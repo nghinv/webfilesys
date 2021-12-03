@@ -12,6 +12,12 @@ mvn install:install-file -Dfile=`pwd`/maven-repository/com/keypoint/png-gif/1.0/
 
 mvn install:install-file -Dfile=`pwd`/maven-repository/mediachest/mediautil/1.0.0/mediautil-1.0.0.jar -DgroupId=mediachest -DartifactId=mediautil -Dversion=1.0.0 -Dpackaging=jar
 
+The custom path made with these commands:
+```
+grep 'webfilesys/' . -r > ../webfilesys.log
+awk -F : '{print $1}' ../../webfilesys.log | grep -v git | sort | uniq | xargs sed -i 's#/webfilesys#/custom/webfilesys#g'
+
+```
 
 Use the command
   maven install
