@@ -16,7 +16,7 @@
 <script language="javascript">
   function backToDirTree()
   {
-      window.location.href = '/webfilesys/servlet?command=exp&amp;expandPath=<xsl:value-of select="/error/currentPath" />';
+      window.location.href = '/custom/webfilesys/servlet?command=exp&amp;expandPath=<xsl:value-of select="/error/currentPath" />';
   }
 
   <xsl:if test="/error/errorMsg">

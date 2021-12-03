@@ -95,7 +95,7 @@ public class AdminSelectFolderHandler extends XslRequestHandlerBase
         	actPath = collapsePath;
         }
 
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/adminSelectFolder.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/adminSelectFolder.xsl\"");
 
 		folderTreeElement = doc.createElement("folderTree");
 			

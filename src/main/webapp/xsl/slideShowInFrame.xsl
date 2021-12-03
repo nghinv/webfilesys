@@ -13,15 +13,15 @@
 <head>
 <meta http-equiv="expires" content="0" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/slideShow/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/slideShow/css" />.css</xsl:attribute>
 </link>
 
 <title>WebFileSys <xsl:value-of select="/slideShow/resources/msg[@key='label.slideshow']/@value" /></title>
 
-<script language="JavaScript" src="/webfilesys/javascript/util.js" type="text/javascript"></script>
+<script language="JavaScript" src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
 
 <script type="text/javascript">
   var wait;
@@ -46,7 +46,7 @@
   function preloadNextImage()
   {
       nextImage = new Image();
-      nextImage.src = '/webfilesys/servlet?command=getFile&amp;filePath=<xsl:value-of select="/slideShow/nextImgPath"/>&amp;cached=true';
+      nextImage.src = '/custom/webfilesys/servlet?command=getFile&amp;filePath=<xsl:value-of select="/slideShow/nextImgPath"/>&amp;cached=true';
 
       <xsl:if test="/slideShow/autoForward">
         <xsl:if test="not(slideShow/paused)">
@@ -122,7 +122,7 @@
 
   function getPrevNextBaseUrl()
   {
-      var url = '/webfilesys/servlet?command=slideShowInFrame';
+      var url = '/custom/webfilesys/servlet?command=slideShowInFrame';
       url = url + '&amp;delay=<xsl:value-of select="/slideShow/delay"/>';
       url = url + '&amp;recurse=<xsl:value-of select="/slideShow/recurse"/>';
       url = url + '&amp;autoForward=<xsl:value-of select="/slideShow/autoForward"/>';
@@ -135,10 +135,10 @@
   function stopSlideShow()
   {
       <xsl:if test="/slideShow/album">
-        window.location.href = '/webfilesys/servlet?command=album';
+        window.location.href = '/custom/webfilesys/servlet?command=album';
       </xsl:if>
       <xsl:if test="not(/slideShow/album)">
-        window.location.href = '/webfilesys/servlet?command=listFiles';
+        window.location.href = '/custom/webfilesys/servlet?command=listFiles';
       </xsl:if>
   }
 
@@ -183,7 +183,7 @@
   <xsl:if test="not(/slideShow/album)">
     function showImgDetail()
     {
-        var url = '/webfilesys/servlet?command=showImg';
+        var url = '/custom/webfilesys/servlet?command=showImg';
         url = url + '&amp;imgname=<xsl:value-of select="/slideShow/encodedPath"/>';
         var detailWinId = 'pict' + (new Date()).getTime();
         
@@ -285,7 +285,7 @@
     <xsl:attribute name="onclick">showImgDetail()</xsl:attribute>
   </xsl:if>
   <img id="currentImg" class="slideShow" border="0">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getFile&amp;filePath=<xsl:value-of select="/slideShow/encodedPath"/>&amp;cached=true</xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getFile&amp;filePath=<xsl:value-of select="/slideShow/encodedPath"/>&amp;cached=true</xsl:attribute>
     <xsl:attribute name="width"><xsl:value-of select="/slideShow/displayWidth"/></xsl:attribute>
     <xsl:attribute name="height"><xsl:value-of select="/slideShow/displayHeight"/></xsl:attribute>
     <xsl:if test="/slideShow/crossfade">

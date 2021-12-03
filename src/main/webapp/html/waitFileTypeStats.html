@@ -1,13 +1,13 @@
 <html>
   <head>
-    <script language="JavaScript" src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-    <script language="JavaScript" src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-    <script language="JavaScript" src="/webfilesys/javascript/ajaxFolder.js" type="text/javascript"></script>
+    <script language="JavaScript" src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+    <script language="JavaScript" src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+    <script language="JavaScript" src="/custom/webfilesys/javascript/ajaxFolder.js" type="text/javascript"></script>
 
     <script type="text/javascript">
       function callStats() {
-          var xmlUrl = "/webfilesys/servlet" + window.location.search
-          var xslUrl = "/webfilesys/xsl/fileTypeTreeStats.xsl";
+          var xmlUrl = "/custom/webfilesys/servlet" + window.location.search
+          var xslUrl = "/custom/webfilesys/xsl/fileTypeTreeStats.xsl";
           
           htmlFragmentByXslt(xmlUrl, xslUrl, document.body);
       }   
@@ -15,7 +15,7 @@
   </head>
   <body onload="setTimeout('callStats()', 1000);" class="statistics">
     <div style="width:100%;height:40px;font-size:24px;text-align:center;padding-top:40px;">
-      <img src="/webfilesys/images/hourglass.gif" style="vertical-align:middle" />
+      <img src="/custom/webfilesys/images/hourglass.gif" style="vertical-align:middle" />
       loading ...
     </div>
   </body>

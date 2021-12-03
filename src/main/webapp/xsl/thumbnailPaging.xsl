@@ -14,9 +14,9 @@
             
                 <xsl:if test="paging/currentPage &gt; 1">
                   <td class="fileListFunct" valign="center" nowrap="true">
-                    <a href="/webfilesys/servlet?command=thumbnail&amp;startIdx=0" class="icon-font icon-paging icon-page-first" style="margin-right:12px;"></a>
+                    <a href="/custom/webfilesys/servlet?command=thumbnail&amp;startIdx=0" class="icon-font icon-paging icon-page-first" style="margin-right:12px;"></a>
                     <a class="icon-font icon-paging icon-page-prev">
-                      <xsl:attribute name="href">/webfilesys/servlet?command=thumbnail&amp;startIdx=<xsl:value-of select="paging/prevStartIdx" /></xsl:attribute>
+                      <xsl:attribute name="href">/custom/webfilesys/servlet?command=thumbnail&amp;startIdx=<xsl:value-of select="paging/prevStartIdx" /></xsl:attribute>
                     </a>
                   </td>
                 </xsl:if>
@@ -46,7 +46,7 @@
                       </xsl:if>
                       <xsl:if test="not(@num=../currentPage)">
                         <div class="pagingPage pagingPageOther">
-                          <xsl:attribute name="onclick">window.location.href='/webfilesys/servlet?command=thumbnail&amp;startIdx=<xsl:value-of select="@startIdx" />'</xsl:attribute>
+                          <xsl:attribute name="onclick">window.location.href='/custom/webfilesys/servlet?command=thumbnail&amp;startIdx=<xsl:value-of select="@startIdx" />'</xsl:attribute>
                           <xsl:value-of select="@num" />
                         </div>
                       </xsl:if>
@@ -57,10 +57,10 @@
               
                     <td class="fileListFunct" align="right" valign="center" nowrap="true">
                       <a class="icon-font icon-paging icon-page-last">
-                        <xsl:attribute name="href">/webfilesys/servlet?command=thumbnail&amp;startIdx=<xsl:value-of select="paging/lastStartIdx" /></xsl:attribute>
+                        <xsl:attribute name="href">/custom/webfilesys/servlet?command=thumbnail&amp;startIdx=<xsl:value-of select="paging/lastStartIdx" /></xsl:attribute>
                       </a>
                       <a class="icon-font icon-paging icon-page-next" style="margin-right:12px;">
-                        <xsl:attribute name="href">/webfilesys/servlet?command=thumbnail&amp;startIdx=<xsl:value-of select="paging/nextStartIdx" /></xsl:attribute>
+                        <xsl:attribute name="href">/custom/webfilesys/servlet?command=thumbnail&amp;startIdx=<xsl:value-of select="paging/nextStartIdx" /></xsl:attribute>
                       </a>
                     </td>
                   </xsl:if>

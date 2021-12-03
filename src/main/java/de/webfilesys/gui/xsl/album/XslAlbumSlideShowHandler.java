@@ -63,7 +63,7 @@ public class XslAlbumSlideShowHandler extends XslRequestHandlerBase
         
         doc.appendChild(slideShowElement);
             
-        ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/album/albumSlideShow.xsl\"");
+        ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/album/albumSlideShow.xsl\"");
 
         doc.insertBefore(xslRef, slideShowElement);
 

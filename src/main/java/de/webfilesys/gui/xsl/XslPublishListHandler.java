@@ -52,7 +52,7 @@ public class XslPublishListHandler extends XslRequestHandlerBase {
 			
 		doc.appendChild(publishListElem);
 			
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/publishList.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/publishList.xsl\"");
 
 		doc.insertBefore(xslRef, publishListElem);
 
@@ -105,7 +105,7 @@ public class XslPublishListHandler extends XslRequestHandlerBase {
 							secretLink.append(":");
 							secretLink.append(serverPort);
 						}
-						secretLink.append("/webfilesys");
+						secretLink.append("/custom/webfilesys");
 					} else {
 						secretLink.append(baseUrl);
 					}
@@ -140,7 +140,7 @@ public class XslPublishListHandler extends XslRequestHandlerBase {
 					
 					XmlUtil.setChildText(publicationElem, "invitationType", type);
 					
-					XmlUtil.setChildText(publicationElem, "cancelUrl", "/webfilesys/servlet?command=cancelPublish&accessCode=" + UTF8URLEncoder.encode(accessCode));
+					XmlUtil.setChildText(publicationElem, "cancelUrl", "/custom/webfilesys/servlet?command=cancelPublish&accessCode=" + UTF8URLEncoder.encode(accessCode));
 				}
 			}
         }

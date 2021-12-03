@@ -18,20 +18,20 @@
   <title>WebFileSys Picture Book</title>
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/pictureAlbum.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/pictureAlbum.css</xsl:attribute>
   </link>
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
 
-  <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/viewMode.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/pictureAlbum.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/viewMode.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/pictureAlbum.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
 
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/fileList/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/fileList/language" /></xsl:attribute>
   </script>
 
   <script language="javascript">
@@ -39,7 +39,7 @@
     function showImage(imgPath, width, height)
     {
         randNum = (new Date()).getTime();
-        picWin = window.open('/webfilesys/servlet?command=bookPicture&amp;imgPath=' + encodeURIComponent(imgPath) + '&amp;random=' + randNum,'picWin' + randNum,'status=no,toolbar=no,location=no,menu=no,width=' + width + ',height=' + (height + 55) + ',resizable=yes,left=1,top=1,screenX=1,screenY=1');
+        picWin = window.open('/custom/webfilesys/servlet?command=bookPicture&amp;imgPath=' + encodeURIComponent(imgPath) + '&amp;random=' + randNum,'picWin' + randNum,'status=no,toolbar=no,location=no,menu=no,width=' + width + ',height=' + (height + 55) + ',resizable=yes,left=1,top=1,screenX=1,screenY=1');
         picWin.focus();
     }
 
@@ -103,7 +103,7 @@
     </div>
 
     <div class="infoIcon" titleResource="label.about">
-      <a href="#" onclick="window.open('/webfilesys/servlet?command=versionInfo','infowindow','status=no,toolbar=no,location=no,menu=no,width=300,height=220,resizable=no,left=250,top=150,screenX=250,screenY=150')"
+      <a href="#" onclick="window.open('/custom/webfilesys/servlet?command=versionInfo','infowindow','status=no,toolbar=no,location=no,menu=no,width=300,height=220,resizable=no,left=250,top=150,screenX=250,screenY=150')"
          class="icon-font icon-info">
       </a>
     </div>
@@ -128,7 +128,7 @@
 
     <xsl:if test="/fileList/file">
   
-      <form accept-charset="utf-8" name="sortform" method="get" action="/webfilesys/servlet" style="padding:0px;margin:0px;">
+      <form accept-charset="utf-8" name="sortform" method="get" action="/custom/webfilesys/servlet" style="padding:0px;margin:0px;">
       
         <input type="hidden" name="command" value="storyInFrame" />
         <input type="hidden" name="mode" value="pictureBook" />
@@ -136,11 +136,11 @@
         <xsl:if test="paging/currentPage &gt; 1">
           
           <div class="albumPagingArrow">
-            <a class="pictureAlbumPaging" href="/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=0">|&lt;</a>
+            <a class="pictureAlbumPaging" href="/custom/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=0">|&lt;</a>
             &#160;
             <a class="pictureAlbumPaging">
               <xsl:attribute name="href">
-                <xsl:value-of select="concat('/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=',paging/prevStartIdx)"/>
+                <xsl:value-of select="concat('/custom/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=',paging/prevStartIdx)"/>
               </xsl:attribute>
               &lt;
             </a>
@@ -175,7 +175,7 @@
               </xsl:if>
               <xsl:if test="not(@num=../currentPage)">
                 <div class="pagingPage pagingPageOther">
-                  <xsl:attribute name="onclick">window.location.href='/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=<xsl:value-of select="@startIdx" />'</xsl:attribute>
+                  <xsl:attribute name="onclick">window.location.href='/custom/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=<xsl:value-of select="@startIdx" />'</xsl:attribute>
                   <xsl:value-of select="@num" />
                 </div>
               </xsl:if>
@@ -186,14 +186,14 @@
             <div class="albumPagingArrow">
               <a class="pictureAlbumPaging">
                 <xsl:attribute name="href">
-                  <xsl:value-of select="concat('/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=',paging/nextStartIdx)"/>
+                  <xsl:value-of select="concat('/custom/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=',paging/nextStartIdx)"/>
                 </xsl:attribute>
                 &gt;
               </a>
               &#160;
               <a class="pictureAlbumPaging">
                 <xsl:attribute name="href">
-                  <xsl:value-of select="concat('/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=',paging/lastStartIdx)"/>
+                  <xsl:value-of select="concat('/custom/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=',paging/lastStartIdx)"/>
                 </xsl:attribute>
                 &gt;|
               </a>
@@ -297,11 +297,11 @@
       <xsl:if test="paging/currentPage &gt; 1">
           
         <div class="albumPagingArrow">
-          <a class="pictureAlbumPaging" href="/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=0">|&lt;</a>
+          <a class="pictureAlbumPaging" href="/custom/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=0">|&lt;</a>
           &#160;
           <a class="pictureAlbumPaging">
             <xsl:attribute name="href">
-              <xsl:value-of select="concat('/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=',paging/prevStartIdx)"/>
+              <xsl:value-of select="concat('/custom/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=',paging/prevStartIdx)"/>
             </xsl:attribute>
             &lt;
           </a>
@@ -315,14 +315,14 @@
           <div class="bottomPagingForward">
             <a class="pictureAlbumPaging">
               <xsl:attribute name="href">
-                <xsl:value-of select="concat('/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=',paging/nextStartIdx)"/>
+                <xsl:value-of select="concat('/custom/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=',paging/nextStartIdx)"/>
               </xsl:attribute>
               &gt;
             </a>
             &#160;
             <a class="pictureAlbumPaging">
               <xsl:attribute name="href">
-                <xsl:value-of select="concat('/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=',paging/lastStartIdx)"/>
+                <xsl:value-of select="concat('/custom/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;startIdx=',paging/lastStartIdx)"/>
               </xsl:attribute>
               &gt;|
             </a>

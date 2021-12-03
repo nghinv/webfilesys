@@ -27,7 +27,7 @@
 
         if (mapType == "1")
         {
-            var mapWin = window.open('/webfilesys/servlet?command=osMap&path=' + encodeURIComponent(folderPath),'mapWin','status=no,toolbar=no,location=no,menu=no,width=600,height=400,resizable=yes,left=20,top=20,screenX=20,screenY=20');
+            var mapWin = window.open('/custom/webfilesys/servlet?command=osMap&path=' + encodeURIComponent(folderPath),'mapWin','status=no,toolbar=no,location=no,menu=no,width=600,height=400,resizable=yes,left=20,top=20,screenX=20,screenY=20');
             if (!mapWin) 
             {
             	alert(resourceBundle["alert.enablePopups"]);
@@ -39,7 +39,7 @@
         } 
         else if (mapType == "2")
         {
-            var mapWin = window.open('/webfilesys/servlet?command=googleMap&path=' + encodeURIComponent(folderPath),'mapWin','status=no,toolbar=no,location=no,menu=no,width=600,height=400,resizable=yes,left=20,top=20,screenX=20,screenY=20');
+            var mapWin = window.open('/custom/webfilesys/servlet?command=googleMap&path=' + encodeURIComponent(folderPath),'mapWin','status=no,toolbar=no,location=no,menu=no,width=600,height=400,resizable=yes,left=20,top=20,screenX=20,screenY=20');
             if (!mapWin) 
             {
             	alert(resourceBundle["alert.enablePopups"]);
@@ -51,7 +51,7 @@
         } 
         else
         {
-            window.location.href = "/webfilesys/servlet?command=googleEarthFolderPlacemark";
+            window.location.href = "/custom/webfilesys/servlet?command=googleEarthFolderPlacemark";
         }
     }  
 
@@ -90,7 +90,7 @@
 
         if (mapType == "1")
         {
-            var mapWin = window.open('/webfilesys/servlet?command=osMap&path=' + encodeURIComponent(filePath),'_blank','status=no,toolbar=no,location=no,menu=no,width=600,height=400,resizable=yes,left=20,top=20,screenX=20,screenY=20');
+            var mapWin = window.open('/custom/webfilesys/servlet?command=osMap&path=' + encodeURIComponent(filePath),'_blank','status=no,toolbar=no,location=no,menu=no,width=600,height=400,resizable=yes,left=20,top=20,screenX=20,screenY=20');
             if (!mapWin) 
             {
             	alert(resourceBundle["alert.enablePopups"]);
@@ -102,7 +102,7 @@
         } 
         else if (mapType == "2")
         {
-            var mapWin = window.open('/webfilesys/servlet?command=googleMap&path=' + encodeURIComponent(filePath),'_blank','status=no,toolbar=no,location=no,menu=no,width=600,height=400,resizable=yes,left=20,top=20,screenX=20,screenY=20');
+            var mapWin = window.open('/custom/webfilesys/servlet?command=googleMap&path=' + encodeURIComponent(filePath),'_blank','status=no,toolbar=no,location=no,menu=no,width=600,height=400,resizable=yes,left=20,top=20,screenX=20,screenY=20');
             if (!mapWin) 
             {
             	alert(resourceBundle["alert.enablePopups"]);
@@ -114,7 +114,7 @@
         } 
         else
         {
-            window.location.href = "/webfilesys/servlet?command=googleEarthPlacemark&path=" + filePath;
+            window.location.href = "/custom/webfilesys/servlet?command=googleEarthPlacemark&path=" + filePath;
         }
     }  
 
@@ -127,7 +127,7 @@
         document.getElementById("map").firstChild.appendChild(picContElem);
 	    
 	    var closeIconElem = document.createElement("img");
-	    closeIconElem.setAttribute("src", "/webfilesys/images/winClose.gif");
+	    closeIconElem.setAttribute("src", "/custom/webfilesys/images/winClose.gif");
         closeIconElem.setAttribute("style", "float:right");
         picContElem.appendChild(closeIconElem);
 	    
@@ -135,7 +135,7 @@
         picElem.id = "picOnMap";
 	    picElem.onload = resizeAndShowPic;
     	picElem.setAttribute("class", "picOnMap");
-        picElem.setAttribute("src", "/webfilesys/servlet?command=getFile&fileName=" + encodeURIComponent(picFileName));
+        picElem.setAttribute("src", "/custom/webfilesys/servlet?command=getFile&fileName=" + encodeURIComponent(picFileName));
         picElem.setAttribute("picFileName", picFileName);
         picContElem.appendChild(picElem);
         

@@ -15,18 +15,18 @@
   <meta http-equiv="expires" content="0" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/common.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/common.css</xsl:attribute>
   </link>
 
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/javascript/browserCheck.js</xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/javascript/browserCheck.js</xsl:attribute>
   </script>
 
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/javascript/resourceBundle.js</xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/javascript/resourceBundle.js</xsl:attribute>
   </script>
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/registration/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/registration/language" /></xsl:attribute>
   </script>
 
   <title resource="label.regtitle"></title>
@@ -42,7 +42,7 @@
       <tr>
         <td class="loginTitle" style="padding-left:10px;vertical-align:top;">
           <img border="0">
-            <xsl:attribute name="src">/webfilesys/images/logo.gif</xsl:attribute>
+            <xsl:attribute name="src">/custom/webfilesys/images/logo.gif</xsl:attribute>
           </img>
           <div style="width:100%;padding-top:10px;padding-left:0px;">
             WebFileSys
@@ -62,7 +62,7 @@
           <br/><br/>
 
           <input type="button" resource="button.registrationToLogin">
-            <xsl:attribute name="onclick">window.location.href='/webfilesys/servlet'</xsl:attribute>
+            <xsl:attribute name="onclick">window.location.href='/custom/webfilesys/servlet'</xsl:attribute>
           </input>
           
         </td>

@@ -98,18 +98,18 @@ function jsContextMenu(fileName, imgType, domId) {
 }
 
 function delImg(fileName) {
-    centeredDialog('/webfilesys/servlet?command=ajaxRPC&method=deleteFilePrompt&param1=' + encodeURIComponent(fileName), 
-                   '/webfilesys/xsl/confirmDeleteFile.xsl', 
+    centeredDialog('/custom/webfilesys/servlet?command=ajaxRPC&method=deleteFilePrompt&param1=' + encodeURIComponent(fileName), 
+                   '/custom/webfilesys/xsl/confirmDeleteFile.xsl', 
                    320, 130);
 }
 
 function deleteFile(fileName)
 {
-    window.location.href = "/webfilesys/servlet?command=fmdelete&fileName=" + fileName + "&deleteRO=yes";
+    window.location.href = "/custom/webfilesys/servlet?command=fmdelete&fileName=" + fileName + "&deleteRO=yes";
 }
 
 function jsRenameImg(fileName, domId) {
-    centeredDialog('/webfilesys/servlet?command=renameImagePrompt&imageFile=' + encodeURIComponent(fileName), '/webfilesys/xsl/renameImage.xsl', 360, 160, function() {
+    centeredDialog('/custom/webfilesys/servlet?command=renameImagePrompt&imageFile=' + encodeURIComponent(fileName), '/custom/webfilesys/xsl/renameImage.xsl', 360, 160, function() {
     	document.renameForm.domId.value = domId;
     	document.renameForm.newFileName.focus();
 
@@ -126,7 +126,7 @@ function jsRenameImg(fileName, domId) {
 }
 
 function rotateFreeAngle(path) {
-    centeredDialog('/webfilesys/servlet?command=rotateImagePrompt&imagePath=' + encodeURIComponent(path), '/webfilesys/xsl/rotateImage.xsl', 360, 170, function() {
+    centeredDialog('/custom/webfilesys/servlet?command=rotateImagePrompt&imagePath=' + encodeURIComponent(path), '/custom/webfilesys/xsl/rotateImage.xsl', 360, 170, function() {
         document.getElementById("rotationDegrees").focus();
     });
 }
@@ -138,24 +138,24 @@ function jsEditDesc(path) {
     const xpos = Math.round((screen.availWidth - windowWidth) / 2);
     const ypos = Math.round((screen.availHeight - windowHeight) / 2);
 
-    const descWin = window.open("/webfilesys/servlet?command=editMetaInf&path=" + encodeURIComponent(path) + "&geoTag=true","descWin","status=no,toolbar=no,location=no,menu=no,width=" + windowWidth + ",height=" + windowHeight + ",resizable=yes,left=" + xpos + ",top=" + ypos + ",screenX=" + xpos + ",screenY=" + ypos);
+    const descWin = window.open("/custom/webfilesys/servlet?command=editMetaInf&path=" + encodeURIComponent(path) + "&geoTag=true","descWin","status=no,toolbar=no,location=no,menu=no,width=" + windowWidth + ",height=" + windowHeight + ",resizable=yes,left=" + xpos + ",top=" + ypos + ",screenX=" + xpos + ",screenY=" + ypos);
     descWin.focus();
     descWin.opener = self;
 }
 
 function categories(path) {
-    catWin = window.open("/webfilesys/servlet?command=assignCategory&filePath=" + encodeURIComponent(path) + "&random=" + new Date().getTime(), "catWin", "status=no,toolbar=no,location=no,menu=no,scrollbars=yes,width=520,height=400,resizable=yes,left=100,top=30,screenX=100,screenY=30");
+    catWin = window.open("/custom/webfilesys/servlet?command=assignCategory&filePath=" + encodeURIComponent(path) + "&random=" + new Date().getTime(), "catWin", "status=no,toolbar=no,location=no,menu=no,scrollbars=yes,width=520,height=400,resizable=yes,left=100,top=30,screenX=100,screenY=30");
     catWin.focus();
 }
 
 function jsResizeParms(path)
 {
-    window.location.href = '/webfilesys/servlet?command=resizeParms&imgFile=' + encodeURIComponent(path);
+    window.location.href = '/custom/webfilesys/servlet?command=resizeParms&imgFile=' + encodeURIComponent(path);
 }
 
 function jsExifData(path)
 {
-    exifWin = window.open('/webfilesys/servlet?command=exifData&imgFile=' + encodeURIComponent(path),'exifWin','scrollbars=yes,status=no,toolbar=no,location=no,menu=no,width=500,height=560,left=100,top=20,screenX=100,screenY=20,resizable=no');
+    exifWin = window.open('/custom/webfilesys/servlet?command=exifData&imgFile=' + encodeURIComponent(path),'exifWin','scrollbars=yes,status=no,toolbar=no,location=no,menu=no,width=500,height=560,left=100,top=20,screenX=100,screenY=20,resizable=no');
     exifWin.focus();
 }
 
@@ -169,24 +169,24 @@ function jsRotate(path, degrees, fileName, domId) {
         if (lossless === "true") {
             ajaxRotate(fileName, degrees, domId);
         } else {
-            window.location.href = '/webfilesys/servlet?command=transformImage&action=rotate&degrees=' + degrees + '&imgName=' + encodeURIComponent(path);
+            window.location.href = '/custom/webfilesys/servlet?command=transformImage&action=rotate&degrees=' + degrees + '&imgName=' + encodeURIComponent(path);
         }
     });    
 }
 
 function jsFlip(path, direction)
 {
-    window.location.href = '/webfilesys/servlet?command=transformImage&action=flip' + direction + '&imgName=' + encodeURIComponent(path);
+    window.location.href = '/custom/webfilesys/servlet?command=transformImage&action=flip' + direction + '&imgName=' + encodeURIComponent(path);
 }
 
 function jsComments(path)
 {
-    commentWin=window.open("/webfilesys/servlet?command=listComments&actPath=" + encodeURIComponent(path),"commentWin","status=no,toolbar=no,location=no,menu=no,scrollbars=yes,width=550,height=400,resizable=yes,left=80,top=100,screenX=80,screenY=100");
+    commentWin=window.open("/custom/webfilesys/servlet?command=listComments&actPath=" + encodeURIComponent(path),"commentWin","status=no,toolbar=no,location=no,menu=no,scrollbars=yes,width=550,height=400,resizable=yes,left=80,top=100,screenX=80,screenY=100");
     commentWin.focus();
 }
 
 function jsSendFile(fileName) {
-    centeredDialog('/webfilesys/servlet?command=emailFilePrompt&fileName=' + encodeURIComponent(fileName), '/webfilesys/xsl/emailFile.xsl', 400, 250, function() {
+    centeredDialog('/custom/webfilesys/servlet?command=emailFilePrompt&fileName=' + encodeURIComponent(fileName), '/custom/webfilesys/xsl/emailFile.xsl', 400, 250, function() {
         document.emailForm.receiver.focus();
         document.emailForm.receiver.select();
     });
@@ -226,7 +226,7 @@ function publishFile(path)
         ypos = 100;
     }
 
-    publishWin = window.open("/webfilesys/servlet?command=publishFile&publishPath=" + encodeURIComponent(path),"publish","status=no,toolbar=no,menu=no,width=550,height=" + windowHeight + ",resizable=no,scrollbars=no,left=80,top=" + ypos + ",screenX=80,screenY=" + ypos);
+    publishWin = window.open("/custom/webfilesys/servlet?command=publishFile&publishPath=" + encodeURIComponent(path),"publish","status=no,toolbar=no,menu=no,width=550,height=" + windowHeight + ",resizable=no,scrollbars=no,left=80,top=" + ypos + ",screenX=80,screenY=" + ypos);
 }
 
 function rotateFlipMenu(shortPath, path, fileName, imgType, domId) {
@@ -264,7 +264,7 @@ function rotateFlipMenu(shortPath, path, fileName, imgType, domId) {
 
 function startSlideshowHere(startPath, startFileName) 
 {
-    window.location.href = '/webfilesys/servlet?command=slideShowParms&cmd=getParms&startPath=' + encodeURIComponent(startPath) + '&startFile=' + encodeURIComponent(startFileName) + '&screenWidth=' + screen.width + '&amp;screenHeight=' + screen.height;
+    window.location.href = '/custom/webfilesys/servlet?command=slideShowParms&cmd=getParms&startPath=' + encodeURIComponent(startPath) + '&startFile=' + encodeURIComponent(startFileName) + '&screenWidth=' + screen.width + '&amp;screenHeight=' + screen.height;
 }
 
 function validateRotationDegrees() {

@@ -20,17 +20,17 @@ function mobileMainMenu() {
 }
 
 function mobileBookmarks() {
-	window.location.href = "/webfilesys/servlet?command=bookmarks";	
+	window.location.href = "/custom/webfilesys/servlet?command=bookmarks";	
 }
 
 function mobileAbout() {
-    window.open('/webfilesys/servlet?command=versionInfo', 'infowindow', 'status=no,toolbar=no,location=no,menu=no,width=300,height=230,resizable=no,left=50,top=20,screenX=50,screenY=20');
+    window.open('/custom/webfilesys/servlet?command=versionInfo', 'infowindow', 'status=no,toolbar=no,location=no,menu=no,width=300,height=230,resizable=no,left=50,top=20,screenX=50,screenY=20');
 }
 
 function switchToClassicVersion() {
-    window.location.href = "/webfilesys/servlet";
+    window.location.href = "/custom/webfilesys/servlet";
 }
 
 function mobileLogout() {
-    window.location.href = "/webfilesys/servlet?command=logout";
+    window.location.href = "/custom/webfilesys/servlet?command=logout";
 }

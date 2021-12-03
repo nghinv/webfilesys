@@ -31,7 +31,7 @@ import de.webfilesys.util.ISO8601DateParser;
  */
 public class GeoTrackViewHandler implements ViewHandler
 {
-    private static final String STYLESHEET_REF = "<?xml-stylesheet type=\"text/xsl\" href=\"/webfilesys/xsl/gpxProfile.xsl\"?>";
+    private static final String STYLESHEET_REF = "<?xml-stylesheet type=\"text/xsl\" href=\"/custom/webfilesys/xsl/gpxProfile.xsl\"?>";
     
     private static final String XML_HEADER = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"yes\"?>";
     

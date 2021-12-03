@@ -1,9 +1,9 @@
 function ajaxRotate(fileName, degrees, domId) {
     hideMenu();
 
-    const xmlUrl = '/webfilesys/servlet?command=xformImage&action=rotate&degrees=' + degrees + '&imgName=' + encodeURIComponent(fileName) + "&domId=" + domId;
+    const xmlUrl = '/custom/webfilesys/servlet?command=xformImage&action=rotate&degrees=' + degrees + '&imgName=' + encodeURIComponent(fileName) + "&domId=" + domId;
 
-    const xslUrl = "/webfilesys/xsl/xformImageResult.xsl";
+    const xslUrl = "/custom/webfilesys/xsl/xformImageResult.xsl";
 
     const thumbCont = document.getElementById("thumbCont-" + fileName.replaceAll(" ", "_"));
         
@@ -27,7 +27,7 @@ function autoImgRotate() {
             		stopPolling();
                 }
                 
-                var xmlUrl = '/webfilesys/servlet?command=autoImgRotate';
+                var xmlUrl = '/custom/webfilesys/servlet?command=autoImgRotate';
                 var responseXml = xmlRequest(xmlUrl, autoImgRotateResult);
 	});
 }
@@ -41,7 +41,7 @@ function autoImgRotateResult(req) {
              hideHourGlass();
                           
              if (anyRotated == "true") {
-                 window.location.href = '/webfilesys/servlet?command=thumbnail';
+                 window.location.href = '/custom/webfilesys/servlet?command=thumbnail';
                  return
              }
              

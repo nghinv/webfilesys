@@ -8,7 +8,7 @@
 
 <div class="promptHead" resource="label.renameImage"></div>
     
-<form accept-charset="utf-8" name="renameForm" id="renameForm" method="get" action="/webfilesys/servlet" style="display:inline;">
+<form accept-charset="utf-8" name="renameForm" id="renameForm" method="get" action="/custom/webfilesys/servlet" style="display:inline;">
   <input type="hidden" name="command" value="renamePicture" />
   <input type="hidden" name="imageFile">
     <xsl:attribute name="value"><xsl:value-of select="/renameFile/oldFileName" /></xsl:attribute>

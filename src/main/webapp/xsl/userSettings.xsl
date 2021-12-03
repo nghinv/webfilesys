@@ -10,20 +10,20 @@
 
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
     
     <link rel="stylesheet" type="text/css">
-      <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/userSettings/css" />.css</xsl:attribute>
+      <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/userSettings/css" />.css</xsl:attribute>
     </link>
     
-    <script type="text/javascript" src="/webfilesys/javascript/ajaxslt/util.js"></script>
-    <script src="/webfilesys/javascript/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="/webfilesys/javascript/browserCheck.js"></script>
-    <script type="text/javascript" src="/webfilesys/javascript/util.js">
-    </script><script type="text/javascript" src="/webfilesys/javascript/fmweb.js"></script>
-    <script type="text/javascript" src="/webfilesys/javascript/resourceBundle.js"></script>
+    <script type="text/javascript" src="/custom/webfilesys/javascript/ajaxslt/util.js"></script>
+    <script src="/custom/webfilesys/javascript/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/custom/webfilesys/javascript/browserCheck.js"></script>
+    <script type="text/javascript" src="/custom/webfilesys/javascript/util.js">
+    </script><script type="text/javascript" src="/custom/webfilesys/javascript/fmweb.js"></script>
+    <script type="text/javascript" src="/custom/webfilesys/javascript/resourceBundle.js"></script>
     <script type="text/javascript">
-      <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/userSettings/language" /></xsl:attribute>
+      <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/userSettings/language" /></xsl:attribute>
     </script>
   </head>
   
@@ -32,7 +32,7 @@
 
 	<br />
 
-	<form accept-charset="utf-8" method="post" action="/webfilesys/servlet" class="userData">
+	<form accept-charset="utf-8" method="post" action="/custom/webfilesys/servlet" class="userData">
 		<input type="hidden" name="command" value="selfChangeUser" />
 		<table class="dataForm" width="100%">
 			<tr>
@@ -135,7 +135,7 @@
 				  <input type="submit" name="changebutton" resource="button.save" />
 				</td>
 				<td class="formButton" style="text-align: right">
-				  <input type="button" resource="button.cancel" onclick="window.location.href='/webfilesys/servlet?command=listFiles';" />
+				  <input type="button" resource="button.cancel" onclick="window.location.href='/custom/webfilesys/servlet?command=listFiles';" />
 				</td>
 			</tr>
 		</table>

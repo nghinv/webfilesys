@@ -70,7 +70,7 @@ public class XslRenameDirHandler extends XslRequestHandlerBase
 			
 			doc.appendChild(errorElement);
 			
-			ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/errorMsgFolder.xsl\"");
+			ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/errorMsgFolder.xsl\"");
 
 			doc.insertBefore(xslRef, errorElement);
 			
@@ -202,7 +202,7 @@ public class XslRenameDirHandler extends XslRequestHandlerBase
 		
 		doc.appendChild(errorElement);
 		
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/errorMsgFolder.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/errorMsgFolder.xsl\"");
 
 		doc.insertBefore(xslRef, errorElement);
 		

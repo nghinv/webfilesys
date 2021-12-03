@@ -8,7 +8,7 @@
 
 <div class="promptHead" resource="label.sendfilehead"></div>
     
-<form accept-charset="utf-8" name="emailForm" id="emailForm" method="get" action="/webfilesys/servlet" style="display:inline;">
+<form accept-charset="utf-8" name="emailForm" id="emailForm" method="get" action="/custom/webfilesys/servlet" style="display:inline;">
   <input type="hidden" name="command" value="emailFile" />
   <input type="hidden" name="fileName">
     <xsl:attribute name="value"><xsl:value-of select="/emailFile/fileName" /></xsl:attribute>

@@ -16,44 +16,44 @@
 
     <meta http-equiv="expires" content="0" />
 
-    <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
-    <link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
+    <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
 
     <link rel="stylesheet" type="text/css">
-      <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/folderTree/css" />.css</xsl:attribute>
+      <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/folderTree/css" />.css</xsl:attribute>
     </link>
 
     <xsl:if test="not(folderTree/browserXslEnabled)">
-      <script src="/webfilesys/javascript/ajaxslt/util.js" type="text/javascript"></script>
-      <script src="/webfilesys/javascript/ajaxslt/xmltoken.js" type="text/javascript"></script>
-      <script src="/webfilesys/javascript/ajaxslt/dom.js" type="text/javascript"></script>
-      <script src="/webfilesys/javascript/ajaxslt/xpath.js" type="text/javascript"></script>
-      <script src="/webfilesys/javascript/ajaxslt/xslt.js" type="text/javascript"></script>
+      <script src="/custom/webfilesys/javascript/ajaxslt/util.js" type="text/javascript"></script>
+      <script src="/custom/webfilesys/javascript/ajaxslt/xmltoken.js" type="text/javascript"></script>
+      <script src="/custom/webfilesys/javascript/ajaxslt/dom.js" type="text/javascript"></script>
+      <script src="/custom/webfilesys/javascript/ajaxslt/xpath.js" type="text/javascript"></script>
+      <script src="/custom/webfilesys/javascript/ajaxslt/xslt.js" type="text/javascript"></script>
     </xsl:if>
 
-    <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/tooltips.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/ajax.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/ajaxFolder.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/contextMenuCommon.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/dirContextMenu.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/contextMenuMouse.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/jsDirMenu.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/keyDirTree.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/xmlUtil.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/tooltips.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/ajax.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/ajaxFolder.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/contextMenuCommon.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/dirContextMenu.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/contextMenuMouse.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/jsDirMenu.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/keyDirTree.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/xmlUtil.js" type="text/javascript"></script>
     
     <xsl:if test="/folderTree/pollInterval">
-      <script src="/webfilesys/javascript/pollForFolderTreeChanges.js" type="text/javascript"></script>
+      <script src="/custom/webfilesys/javascript/pollForFolderTreeChanges.js" type="text/javascript"></script>
     </xsl:if>
     
-    <script src="/webfilesys/javascript/jquery/jquery.min.js"></script>
+    <script src="/custom/webfilesys/javascript/jquery/jquery.min.js"></script>
 
-    <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
     <script type="text/javascript">
-      <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/folderTree/language" /></xsl:attribute>
+      <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/folderTree/language" /></xsl:attribute>
     </script>
 
     <script language="javascript">
@@ -134,7 +134,7 @@
   <xsl:if test="folderTree/loginEvent">
     <div id="hint" class="hint">
       <xsl:attribute name="onClick">hideHint()</xsl:attribute>
-      <img src="/webfilesys/images/winClose.gif" border="0" class="closeIcon" />
+      <img src="/custom/webfilesys/images/winClose.gif" border="0" class="closeIcon" />
       <span resource="label.loginHint"></span>
     </div>
   </xsl:if>
@@ -153,7 +153,7 @@
   <xsl:if test="fastPath">
     <script language="javascript">
       encodedPath = encodeURIComponent('<xsl:value-of select="fastPath" />');
-      parent.frames[2].window.location.href = "/webfilesys/servlet?command=listFiles&amp;actpath=" + encodedPath + "&amp;mask=*";
+      parent.frames[2].window.location.href = "/custom/webfilesys/servlet?command=listFiles&amp;actpath=" + encodedPath + "&amp;mask=*";
     </script>
   </xsl:if>
 
@@ -197,12 +197,12 @@
 
          <xsl:if test="position()=last()">
            <img class="expCol">
-             <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/minusLast.gif</xsl:attribute>
+             <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/minusLast.gif</xsl:attribute>
            </img>
          </xsl:if>
          <xsl:if test="position()!=last()">
            <img class="expCol">
-             <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/minusMore.gif</xsl:attribute>
+             <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/minusMore.gif</xsl:attribute>
            </img>
          </xsl:if>
        </a>
@@ -217,13 +217,13 @@
 
            <xsl:if test="position()=last()">
              <img class="expCol">
-               <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/plusLast.gif</xsl:attribute>
+               <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/plusLast.gif</xsl:attribute>
              </img>
            </xsl:if>
            
            <xsl:if test="position()!=last()">
              <img class="expCol">
-               <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/plusMore.gif</xsl:attribute>
+               <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/plusMore.gif</xsl:attribute>
              </img>
            </xsl:if>
          </a>
@@ -231,10 +231,10 @@
        </xsl:if>
        <xsl:if test="@leaf='true'">
          <xsl:if test="position()=last()">
-           <img src="/webfilesys/images/branchLast.gif" class="expCol" />
+           <img src="/custom/webfilesys/images/branchLast.gif" class="expCol" />
          </xsl:if>
          <xsl:if test="position()!=last()">
-           <img src="/webfilesys/images/branch.gif" class="expCol" />
+           <img src="/custom/webfilesys/images/branch.gif" class="expCol" />
          </xsl:if>
        </xsl:if>
      </xsl:if>
@@ -263,7 +263,7 @@
          <xsl:if test="@current">
            <xsl:if test="@icon">
              <img class="icon">
-               <xsl:attribute name="src">/webfilesys/icons/<xsl:value-of select="@icon"/></xsl:attribute>
+               <xsl:attribute name="src">/custom/webfilesys/icons/<xsl:value-of select="@icon"/></xsl:attribute>
              </img>
            </xsl:if>
            <xsl:if test="not(@icon)">
@@ -281,7 +281,7 @@
          <xsl:if test="not(@current)">
            <xsl:if test="@icon">
              <img class="icon">
-               <xsl:attribute name="src">/webfilesys/icons/<xsl:value-of select="@icon"/></xsl:attribute>
+               <xsl:attribute name="src">/custom/webfilesys/icons/<xsl:value-of select="@icon"/></xsl:attribute>
              </img>
            </xsl:if>
            <xsl:if test="not(@icon)">

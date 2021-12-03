@@ -9,7 +9,7 @@ function visibilityChangeHandler() {
 
 function pollForFolderTreeChanges(immediateRefreshView) {
 	
-	var pollUrl = "/webfilesys/servlet?command=pollForFolderTreeChange";
+	var pollUrl = "/custom/webfilesys/servlet?command=pollForFolderTreeChange";
 	
 	xmlRequest(pollUrl, function(req) {
         if (req.readyState == 4) {
@@ -21,11 +21,11 @@ function pollForFolderTreeChanges(immediateRefreshView) {
                 var result = item.firstChild.nodeValue;
                 if (result == "true") {
                 	if (immediateRefreshView) {
-                	    window.location.href = "/webfilesys/servlet?command=exp";
+                	    window.location.href = "/custom/webfilesys/servlet?command=exp";
                 	} else {
                     	customConfirm(resourceBundle["folderTreeModified"], resourceBundle["label.no"], resourceBundle["label.yes"], 
                         	function() {
-                                window.location.href = "/webfilesys/servlet?command=exp";
+                                window.location.href = "/custom/webfilesys/servlet?command=exp";
                         	},
                         	function() {
                         		closeAlert();

@@ -56,7 +56,7 @@ function previewSearchResult(fileName) {
 		previewPic.style.display = "inline";
 	};
    	
-   	previewPic.src = "/webfilesys/servlet?command=getFile&fileName=" + encodeURIComponent(fileName) + "&cached=true";
+   	previewPic.src = "/custom/webfilesys/servlet?command=getFile&fileName=" + encodeURIComponent(fileName) + "&cached=true";
    	filePreviewCont.appendChild(previewPic);
    	
     filePreviewActive = true;

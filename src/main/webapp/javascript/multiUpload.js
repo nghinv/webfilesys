@@ -229,7 +229,7 @@
 	          }
 		  }
 		  
-		  xmlRequestPost("/webfilesys/servlet", postData, function(req) {
+		  xmlRequestPost("/custom/webfilesys/servlet", postData, function(req) {
 	          if (req.readyState == 4) {
 	              if (req.status == 200) {
 		              var conflicts = req.responseXML.getElementsByTagName("conflict");            
@@ -312,7 +312,7 @@
           xhr.upload.addEventListener("progress", updateProgress, false);
           xhr.upload.addEventListener("load", uploadComplete, false);
 
-          xhr.open("POST", "/webfilesys/upload/singleBinary/" + encodeURIComponent(fileName), true);  
+          xhr.open("POST", "/custom/webfilesys/upload/singleBinary/" + encodeURIComponent(fileName), true);  
 
           if (!browserMSIE) {
               xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');  
@@ -349,7 +349,7 @@
                       new singleFileBinaryUpload(file)
                   } else {
                       if (firefoxDragDrop || uploadStartedByButton) {
-                          window.location.href = '/webfilesys/servlet?command=listFiles&keepListStatus=true';
+                          window.location.href = '/custom/webfilesys/servlet?command=listFiles&keepListStatus=true';
                       } else {
                           document.getElementById('lastUploadedFile').innerHTML = lastUploadedFile;
                           document.getElementById('lastUploaded').style.visibility = 'visible';

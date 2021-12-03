@@ -47,7 +47,7 @@ public class XslFastPathHandler extends XslRequestHandlerBase
 			
 		doc.appendChild(fastPathElement);
 			
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/fastPath.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/fastPath.xsl\"");
 
 		doc.insertBefore(xslRef, fastPathElement);
 

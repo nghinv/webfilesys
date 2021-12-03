@@ -88,7 +88,7 @@ public class XslCalendarMonthHandler extends XslCalendarHandlerBase
 			
 		doc.appendChild(calendarElement);
 			
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/calendar/calendarMonth.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/calendar/calendarMonth.xsl\"");
 
 		doc.insertBefore(xslRef, calendarElement);
 

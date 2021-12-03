@@ -82,7 +82,7 @@ public class XslGoogleMapHandler extends XslRequestHandlerBase
 			
 		doc.appendChild(geoTagElement);
 
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/googleMap.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/googleMap.xsl\"");
 
 		doc.insertBefore(xslRef, geoTagElement);
 

@@ -41,21 +41,21 @@ public class UserListRequestHandler extends AdminRequestHandler {
 		output.println("<script type=\"text/javascript\">");
 		output.println("function confirmDelete(delUser)");
 		output.println("{if (confirm(\"Are you sure you want to delete user \" + delUser + \" ?\"))");
-		output.println("    {window.location=\"/webfilesys/servlet?command=admin&cmd=deleteUser&userToBeDeleted=\" + delUser ;");
+		output.println("    {window.location=\"/custom/webfilesys/servlet?command=admin&cmd=deleteUser&userToBeDeleted=\" + delUser ;");
 		output.println("    }");
 		output.println("}");
 
-		output.println("function diskQuota(userid) {window.open('/webfilesys/servlet?command=diskQuota&userid=' + encodeURIComponent(userid) + '&random=' + new Date().getTime(),'quotaWin','scrollbars=no,resizable=no,width=400,height=230,left=100,top=100,screenX=100,screenY=100');}");
+		output.println("function diskQuota(userid) {window.open('/custom/webfilesys/servlet?command=diskQuota&userid=' + encodeURIComponent(userid) + '&random=' + new Date().getTime(),'quotaWin','scrollbars=no,resizable=no,width=400,height=230,left=100,top=100,screenX=100,screenY=100');}");
 
 		output.println("</script>");
 
 		output.print("<title> WebFileSys User Administration </title>");
 
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/common.css\">");
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/admin.css\">");
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/icons.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/common.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/admin.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/icons.css\">");
 		
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/skins/fmweb.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/skins/fmweb.css\">");
 		
 		output.println("</head>");
 		output.println("<body>");
@@ -157,7 +157,7 @@ public class UserListRequestHandler extends AdminRequestHandler {
 			session.removeAttribute(SESSION_KEY_USER_LIST_SORT_FIELD);
 		}
 
-		output.println("<form accept-charset=\"utf-8\" method=\"get\" action=\"/webfilesys/servlet\">");
+		output.println("<form accept-charset=\"utf-8\" method=\"get\" action=\"/custom/webfilesys/servlet\">");
 
 		output.println("<input type=\"hidden\" name=\"command\" value=\"admin\">");
 		output.println("<input type=\"hidden\" name=\"cmd\" value=\"userList\">");
@@ -268,7 +268,7 @@ public class UserListRequestHandler extends AdminRequestHandler {
 			output.print("<a href=\"javascript:confirmDelete('"
 					+ actUser.getUserid()
 					+ "')\"><span class=\"icon-font icon-delete iconUserAdmin\" title=\"Delete User\"></span></a>");
-			output.print("<a href=\"/webfilesys/servlet?command=admin&cmd=editUser&username="
+			output.print("<a href=\"/custom/webfilesys/servlet?command=admin&cmd=editUser&username="
 					+ UTF8URLEncoder.encode(actUser.getUserid())
 					+ "\"><span class=\"icon-font icon-edit iconUserAdmin\" title=\"Edit User\"></span></a>");
 
@@ -402,12 +402,12 @@ public class UserListRequestHandler extends AdminRequestHandler {
 				output.println("<img src=\"images/firstDisabled.gif\" border=\"0\">");
 				output.println("<img src=\"images/previousDisabled.gif\" border=\"0\">");
 			} else {
-				output.print("<a href=\"/webfilesys/servlet?command=admin&cmd=userList&startIndex=0\">");
+				output.print("<a href=\"/custom/webfilesys/servlet?command=admin&cmd=userList&startIndex=0\">");
 				output.println("<img src=\"images/first.gif\" border=\"0\"></a>");
 
 				output.println("&nbsp;");
 
-				output.print("<a href=\"/webfilesys/servlet?command=admin&cmd=userList&startIndex="
+				output.print("<a href=\"/custom/webfilesys/servlet?command=admin&cmd=userList&startIndex="
 						+ paging.getPrevStartIndex() + "\">");
 				output.println("<img src=\"images/previous.gif\" border=\"0\"></a>");
 			}
@@ -434,7 +434,7 @@ public class UserListRequestHandler extends AdminRequestHandler {
 				if (idx != paging.getStartIndex() - 1) {
 					if (((pageCounter - 1) % pageStep == 0)
 							|| (k == startIndices.size() - 1)) {
-						output.print("<a class=\"fn\" href=\"/webfilesys/servlet?command=admin&cmd=userList&startIndex="
+						output.print("<a class=\"fn\" href=\"/custom/webfilesys/servlet?command=admin&cmd=userList&startIndex="
 								+ idx + "\">");
 						output.print(pageCounter);
 						output.print("</a>");
@@ -453,13 +453,13 @@ public class UserListRequestHandler extends AdminRequestHandler {
 			output.println("<td class=\"dir\" align=\"right\" valign=\"middle\" nowrap=\"true\">");
 
 			if (!paging.isLastPage()) {
-				output.print("<a href=\"/webfilesys/servlet?command=admin&cmd=userList&startIndex="
+				output.print("<a href=\"/custom/webfilesys/servlet?command=admin&cmd=userList&startIndex="
 						+ paging.getNextStartIndex() + "\">");
 				output.println("<img src=\"images/next.gif\" border=\"0\"></a>");
 
 				output.println("&nbsp;");
 
-				output.print("<a href=\"/webfilesys/servlet?command=admin&cmd=userList&startIndex="
+				output.print("<a href=\"/custom/webfilesys/servlet?command=admin&cmd=userList&startIndex="
 						+ paging.getLastPageStartIndex() + "\">");
 				output.println("<img src=\"images/last.gif\" border=\"0\"></a>");
 			} else {
@@ -477,11 +477,11 @@ public class UserListRequestHandler extends AdminRequestHandler {
 
 		output.println("<form accept-charset=\"utf-8\" style=\"margin-top:20px;\">");
 
-		output.println("<input type=\"button\" value=\"Add new user\" onclick=\"window.location.href='/webfilesys/servlet?command=admin&cmd=registerUser'\">");
+		output.println("<input type=\"button\" value=\"Add new user\" onclick=\"window.location.href='/custom/webfilesys/servlet?command=admin&cmd=registerUser'\">");
 
 		output.println("&nbsp;&nbsp;&nbsp;");
 
-		output.println("<input type=\"button\" value=\"Return\" onclick=\"window.location.href='/webfilesys/servlet?command=admin&cmd=menu'\">");
+		output.println("<input type=\"button\" value=\"Return\" onclick=\"window.location.href='/custom/webfilesys/servlet?command=admin&cmd=menu'\">");
 
 		output.println("</form>");
 

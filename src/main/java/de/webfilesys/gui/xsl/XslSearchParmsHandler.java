@@ -59,7 +59,7 @@ public class XslSearchParmsHandler extends XslRequestHandlerBase
 			
 		doc.appendChild(searchParmsElement);
 
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/searchParms.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/searchParms.xsl\"");
 
 		doc.insertBefore(xslRef, searchParmsElement);
 

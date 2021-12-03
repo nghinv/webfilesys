@@ -14,31 +14,31 @@
 
   <meta http-equiv="expires" content="0" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
   <link rel="stylesheet" type="text/css">
     <xsl:if test="mobile">
-      <xsl:attribute name="href">/webfilesys/styles/skins/fmweb.css</xsl:attribute>
+      <xsl:attribute name="href">/custom/webfilesys/styles/skins/fmweb.css</xsl:attribute>
     </xsl:if>
     <xsl:if test="not(mobile)">
-      <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="css" />.css</xsl:attribute>
+      <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="css" />.css</xsl:attribute>
     </xsl:if>
   </link>
 
   <xsl:if test="mobile">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <link rel="stylesheet" type="text/css" href="/webfilesys/styles/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/mobile.css" />
   </xsl:if>
 
-  <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxUpload.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxUpload.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
   
-  <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/upload/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/upload/language" /></xsl:attribute>
   </script>
 
   <script language="javascript">
@@ -188,7 +188,7 @@
 
   <div class="headline" resource="label.uploadfile"></div>
 
-  <form accept-charset="utf-8" name="form1" method="post" action="/webfilesys/upload" enctype="multipart/form-data">
+  <form accept-charset="utf-8" name="form1" method="post" action="/custom/webfilesys/upload" enctype="multipart/form-data">
   
     <input type="hidden" name="actpath">
       <xsl:attribute name="value"><xsl:value-of select="currentPath" /></xsl:attribute>
@@ -213,7 +213,7 @@
         </td>
         <td style="text-align:right;padding-right:20px;">
           <input id="linkMultiUpload" type="button" style="visibility:hidden" resource="link.multiUpload">
-            <xsl:attribute name="onclick">window.location.href='/webfilesys/servlet?command=multiUpload';</xsl:attribute>
+            <xsl:attribute name="onclick">window.location.href='/custom/webfilesys/servlet?command=multiUpload';</xsl:attribute>
           </input>
         </td>
       </tr>
@@ -274,7 +274,7 @@
         
         <td class="formButton" align="right">
           <input type="button" resource="button.cancel">
-            <xsl:attribute name="onclick">javascript:window.location.href='/webfilesys/servlet?command=listFiles';</xsl:attribute>
+            <xsl:attribute name="onclick">javascript:window.location.href='/custom/webfilesys/servlet?command=listFiles';</xsl:attribute>
           </input>
         </td>
       </tr>
@@ -282,7 +282,7 @@
     </table>
   </form>
   
-  <img src="/webfilesys/images/bluedot.gif" border="0" width="1" height="1" />
+  <img src="/custom/webfilesys/images/bluedot.gif" border="0" width="1" height="1" />
   
 </body>
 
@@ -294,7 +294,7 @@
 
     <div class="uploadStatusBar">
       <img id="done" width="1" height="20" border="0">
-        <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="css" />/progressbar.gif</xsl:attribute>
+        <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="css" />/progressbar.gif</xsl:attribute>
       </img>
     </div>
 

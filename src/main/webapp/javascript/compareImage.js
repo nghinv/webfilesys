@@ -17,7 +17,7 @@ function compareShowImage(imgPath, clickTarget) {
 	var picture = document.getElementById("picture");
 	picture.style.display = "none";
 	
-	picture.src = "/webfilesys/servlet?command=getFile&filePath=" + encodeURIComponent(imgPath);
+	picture.src = "/custom/webfilesys/servlet?command=getFile&filePath=" + encodeURIComponent(imgPath);
 
 	picture.onload = function () {
 		var picWidth = picture.naturalWidth;
@@ -131,7 +131,7 @@ function sizeCompareImagesToFit() {
 	compImgCont.style.width = picture1Width + "px";
 	
 	const script = document.createElement('script');
-	script.src = "/webfilesys/javascript/imgCompSlider/imgCompSlider.js";
+	script.src = "/custom/webfilesys/javascript/imgCompSlider/imgCompSlider.js";
     document.head.appendChild(script);
 }
 

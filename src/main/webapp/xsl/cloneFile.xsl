@@ -8,7 +8,7 @@
 
 <div class="promptHead" resource="label.cloneFile"></div>
     
-<form accept-charset="utf-8" name="renameForm" id="renameForm" method="get" action="/webfilesys/servlet" style="display:inline;">
+<form accept-charset="utf-8" name="renameForm" id="renameForm" method="get" action="/custom/webfilesys/servlet" style="display:inline;">
   <input type="hidden" name="command" value="cloneFile" />
   <input type="hidden" name="sourceFileName">
     <xsl:attribute name="value"><xsl:value-of select="/cloneFile/sourceFileName" /></xsl:attribute>

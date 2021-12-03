@@ -16,26 +16,26 @@
   
   <title resource="title.folderDiffTree" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/folderDiff/css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/folderDiff/css" />.css</xsl:attribute>
   </link>
 
   <style type="text/css">
     img {vertical-align:middle}
   </style>
   
-  <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/folderDiff/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/folderDiff/language" /></xsl:attribute>
   </script>
   
   <script type="text/javascript">
     function openDiffWin(relativePath)
     {
-        var url = '/webfilesys/servlet?command=diffFromTree&amp;sourceFile=<xsl:value-of select="/folderDiff/sourceAbsolutePath" />' + encodeURIComponent(relativePath) + '&amp;targetFile=<xsl:value-of select="/folderDiff/targetAbsolutePath" />' + encodeURIComponent(relativePath) + '&amp;screenWidth=' + screen.availWidth  + '&amp;screenHeight=' + screen.availHeight;
+        var url = '/custom/webfilesys/servlet?command=diffFromTree&amp;sourceFile=<xsl:value-of select="/folderDiff/sourceAbsolutePath" />' + encodeURIComponent(relativePath) + '&amp;targetFile=<xsl:value-of select="/folderDiff/targetAbsolutePath" />' + encodeURIComponent(relativePath) + '&amp;screenWidth=' + screen.availWidth  + '&amp;screenHeight=' + screen.availHeight;
 
         diffWin = window.open(url,'diffWin','width=' + (screen.width - 20) + ',height=' + (screen.height - 80) + ',scrollbars=yes,resizable=yes,status=no,menubar=no,toolbar=no,location=no,directories=no,screenX=0,screenY=0,left=0,top=0');
         diffWin.focus();
@@ -58,11 +58,11 @@
     
         if (path.charAt(0) == '/')
         {
-            viewPath = '/webfilesys/servlet' + path + relativePath;
+            viewPath = '/custom/webfilesys/servlet' + path + relativePath;
         }
         else
         {
-            viewPath = '/webfilesys/servlet/' + path + relativePath;
+            viewPath = '/custom/webfilesys/servlet/' + path + relativePath;
         }
     
         window.open(viewPath,"_blank","status=yes,toolbar=yes,menubar=yes,location=yes,resizable=yes,scrollbars=yes");

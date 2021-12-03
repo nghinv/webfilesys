@@ -10,7 +10,7 @@
   <xsl:value-of select="/cryptoPrompt/resources/msg[@key='label.decrypt']/@value" />
 </div>
     
-<form accept-charset="utf-8" name="cryptoForm" id="cryptoForm" method="post" action="/webfilesys/servlet" style="display:inline;">
+<form accept-charset="utf-8" name="cryptoForm" id="cryptoForm" method="post" action="/custom/webfilesys/servlet" style="display:inline;">
   <input type="hidden" name="command" value="decrypt" />
   <input type="hidden" name="fileName">
     <xsl:attribute name="value"><xsl:value-of select="/cryptoPrompt/fileName" /></xsl:attribute>
@@ -54,7 +54,7 @@
   </table>
   
   <div id="hourGlass" style="width:64px;height:64px;position:absolute;top:50%;left:50%;margin-left:-32px;margin-top:-32px;background-color:ivory;visibility:hidden;border:1px solid black;">
-    <img src="/webfilesys/images/hourglass.gif" width="32" height="32" border="0" style="padding:8px;" /> 
+    <img src="/custom/webfilesys/images/hourglass.gif" width="32" height="32" border="0" style="padding:8px;" /> 
   </div>
   
 </form>

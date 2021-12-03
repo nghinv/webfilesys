@@ -72,7 +72,7 @@ function loadGoogleMapsAPIScriptCode(googleMapsAPIKey) {
 
 function loadAndShowTrack() {
 	
-    var url = "/webfilesys/servlet?command=gpxTrack&filePath=" + encodeURIComponent(filePath) + "&trackNumber=" + currentTrack;
+    var url = "/custom/webfilesys/servlet?command=gpxTrack&filePath=" + encodeURIComponent(filePath) + "&trackNumber=" + currentTrack;
     
     xmlRequest(url, function(req) {
         if (req.readyState == 4) {
@@ -120,7 +120,7 @@ function loadAndShowTrack() {
 function loadAndShowMultipleGPXFiles() {
 	var filePath = gpxFiles.pop();
 	
-    var url = "/webfilesys/servlet?command=gpxTrack&filePath=" + encodeURIComponent(filePath) + "&trackNumber=0";
+    var url = "/custom/webfilesys/servlet?command=gpxTrack&filePath=" + encodeURIComponent(filePath) + "&trackNumber=0";
     
     xmlRequest(url, function(req) {
         if (req.readyState == 4) {
@@ -143,7 +143,7 @@ function loadAndShowMultipleGPXFiles() {
 
 function loadAndShowWayPoints() {
 	
-    var url = "/webfilesys/servlet?command=gpxWayPoints&filePath=" + encodeURIComponent(filePath);
+    var url = "/custom/webfilesys/servlet?command=gpxWayPoints&filePath=" + encodeURIComponent(filePath);
     
     xmlRequest(url, function(req) {
         if (req.readyState == 4) {
@@ -633,7 +633,7 @@ function showTrackInSlowMotion(trackId) {
 		slowMotionTracks.pop().setMap(null);
 	}
 	
-    var url = "/webfilesys/servlet?command=gpxTrack&filePath=" + encodeURIComponent(filePath) + "&trackNumber=" + trackId;
+    var url = "/custom/webfilesys/servlet?command=gpxTrack&filePath=" + encodeURIComponent(filePath) + "&trackNumber=" + trackId;
     
     xmlRequest(url, function(req) {
         if (req.readyState == 4) {

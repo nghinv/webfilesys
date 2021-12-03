@@ -62,13 +62,13 @@ function removeDir(path) {
             var pathItem = responseXml.getElementsByTagName("parentPath")[0];            
             var parentPath = pathItem.firstChild.nodeValue;
 
-            window.location.href = "/webfilesys/servlet?command=exp&actPath=" + encodeURIComponent(parentPath) + "&expand=" + encodeURIComponent(parentPath) + "&fastPath=true";
+            window.location.href = "/custom/webfilesys/servlet?command=exp&actPath=" + encodeURIComponent(parentPath) + "&expand=" + encodeURIComponent(parentPath) + "&fastPath=true";
         } else {
             customAlert(message, null, function() {
                 var pathItem = responseXml.getElementsByTagName("path")[0]; 
                 if (pathItem) {
                     var path = pathItem.firstChild.nodeValue;
-                    window.location.href = "/webfilesys/servlet?command=exp&actPath=" + encodeURIComponent(path) + "&expand=" + encodeURIComponent(path) + "&fastPath=true";
+                    window.location.href = "/custom/webfilesys/servlet?command=exp&actPath=" + encodeURIComponent(path) + "&expand=" + encodeURIComponent(path) + "&fastPath=true";
                 }           
             });
         }
@@ -77,7 +77,7 @@ function removeDir(path) {
 
 function cancelSearch()
 {
-    url = "/webfilesys/servlet?command=cancelSearch";
+    url = "/custom/webfilesys/servlet?command=cancelSearch";
 
     xmlRequest(url, handleSearchCanceled);
 }
@@ -106,7 +106,7 @@ function createThumbs(path) {
 
 function winCmdLine(path)
 {
-    url = "/webfilesys/servlet?command=winCmdLine&path=" + encodeURIComponent(path);
+    url = "/custom/webfilesys/servlet?command=winCmdLine&path=" + encodeURIComponent(path);
 
     xmlRequest(url, handleCmdLineResult);
 }
@@ -214,7 +214,7 @@ function col(domId)
         }       
     }
     
-    url = "/webfilesys/servlet?command=ajaxCollapse&path=" + urlEncodedPath;
+    url = "/custom/webfilesys/servlet?command=ajaxCollapse&path=" + urlEncodedPath;
 
     xmlRequest(url, dummy);
 }
@@ -305,7 +305,7 @@ function listFiles(id)
 
     var urlEncodedPath = parentDiv.getAttribute("path");
 
-    window.parent.frames[2].location.href = '/webfilesys/servlet?command=listFiles&actpath=' + urlEncodedPath + '&mask=*';
+    window.parent.frames[2].location.href = '/custom/webfilesys/servlet?command=listFiles&actpath=' + urlEncodedPath + '&mask=*';
 
     deselectCurrentDir();
         
@@ -324,9 +324,9 @@ function exp(parentDivId, lastInLevel) {
    
     const urlEncodedPath = parentDiv.getAttribute("path");
 
-    const xmlUrl = "/webfilesys/servlet?command=ajaxExp&path=" + urlEncodedPath + "&lastInLevel=" + lastInLevel;
+    const xmlUrl = "/custom/webfilesys/servlet?command=ajaxExp&path=" + urlEncodedPath + "&lastInLevel=" + lastInLevel;
 
-    const xslUrl = "/webfilesys/xsl/subFolder.xsl";
+    const xslUrl = "/custom/webfilesys/xsl/subFolder.xsl";
 
     if (window.ActiveXObject !== undefined) {
         // MSIE  
@@ -358,7 +358,7 @@ function expMozilla(parentDiv, xmlUrl, xslUrl) {
 			                var xmlDoc = req.responseXML;
 				
 				            if (!xmlDoc) {
-                                window.parent.parent.location.href = '/webfilesys/servlet?command=loginForm';
+                                window.parent.parent.location.href = '/custom/webfilesys/servlet?command=loginForm';
                                 return;
 				            }
 				
@@ -383,13 +383,13 @@ function expMozilla(parentDiv, xmlUrl, xslUrl) {
                             
                             querySubdirs();
                         } else {
-                            window.parent.parent.location.href = '/webfilesys/servlet?command=loginForm';
+                            window.parent.parent.location.href = '/custom/webfilesys/servlet?command=loginForm';
                             return;
 			            }
 			        }
 		        });
 		    } else {
-                window.parent.parent.location.href = '/webfilesys/servlet?command=loginForm';
+                window.parent.parent.location.href = '/custom/webfilesys/servlet?command=loginForm';
 		    }
 		}
 	});
@@ -403,7 +403,7 @@ function expMSIE(parentDiv, xmlUrl, xslUrl)
     xml.async = false;
     if (!xml.load(xmlUrl))
     {
-        window.parent.parent.location.href = '/webfilesys/servlet?command=loginForm';
+        window.parent.parent.location.href = '/custom/webfilesys/servlet?command=loginForm';
 
         return;
     }
@@ -465,7 +465,7 @@ function expJavascriptXslt(parentDiv, xmlUrl, xslUrl) {
                 });		
             } else {
                 alert(resourceBundle["alert.communicationFailure"]);
-                window.parent.parent.location.href = '/webfilesys/servlet?command=loginForm';
+                window.parent.parent.location.href = '/custom/webfilesys/servlet?command=loginForm';
             }
         }
     });
@@ -485,7 +485,7 @@ function querySubdirs() {
 function querySubdirStatus() {
 	if (querySubdirQueue.length > 0) {
 		var queueElem = querySubdirQueue.pop();
-        var ajaxUrl = "/webfilesys/servlet?command=testSubdirExist&path=" + queueElem.path;
+        var ajaxUrl = "/custom/webfilesys/servlet?command=testSubdirExist&path=" + queueElem.path;
         
     	xmlRequest(ajaxUrl, function(req) {
             if (req.readyState == 4) {
@@ -499,9 +499,9 @@ function querySubdirStatus() {
                         		var expColImg = getChildElementsByTagName(linkElem, "IMG")[0];
                         		if (expColImg) {
                         			if (expColImg.src.endsWith("plusMore.gif")) {
-                            			expColImg.src = "/webfilesys/images/branch.gif";
+                            			expColImg.src = "/custom/webfilesys/images/branch.gif";
                         			} else {
-                        				expColImg.src = "/webfilesys/images/branchLast.gif";
+                        				expColImg.src = "/custom/webfilesys/images/branchLast.gif";
                         			}
                         		}
                     		}
@@ -523,7 +523,7 @@ function synchronize(path, domId)
 	deselectFolder();
 	selectFolder(domId);
 
-    url = "/webfilesys/servlet?command=selectSyncFolder&path=" + encodeURIComponent(path);
+    url = "/custom/webfilesys/servlet?command=selectSyncFolder&path=" + encodeURIComponent(path);
 
     xmlRequest(url, selectSyncFolderResult);
 }
@@ -557,7 +557,7 @@ function openSyncWindow()
 {
     deselectFolder();
 
-    syncWin = window.open("/webfilesys/html/waitSync.html?command=syncCompare","syncWin","status=no,toolbar=no,location=no,menu=no,scrollbars=yes,width=700,height=500,resizable=yes,left=10,top=10,screenX=10,screenY=10");
+    syncWin = window.open("/custom/webfilesys/html/waitSync.html?command=syncCompare","syncWin","status=no,toolbar=no,location=no,menu=no,scrollbars=yes,width=700,height=500,resizable=yes,left=10,top=10,screenX=10,screenY=10");
     
     if (!syncWin)
     {
@@ -571,7 +571,7 @@ function openSyncWindow()
 
 function deselectSyncFolders()
 {
-    url = "/webfilesys/servlet?command=selectSyncFolder&cmd=deselect";
+    url = "/custom/webfilesys/servlet?command=selectSyncFolder&cmd=deselect";
     
     xmlRequest(url, deselectSyncFolderResult);
 }
@@ -590,7 +590,7 @@ function deselectSyncFolderResult(req)
 function cancelSynchronize() {
     deselectFolder();
 
-    url = "/webfilesys/servlet?command=selectSyncFolder&cmd=deselect";
+    url = "/custom/webfilesys/servlet?command=selectSyncFolder&cmd=deselect";
 
     xmlRequest(url, function(req) {
         if (req.readyState == 4) {
@@ -636,7 +636,7 @@ function cancelCompare()
 {
     deselectFolder();
 
-    url = "/webfilesys/servlet?command=selectCompFolder&cmd=deselect";
+    url = "/custom/webfilesys/servlet?command=selectCompFolder&cmd=deselect";
 
     xmlRequest(url, function(req) {
         if (req.readyState == 4) {
@@ -660,14 +660,14 @@ function deselectCompFolders() {
 }
 
 function compFolderParms() {
-    centeredDialog('/webfilesys/servlet?command=compFolderParms', '/webfilesys/xsl/compFolderParms.xsl', 340, 325);
+    centeredDialog('/custom/webfilesys/servlet?command=compFolderParms', '/custom/webfilesys/xsl/compFolderParms.xsl', 340, 325);
 }
 
 function openCompWindow()
 {
     deselectFolder();
 
-    compWin = window.open("/webfilesys/servlet?command=blank","compWin","status=no,toolbar=no,location=no,menu=no,scrollbars=yes,width=700,height=500,resizable=yes,left=10,top=10,screenX=10,screenY=10");
+    compWin = window.open("/custom/webfilesys/servlet?command=blank","compWin","status=no,toolbar=no,location=no,menu=no,scrollbars=yes,width=700,height=500,resizable=yes,left=10,top=10,screenX=10,screenY=10");
     document.compParmsForm.target = 'compWin';
     if (document.compParmsForm.treeView.checked) 
     {
@@ -685,9 +685,9 @@ function gotoBookmarkedFolder(encodedPath) {
         var resultItem = responseXml.getElementsByTagName("result")[0];
         var result = resultItem.firstChild.nodeValue;            
         if (result === "true") {
-          	let bookmarkUrl = "/webfilesys/servlet?command=exp&expandPath=" + encodedPath + "&mask=*&fastPath=true"; 
+          	let bookmarkUrl = "/custom/webfilesys/servlet?command=exp&expandPath=" + encodedPath + "&mask=*&fastPath=true"; 
            	if (mobile) {
-           		bookmarkUrl = "/webfilesys/servlet?command=mobile&cmd=folderFileList&absPath=" + encodedPath;
+           		bookmarkUrl = "/custom/webfilesys/servlet?command=mobile&cmd=folderFileList&absPath=" + encodedPath;
            	} 
            	setTimeout(function() { 
            		window.location.href = bookmarkUrl;

@@ -125,7 +125,7 @@ function sendSlideshowVideoParams() {
             customAlert(resourceBundle["slideshowToVideoStarted"] + " " + targetFolder + ".");
                     
             setTimeout(function() {
-                const expUrl = "/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&mask=*&fastPath=true";
+                const expUrl = "/custom/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&mask=*&fastPath=true";
                 window.parent.frames[1].location.href = expUrl;
             } , 4000);
         } else {
@@ -192,7 +192,7 @@ function compare() {
     var outerWindowWidth = screen.availWidth - 2;
     var outerWindowHeight = screen.availHeight - 2;
     
-    var compareWin = window.open("/webfilesys/servlet?command=blank", "compareWin", "scrollbars=no,resizable=yes,status=no,menubar=no,toolbar=no,location=no,directories=no,screenX=0,screenY=0,left=0,top=0,width=" + outerWindowWidth + ",height=" + outerWindowHeight);
+    var compareWin = window.open("/custom/webfilesys/servlet?command=blank", "compareWin", "scrollbars=no,resizable=yes,status=no,menubar=no,toolbar=no,location=no,directories=no,screenX=0,screenY=0,left=0,top=0,width=" + outerWindowWidth + ",height=" + outerWindowHeight);
     
     if (!compareWin) {
     	customAlert(resourceBundle["alert.enablePopups"]);
@@ -269,7 +269,7 @@ function resize() {
 function multiImageCopyMove() {
     if (anySelected()) {
         document.form2.command.value = 'multiImageCopyMove';
-        xmlRequestPost("/webfilesys/servlet", getFormData(document.form2), showCopyResult);
+        xmlRequestPost("/custom/webfilesys/servlet", getFormData(document.form2), showCopyResult);
 	    document.form2.command.value = 'compareImg';
     } else {   
         customAlert(resourceBundle["alert.nofileselected"] + "!");
@@ -374,7 +374,7 @@ function exportGeoData() {
     checkGeoDataExist(
         function() {
             hideHourGlass();
-            window.location.href = "/webfilesys/servlet?command=googleEarthDirPlacemarks";
+            window.location.href = "/custom/webfilesys/servlet?command=googleEarthDirPlacemarks";
         },
         function() {
             hideHourGlass();
@@ -391,7 +391,7 @@ function filesOSMap() {
             var mapWinWidth =  screen.availWidth - 20;
             var mapWinHeight = screen.availHeight - 80;
 
-            var mapWin = window.open('/webfilesys/servlet?command=osMapFiles&path=' + encodeURIComponent(pathForScript),'mapWin','status=no,toolbar=no,location=no,menu=no,width=' + mapWinWidth + ',height=' + mapWinHeight + ',resizable=yes,left=2,top=2,screenX=2,screenY=2');
+            var mapWin = window.open('/custom/webfilesys/servlet?command=osMapFiles&path=' + encodeURIComponent(pathForScript),'mapWin','status=no,toolbar=no,location=no,menu=no,width=' + mapWinWidth + ',height=' + mapWinHeight + ',resizable=yes,left=2,top=2,screenX=2,screenY=2');
             mapWin.focus();
         },
         function() {
@@ -408,7 +408,7 @@ function googleMapAllPics() {
             var mapWinWidth =  screen.availWidth - 20;
             var mapWinHeight = screen.availHeight - 80;
             	
-            var mapWin = window.open('/webfilesys/servlet?command=googleMapMulti', 'mapWin', 'status=no,toolbar=no,location=no,menu=no,width=' + mapWinWidth + ',height=' + mapWinHeight + ',resizable=yes,left=2,top=2,screenX=2,screenY=2');
+            var mapWin = window.open('/custom/webfilesys/servlet?command=googleMapMulti', 'mapWin', 'status=no,toolbar=no,location=no,menu=no,width=' + mapWinWidth + ',height=' + mapWinHeight + ',resizable=yes,left=2,top=2,screenX=2,screenY=2');
 
             if (!mapWin) {
                 customAlert(resourceBundle["alert.enablePopups"]);
@@ -566,7 +566,7 @@ function setPictureDimensions(pic) {
 
     var picFileName = pixDim.getAttribute("picFileName");
 
-    var url = "/webfilesys/servlet?command=getPicDimensions&fileName=" +  encodeURIComponent(picFileName);
+    var url = "/custom/webfilesys/servlet?command=getPicDimensions&fileName=" +  encodeURIComponent(picFileName);
 
     var picIsLink = pixDim.getAttribute("picIsLink");
     if (picIsLink) {
@@ -697,7 +697,7 @@ function picturePopupInFrame(filePath, picIdx) {
     if (pic) {
     	var origWidth = pic.getAttribute("origWidth");
     	var origHeight = pic.getAttribute("origHeight");
-        showPicturePopup('/webfilesys/servlet?command=getFile&filePath=' + encodeURIComponent(filePath), origWidth, origHeight);
+        showPicturePopup('/custom/webfilesys/servlet?command=getFile&filePath=' + encodeURIComponent(filePath), origWidth, origHeight);
     }
 }
 
@@ -946,7 +946,7 @@ function showImgFromThumb(imgPath) {
 	    return;
 	}
     var randNum = (new Date()).getTime();
-    picWin = window.open('/webfilesys/servlet?command=showImg&imgname=' + encodeURIComponent(imgPath), 'picWin' + randNum, 'status=no,toolbar=no,location=no,menu=no,width=400,height=300,resizable=yes,left=1,top=1,screenX=1,screenY=1');
+    picWin = window.open('/custom/webfilesys/servlet?command=showImg&imgname=' + encodeURIComponent(imgPath), 'picWin' + randNum, 'status=no,toolbar=no,location=no,menu=no,width=400,height=300,resizable=yes,left=1,top=1,screenX=1,screenY=1');
     picWin.focus();
 }
 

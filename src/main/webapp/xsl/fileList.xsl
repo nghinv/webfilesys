@@ -17,45 +17,45 @@
 <meta http-equiv="expires" content="0" />
 <meta http-equiv="Content-Type" name="text/html; charset=UTF-8" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/fileIcons.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/fileIcons.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/fileList/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/fileList/css" />.css</xsl:attribute>
 </link>
 
 <xsl:if test="not(fileList/browserXslEnabled)">
-  <script src="/webfilesys/javascript/ajaxslt/util.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/xmltoken.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/dom.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/xpath.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/xslt.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/util.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/xmltoken.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/dom.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/xpath.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/xslt.js" type="text/javascript"></script>
 </xsl:if>
 
-<script src="/webfilesys/javascript/jquery/jquery.min.js"></script>
+<script src="/custom/webfilesys/javascript/jquery/jquery.min.js"></script>
 
-<script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/viewMode.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/ajax.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/contextMenuCommon.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/fileContextMenu.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/linkContextMenu.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/contextMenuMouse.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/jsFileMenu.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/keyFileList.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/viewMode.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/ajax.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/contextMenuCommon.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/fileContextMenu.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/linkContextMenu.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/contextMenuMouse.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/jsFileMenu.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/keyFileList.js" type="text/javascript"></script>
 <xsl:if test="/fileList/pollInterval">
-  <script src="/webfilesys/javascript/pollForFilesysChanges.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/pollForFilesysChanges.js" type="text/javascript"></script>
 </xsl:if>
-<script src="/webfilesys/javascript/crypto.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/videoAudio.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/previewFile.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/crypto.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/videoAudio.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/previewFile.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
 <script type="text/javascript">
-  <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/fileList/language" /></xsl:attribute>
+  <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/fileList/language" /></xsl:attribute>
 </script>
 
 <script language="javascript">
@@ -129,7 +129,7 @@
   </xsl:if>
   
   function uploadParms() {
-      window.location.href='/webfilesys/servlet?command=uploadParms&amp;actpath='+encodeURIComponent('<xsl:value-of select="/fileList/menuPath" />');  
+      window.location.href='/custom/webfilesys/servlet?command=uploadParms&amp;actpath='+encodeURIComponent('<xsl:value-of select="/fileList/menuPath" />');  
   }
   
   function addBookmark() {
@@ -253,7 +253,7 @@
   <!-- tabs end -->
   
 
-  <form accept-charset="utf-8" name="sortform" method="get" action="/webfilesys/servlet" style="padding:0px;margin:0px;">
+  <form accept-charset="utf-8" name="sortform" method="get" action="/custom/webfilesys/servlet" style="padding:0px;margin:0px;">
     <input type="hidden" name="command" value="listFiles" />
   
     <table class="fileListFilterSort2">
@@ -355,7 +355,7 @@
     </table>    
   </form>
 
-  <form accept-charset="utf-8" name="form1" method="post" action="/webfilesys/servlet" style="padding:0px;margin:0px;">
+  <form accept-charset="utf-8" name="form1" method="post" action="/custom/webfilesys/servlet" style="padding:0px;margin:0px;">
 
     <input type="hidden" name="command" value="multiFileOp" />
 
@@ -377,7 +377,7 @@
           </th>
           <th class="fileList fileListIcon">
             <img border="0" width="16" height="16">
-              <xsl:attribute name="src">/webfilesys/images/space.gif</xsl:attribute>
+              <xsl:attribute name="src">/custom/webfilesys/images/space.gif</xsl:attribute>
             </img>
           </th>
           <th class="fileList fileListName">
@@ -396,7 +396,7 @@
             <xsl:if test="/fileList/sortBy!='5'">
               <a class="listHead" href="javascript:setSortField('5')" resource="label.lastModified" />
             </xsl:if>
-            <a href="/webfilesys/servlet?command=switchFileAgeColoring" class="fileAgeColor">
+            <a href="/custom/webfilesys/servlet?command=switchFileAgeColoring" class="fileAgeColor">
               <span titleResource="switchfileAgeColoring">
                 <xsl:if test="/fileList/fileAgeColoring">
                   <xsl:attribute name="class">icon-font icon-minus</xsl:attribute>
@@ -450,7 +450,7 @@
               <xsl:attribute name="class">fileListIcon</xsl:attribute>
               <xsl:if test="@icon">
                 <img border="0" width="16" height="16">
-                  <xsl:attribute name="src">/webfilesys/icons/<xsl:value-of select="@icon" /></xsl:attribute>
+                  <xsl:attribute name="src">/custom/webfilesys/icons/<xsl:value-of select="@icon" /></xsl:attribute>
                 </img>
               </xsl:if>
               <xsl:if test="@iconFont">
@@ -622,7 +622,7 @@
               </input> 
         
               <input type="button" resource="button.pasteLink" id="pasteLinkButton">
-                <xsl:attribute name="onclick">javascript:window.location.href='/webfilesys/servlet?command=pasteLinks';</xsl:attribute>
+                <xsl:attribute name="onclick">javascript:window.location.href='/custom/webfilesys/servlet?command=pasteLinks';</xsl:attribute>
                 <xsl:if test="not(/fileList/copyOperation) or (/fileList/clipBoardEmpty)">
                   <xsl:attribute name="style">display:none</xsl:attribute>
                 </xsl:if>

@@ -14,18 +14,18 @@
 
   <meta http-equiv="expires" content="0" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/fileComments/css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/fileComments/css" />.css</xsl:attribute>
   </link>
 
   <title resource="label.commentList"></title>
 
-  <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/fileComments/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/fileComments/language" /></xsl:attribute>
   </script>
 
 <script language="javascript">
@@ -41,7 +41,7 @@
   {  
       if (confirm(resourceBundle["confirm.delcomments"]))
       { 
-          window.location.href='/webfilesys/servlet?command=delComments&amp;actPath=<xsl:value-of select="/fileComments/encodedPath" />';
+          window.location.href='/custom/webfilesys/servlet?command=delComments&amp;actPath=<xsl:value-of select="/fileComments/encodedPath" />';
       }
   }
 </script>
@@ -59,7 +59,7 @@
     </xsl:if>
   </div>
 
-  <form accept-charset="utf-8" name="form1" method="post" action="/webfilesys/servlet">
+  <form accept-charset="utf-8" name="form1" method="post" action="/custom/webfilesys/servlet">
   
     <input type="hidden" name="command" value="addComment" />
     
@@ -143,7 +143,7 @@
 
             <xsl:if test="/fileComments/mobile">
               <input type="button" resource="button.return">
-                <xsl:attribute name="onclick">window.location.href='/webfilesys/servlet?command=mobile&amp;cmd=folderFileList';</xsl:attribute>
+                <xsl:attribute name="onclick">window.location.href='/custom/webfilesys/servlet?command=mobile&amp;cmd=folderFileList';</xsl:attribute>
               </input>
             </xsl:if>
             <xsl:if test="not(/fileComments/mobile)">

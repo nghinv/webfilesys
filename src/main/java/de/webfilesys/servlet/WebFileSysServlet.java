@@ -321,7 +321,7 @@ public class WebFileSysServlet extends ServletBase
 	
 	static boolean initialized = false;
 	
-	private static int REQUEST_PATH_LENGTH = "/webfilesys/servlet".length();
+	private static int REQUEST_PATH_LENGTH = "/custom/webfilesys/servlet".length();
 	
     public void init(ServletConfig config)
     throws ServletException
@@ -2571,7 +2571,7 @@ public class WebFileSysServlet extends ServletBase
 
     	session.invalidate();
 
-        String logoutPage = "/webfilesys/servlet";
+        String logoutPage = "/custom/webfilesys/servlet";
 
         if (WebFileSys.getInstance().getLogoutURL() != null)
         {
@@ -3011,7 +3011,7 @@ public class WebFileSysServlet extends ServletBase
 
 		output.println("<script language=\"javascript\">");
 
-		output.println("  top.location.href='/webfilesys/servlet?command=loginForm';"); 
+		output.println("  top.location.href='/custom/webfilesys/servlet?command=loginForm';"); 
 
 		output.println("</script>");
 

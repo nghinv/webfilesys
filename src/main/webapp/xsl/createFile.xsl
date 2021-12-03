@@ -8,7 +8,7 @@
 
 <div class="promptHead" resource="label.createfile"></div>
     
-<form accept-charset="utf-8" name="mkfileForm" id="mkfileForm" method="get" action="/webfilesys/servlet" style="display:inline;">
+<form accept-charset="utf-8" name="mkfileForm" id="mkfileForm" method="get" action="/custom/webfilesys/servlet" style="display:inline;">
   <input type="hidden" name="command" value="mkfile" />
   <input type="hidden" name="actpath">
     <xsl:attribute name="value"><xsl:value-of select="/createFile/baseFolder" /></xsl:attribute>

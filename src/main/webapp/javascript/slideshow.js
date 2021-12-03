@@ -8,7 +8,7 @@ var first = true;
    
 var stopped = false;
     
-var prefetchSrc = '/webfilesys/images/space.gif';
+var prefetchSrc = '/custom/webfilesys/images/space.gif';
     
 var prefetchWidth = 1;
     
@@ -55,7 +55,7 @@ function enableNextButton() {
     if (!fadeRunning) {
         var pauseGoImg = document.getElementById('pauseGo');
         if (pauseGoImg) {
-            pauseGoImg.src = '/webfilesys/images/next.png';
+            pauseGoImg.src = '/custom/webfilesys/images/next.png';
             pauseGoImg.title = pauseGoTitle;
         }
         document.getElementById('stopAndGoLink').href = 'javascript:stopAndGo()';
@@ -80,11 +80,11 @@ function loadImage() {
         document.getElementById('stopAndGoLink').href = 'javascript:void(0)';
         
         var pauseGoImg = document.getElementById('pauseGo');
-        pauseGoImg.src = '/webfilesys/images/pause.gif';
+        pauseGoImg.src = '/custom/webfilesys/images/pause.gif';
         pauseGoImg.title = 'loading next picture ...';
     }
 
-    url = '/webfilesys/servlet?command=slideShowImage&imageIdx=' + imageIdx + '&windowWidth=' + getWinWidth() + '&windowHeight=' + getWinHeight();
+    url = '/custom/webfilesys/servlet?command=slideShowImage&imageIdx=' + imageIdx + '&windowWidth=' + getWinWidth() + '&windowHeight=' + getWinHeight();
 
     xmlRequest(url, showImage);
 }
@@ -119,13 +119,13 @@ function showImage(req) {
                     
                 prefetchLoading = true;
                     
-                prefetchSrc = '/webfilesys/servlet?command=getFile&filePath=' + encodeURIComponent(imagePath) + '&cached=true';
+                prefetchSrc = '/custom/webfilesys/servlet?command=getFile&filePath=' + encodeURIComponent(imagePath) + '&cached=true';
 
                 prefetchImg.src = prefetchSrc;
                     
                 imageElement.style.visibility = 'hidden';
 
-                imageElement.src = '/webfilesys/images/space.gif';
+                imageElement.src = '/custom/webfilesys/images/space.gif';
 
                 imageElement.width = 1;
                     
@@ -195,7 +195,7 @@ function stopAndGo() {
         timeout = window.setTimeout('loadImage()', 1000);
 
         if (pauseGoImg) {
-            pauseGoImg.src = '/webfilesys/images/pause.png';
+            pauseGoImg.src = '/custom/webfilesys/images/pause.png';
 
             pauseGoImg.title = pauseTitle;            
         }
@@ -205,7 +205,7 @@ function stopAndGo() {
         clearTimeout(timeout);
         
         if (pauseGoImg) {
-            pauseGoImg.src = '/webfilesys/images/go.png';
+            pauseGoImg.src = '/custom/webfilesys/images/go.png';
             
             pauseGoImg.title = continueTitle;            
         }
@@ -215,7 +215,7 @@ function stopAndGo() {
 }
     
 function loadImageIgnorePrefetch() {
-    url = '/webfilesys/servlet?command=slideShowImage&imageIdx=' + imageIdx + '&windowWidth=' + getWinWidth() + '&windowHeight=' + getWinHeight();
+    url = '/custom/webfilesys/servlet?command=slideShowImage&imageIdx=' + imageIdx + '&windowWidth=' + getWinWidth() + '&windowHeight=' + getWinHeight();
 
     xmlRequest(url, showImageNoPrefetch);
 }
@@ -251,7 +251,7 @@ function showImageNoPrefetch(req) {
 				    }
 
 				    alternateImg.style.visibility = 'hidden';
-			        alternateImg.src = '/webfilesys/images/space.gif';
+			        alternateImg.src = '/custom/webfilesys/images/space.gif';
                     alternateImg.width = 1;
                     alternateImg.heigth = 1;
 		            alternateImg.style.opacity = 1;
@@ -260,13 +260,13 @@ function showImageNoPrefetch(req) {
 			    imageElement.style.top = Math.round(((getWinHeight() - displayHeight) / 2)) + 'px';
 				imageElement.style.left = Math.round(((getWinWidth() - displayWidth) / 2)) + 'px';
                     
-                imageElement.src = '/webfilesys/images/space.gif';
+                imageElement.src = '/custom/webfilesys/images/space.gif';
 
                 imageElement.width = 1;
                     
                 imageElement.heigth = 1;
                     
-                imageElement.src = '/webfilesys/servlet?command=getFile&filePath=' + encodeURIComponent(imagePath) + '&cached=true';
+                imageElement.src = '/custom/webfilesys/servlet?command=getFile&filePath=' + encodeURIComponent(imagePath) + '&cached=true';
                     
                 imageElement.width = displayWidth;
                     
@@ -285,7 +285,7 @@ function showImageNoPrefetch(req) {
                 } 
                     
                 first = true;
-                prefetchSrc = '/webfilesys/images/space.gif';
+                prefetchSrc = '/custom/webfilesys/images/space.gif';
             }
         }
     }

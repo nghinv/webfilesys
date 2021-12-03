@@ -8,19 +8,19 @@
     <html>
       <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
-        <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+        <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
         <link rel="stylesheet" type="text/css">
-          <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/calendar/css" />.css</xsl:attribute>
+          <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/calendar/css" />.css</xsl:attribute>
         </link>
 
-        <link rel="stylesheet" type="text/css" href="/webfilesys/styles/calendar.css" />
+        <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/calendar.css" />
 	  
-        <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-        <script src="/webfilesys/javascript/sunburstChart.js" type="text/javascript"></script>
-        <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-        <script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-        <script src="/webfilesys/javascript/appointment/alarm.js" type="text/javascript"></script>
+        <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+        <script src="/custom/webfilesys/javascript/sunburstChart.js" type="text/javascript"></script>
+        <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+        <script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+        <script src="/custom/webfilesys/javascript/appointment/alarm.js" type="text/javascript"></script>
 	  
 	<script type="text/javascript">  
 	
@@ -226,11 +226,11 @@
 	    <div id="titleBox" style="position:absolute;left:800px;top:60px;width:150px;height:30px;color:#000000;font-family:Arial,Helvetica;font-size:12px;border:1px solid #a0a0a0;padding:10px;visibility:hidden"></div>
 	  
 	    <a id="prevYearLink" class="calendarYearLink calendarPrevYearLink">
-	      <xsl:attribute name="href">/webfilesys/servlet?command=calendar&amp;year=<xsl:value-of select="/calendar/prevYear" /></xsl:attribute>
+	      <xsl:attribute name="href">/custom/webfilesys/servlet?command=calendar&amp;year=<xsl:value-of select="/calendar/prevYear" /></xsl:attribute>
 	      <xsl:value-of select="/calendar/resources/msg[@key='calendar.prevYear']/@value" />
 	    </a>  
 	    <a id="nextYearLink" class="calendarYearLink calendarNextYearLink">
-	      <xsl:attribute name="href">/webfilesys/servlet?command=calendar&amp;year=<xsl:value-of select="/calendar/nextYear" /></xsl:attribute>
+	      <xsl:attribute name="href">/custom/webfilesys/servlet?command=calendar&amp;year=<xsl:value-of select="/calendar/nextYear" /></xsl:attribute>
 	      <xsl:value-of select="/calendar/resources/msg[@key='calendar.nextYear']/@value" />
 	    </a>  
       </body>
@@ -252,7 +252,7 @@
 	
 	var monthName = monthMap[<xsl:value-of select="@id" />];
 	
-	var monthDetailLink = '/webfilesys/servlet?command=calendar&amp;cmd=month&amp;year=<xsl:value-of select="/calendar/@year" />&amp;month=<xsl:value-of select="@id" />';
+	var monthDetailLink = '/custom/webfilesys/servlet?command=calendar&amp;cmd=month&amp;year=<xsl:value-of select="/calendar/@year" />&amp;month=<xsl:value-of select="@id" />';
 	
     shellSector(shellSectorStartAngle, shellSectorEndAngle, 
 	            monthColor, 

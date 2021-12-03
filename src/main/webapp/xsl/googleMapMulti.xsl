@@ -14,25 +14,25 @@
 
   <meta http-equiv="expires" content="0" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/geoData/css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/geoData/css" />.css</xsl:attribute>
   </link>
   
   <title>
     WebFileSys google map
   </title>
 
-  <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
 
-  <script type="text/javascript" src="/webfilesys/javascript/geoMap.js"></script>
-  <script type="text/javascript" src="/webfilesys/javascript/ajaxCommon.js"></script>
-  <script type="text/javascript" src="/webfilesys/javascript/util.js"></script>
+  <script type="text/javascript" src="/custom/webfilesys/javascript/geoMap.js"></script>
+  <script type="text/javascript" src="/custom/webfilesys/javascript/ajaxCommon.js"></script>
+  <script type="text/javascript" src="/custom/webfilesys/javascript/util.js"></script>
   
-  <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/geoData/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/geoData/language" /></xsl:attribute>
   </script>
 
   <script language="javascript">

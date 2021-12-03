@@ -9,7 +9,7 @@ if (typeof String.prototype.endsWithIgnoreCase != 'function') {
 
 function playVideo(videoFilePath) {
 
-    var videoUrl = "/webfilesys/servlet?command=getFile&filePath=" + encodeURIComponent(videoFilePath);
+    var videoUrl = "/custom/webfilesys/servlet?command=getFile&filePath=" + encodeURIComponent(videoFilePath);
 
     var videoType = "mp4";
     
@@ -24,7 +24,7 @@ function playVideo(videoFilePath) {
     videoCont.setAttribute("class", "videoCont");
     
     var closeButton = document.createElement("img");
-    closeButton.setAttribute("src", "/webfilesys/images/winClose.gif");
+    closeButton.setAttribute("src", "/custom/webfilesys/images/winClose.gif");
     closeButton.setAttribute("class", "closeButton");
     closeButton.setAttribute("onclick", "destroyVideo()");
     videoCont.appendChild(closeButton);
@@ -142,7 +142,7 @@ function setVideoDimensions(pic) {
 
     var picFileName = pixDim.getAttribute("picFileName");
 
-    var url = "/webfilesys/servlet?command=video&cmd=getVideoDimensions&fileName=" +  encodeURIComponent(picFileName);
+    var url = "/custom/webfilesys/servlet?command=video&cmd=getVideoDimensions&fileName=" +  encodeURIComponent(picFileName);
 
     var picIsLink = pixDim.getAttribute("picIsLink");
     if (picIsLink) {
@@ -278,7 +278,7 @@ function multiVideoFunction() {
 function multiVideoCopyMove() {
     if (anySelected()) {
         document.form2.command.value = 'multiImageCopyMove';
-        xmlRequestPost("/webfilesys/servlet", getFormData(document.form2), showCopyResult);
+        xmlRequestPost("/custom/webfilesys/servlet", getFormData(document.form2), showCopyResult);
 	    document.form2.command.value = '';
         resetSelected();
     } else {   
@@ -310,7 +310,7 @@ function multiVideoConcat() {
     	showHourGlass();
 	    document.form2.command.value = 'multiVideoConcat';
 	    
-	    xmlRequestPost("/webfilesys/servlet", getFormData(document.form2), function (req) {
+	    xmlRequestPost("/custom/webfilesys/servlet", getFormData(document.form2), function (req) {
 	        if (req.readyState == 4) {
 	            if (req.status == 200) {
 	                var success = req.responseXML.getElementsByTagName("success")[0];
@@ -324,7 +324,7 @@ function multiVideoConcat() {
                         customAlert(resourceBundle["videoConcatStarted"] + " " + targetFolder + ".");
                         
                         setTimeout(function() {
-                        	parent.parent.frames[1].location.href = "/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&expand=" + encodeURIComponent(targetPath) + "&fastPath=true";
+                        	parent.parent.frames[1].location.href = "/custom/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&expand=" + encodeURIComponent(targetPath) + "&fastPath=true";
                         }, 6000);
 	                } else {
 		                var item = req.responseXML.getElementsByTagName("errorCode")[0];
@@ -370,7 +370,7 @@ function multiVideoJoinParams() {
 function sendConcatForm() {
 	showHourGlass();
     
-    xmlRequestPost("/webfilesys/servlet", getFormData(document.form1), function (req) {
+    xmlRequestPost("/custom/webfilesys/servlet", getFormData(document.form1), function (req) {
         if (req.readyState == 4) {
             if (req.status == 200) {
                 var success = req.responseXML.getElementsByTagName("success")[0];
@@ -384,7 +384,7 @@ function sendConcatForm() {
                     customAlert(resourceBundle["videoConcatStarted"] + " " + targetFolder + ".");
                     
                     setTimeout(function() {
-                    	parent.parent.frames[1].location.href = "/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&expand=" + encodeURIComponent(targetPath) + "&fastPath=true";
+                    	parent.parent.frames[1].location.href = "/custom/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&expand=" + encodeURIComponent(targetPath) + "&fastPath=true";
                     }, 6000);
                 } else {
 	                var item = req.responseXML.getElementsByTagName("errorCode")[0];
@@ -407,7 +407,7 @@ function multiVideoDeshake() {
     	showHourGlass();
 	    document.form2.command.value = 'multiVideoDeshake';
 	    
-	    xmlRequestPost("/webfilesys/servlet", getFormData(document.form2), function (req) {
+	    xmlRequestPost("/custom/webfilesys/servlet", getFormData(document.form2), function (req) {
 	        if (req.readyState == 4) {
 	            if (req.status == 200) {
 	                var success = req.responseXML.getElementsByTagName("success")[0];
@@ -421,7 +421,7 @@ function multiVideoDeshake() {
                         customAlert(resourceBundle["videoDeshakeStarted"] + " " + targetFolder + ".");
                         
                         setTimeout(function() {
-                        	parent.parent.frames[1].location.href = "/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&expand=" + encodeURIComponent(targetPath) + "&fastPath=true";
+                        	parent.parent.frames[1].location.href = "/custom/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&expand=" + encodeURIComponent(targetPath) + "&fastPath=true";
                         }, 6000);
 	                } else {
 	                    customAlert(resourceBundle["errorVideoDeshake"]);
@@ -468,7 +468,7 @@ function playVideoMaxSize(videoFilePath, videoFileName, isLink) {
     	return;
     }
 	
-    var url = "/webfilesys/servlet?command=video&cmd=getVideoDimensions&fileName=" +  encodeURIComponent(videoFileName);
+    var url = "/custom/webfilesys/servlet?command=video&cmd=getVideoDimensions&fileName=" +  encodeURIComponent(videoFileName);
 
     if (isLink) {
     	url = url + "&link=true";
@@ -544,12 +544,12 @@ function playVideoMaxSize(videoFilePath, videoFileName, isLink) {
                 videoCont.style.height = (scaledHeight + 40) + "px";
                 
                 var closeButton = document.createElement("img");
-                closeButton.setAttribute("src", "/webfilesys/images/winClose.gif");
+                closeButton.setAttribute("src", "/custom/webfilesys/images/winClose.gif");
                 closeButton.setAttribute("class", "closeButton");
                 closeButton.setAttribute("onclick", "destroyVideo()");
                 videoCont.appendChild(closeButton);
                 
-                var videoUrl = "/webfilesys/servlet?command=getFile&filePath=" + encodeURIComponent(videoFilePath);
+                var videoUrl = "/custom/webfilesys/servlet?command=getFile&filePath=" + encodeURIComponent(videoFilePath);
                 
                 var videoElem = document.createElement("video");
                 videoElem.setAttribute("autobuffer", "autobuffer");
@@ -617,7 +617,7 @@ function sendEditConvertForm() {
         return;
     }
 
-    xmlRequestPost("/webfilesys/servlet", getFormData(document.form1), function(req) {
+    xmlRequestPost("/custom/webfilesys/servlet", getFormData(document.form1), function(req) {
         if (req.readyState == 4) {
             if (req.status == 200) {
                 var successItem = req.responseXML.getElementsByTagName("success")[0];            
@@ -633,7 +633,7 @@ function sendEditConvertForm() {
                     customAlert(resourceBundle["videoConversionStarted"] + " " + targetFolder + ".");
                     
                     setTimeout(function() {
-    	                var expUrl = "/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&mask=*&fastPath=true";
+    	                var expUrl = "/custom/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&mask=*&fastPath=true";
     	                window.parent.frames[1].location.href = expUrl;
                     } , 4000);
                     
@@ -650,7 +650,7 @@ function sendEditConvertForm() {
 }
 
 function sendTextOnVideoForm() {
-    xmlRequestPost("/webfilesys/servlet", getFormData(document.textOnVideoForm), function(req) {
+    xmlRequestPost("/custom/webfilesys/servlet", getFormData(document.textOnVideoForm), function(req) {
         if (req.readyState == 4) {
             if (req.status == 200) {
                 var successItem = req.responseXML.getElementsByTagName("success")[0];            
@@ -666,7 +666,7 @@ function sendTextOnVideoForm() {
                     customAlert(resourceBundle["textOnVideoStarted"] + " " + targetFolder + ".");
                     
                     setTimeout(function() {
-    	                var expUrl = "/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&mask=*&fastPath=true";
+    	                var expUrl = "/custom/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&mask=*&fastPath=true";
     	                window.parent.frames[1].location.href = expUrl;
                     } , 4000);
                     
@@ -702,7 +702,7 @@ function sendFadeAudioForm() {
 		}
 	}
 
-	xmlRequestPost("/webfilesys/servlet", getFormData(document.fadeAudioForm), function(req) {
+	xmlRequestPost("/custom/webfilesys/servlet", getFormData(document.fadeAudioForm), function(req) {
         if (req.readyState == 4) {
             if (req.status == 200) {
                 var successItem = req.responseXML.getElementsByTagName("success")[0];            
@@ -718,7 +718,7 @@ function sendFadeAudioForm() {
                     customAlert(resourceBundle["videoFadeAudioStarted"] + " " + targetFolder + ".");
                     
                     setTimeout(function() {
-    	                var expUrl = "/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&mask=*&fastPath=true";
+    	                var expUrl = "/custom/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&mask=*&fastPath=true";
     	                window.parent.frames[1].location.href = expUrl;
                     } , 4000);
                     
@@ -754,7 +754,7 @@ function sendExtractVideoFrameForm() {
         return;
     }
 
-    xmlRequestPost("/webfilesys/servlet", getFormData(document.form1), function(req) {
+    xmlRequestPost("/custom/webfilesys/servlet", getFormData(document.form1), function(req) {
         if (req.readyState == 4) {
             if (req.status == 200) {
                 var successItem = req.responseXML.getElementsByTagName("success")[0];            
@@ -770,7 +770,7 @@ function sendExtractVideoFrameForm() {
                     customAlert(resourceBundle["videoFrameExtractionStarted"] + " " + targetFolder + ".");
                     
                     setTimeout(function() {
-                    	parent.parent.frames[1].location.href = "/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&expand=" + encodeURIComponent(targetPath) + "&fastPath=true&viewMode=2";
+                    	parent.parent.frames[1].location.href = "/custom/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&expand=" + encodeURIComponent(targetPath) + "&fastPath=true&viewMode=2";
                     }, 5000);
                 } else {
                     var messageItem = req.responseXML.getElementsByTagName("message")[0];            
@@ -842,13 +842,13 @@ function videoEditEndPreview() {
 }
 
 function fetchPreviewFrame(previewImg, hour, min, sec, callBack) {
-    previewImg.src = "/webfilesys/images/space.gif";
+    previewImg.src = "/custom/webfilesys/images/space.gif";
     
     var videoFileName = document.getElementById("videoFileName").value;
     var videoWidth = document.getElementById("videoWidth").value;
     var videoHeight = document.getElementById("videoHeight").value;
     
-    previewImgUrl = "/webfilesys/servlet?command=video&cmd=previewFrame&videoFile=" + videoFileName + "&videoWidth=" + videoWidth + "&videoHeight=" + videoHeight + "&hour=" + hour + "&min=" + min + "&sec=" + sec;
+    previewImgUrl = "/custom/webfilesys/servlet?command=video&cmd=previewFrame&videoFile=" + videoFileName + "&videoWidth=" + videoWidth + "&videoHeight=" + videoHeight + "&hour=" + hour + "&min=" + min + "&sec=" + sec;
 
     previewImg.src = previewImgUrl;
 
@@ -905,7 +905,7 @@ function createVideoTimeOptions(selectBox, minVal, maxVal, preselectVal) {
 }
                 
 function addAudioToVideo(videoFilePath) {
-    var url = "/webfilesys/servlet?command=video&cmd=addAudioToVideo&videoFilePath=" +  encodeURIComponent(videoFilePath);
+    var url = "/custom/webfilesys/servlet?command=video&cmd=addAudioToVideo&videoFilePath=" +  encodeURIComponent(videoFilePath);
 
 	xmlRequest(url, function(req) {
         if (req.readyState == 4) {
@@ -925,7 +925,7 @@ function addAudioToVideo(videoFilePath) {
                     customAlert(resourceBundle["addAudioToVideoStarted"] + " " + targetFolder + ".");
                     
                     setTimeout(function() {
-    	                var expUrl = "/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&mask=*&fastPath=true";
+    	                var expUrl = "/custom/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(targetPath) + "&mask=*&fastPath=true";
     	                window.parent.frames[1].location.href = expUrl;
                     } , 4000);
                 }

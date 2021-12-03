@@ -15,10 +15,10 @@
 
 <meta http-equiv="expires" content="0" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/folderTree/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/folderTree/css" />.css</xsl:attribute>
 </link>
 
 <script language="javascript">
@@ -33,12 +33,12 @@
   
   function expandFolder(path) 
   {
-      window.location.href = '/webfilesys/servlet?command=admin&amp;cmd=selectDocRootExp&amp;expand=' + encodeURIComponent(path);
+      window.location.href = '/custom/webfilesys/servlet?command=admin&amp;cmd=selectDocRootExp&amp;expand=' + encodeURIComponent(path);
   }
 
   function collapseFolder(path) 
   {
-      window.location.href = '/webfilesys/servlet?command=admin&amp;cmd=selectDocRootCol&amp;collapse=' + encodeURIComponent(path);
+      window.location.href = '/custom/webfilesys/servlet?command=admin&amp;cmd=selectDocRootCol&amp;collapse=' + encodeURIComponent(path);
   }
   
   function selectDocRoot(path)
@@ -82,8 +82,8 @@
 
 <xsl:template name="computer" match="computer"> 
 
-  <img src="/webfilesys/images/space.gif" border="0" width="12" height="17" />
-  <img src="/webfilesys/images/computer.gif" border="0" width="17" height="14" />
+  <img src="/custom/webfilesys/images/space.gif" border="0" width="12" height="17" />
+  <img src="/custom/webfilesys/images/computer.gif" border="0" width="17" height="14" />
   <a class="dirtree">
     <xsl:value-of select="@name" />
   </a>
@@ -106,12 +106,12 @@
 
           <xsl:if test="position()=last()">
             <img src="" border="0" width="15" height="17">
-              <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/minusLast.gif</xsl:attribute>
+              <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/minusLast.gif</xsl:attribute>
             </img>
           </xsl:if>
           <xsl:if test="position()!=last()">
             <img src="" border="0" width="15" height="17">
-              <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/minusMore.gif</xsl:attribute>
+              <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/minusMore.gif</xsl:attribute>
             </img>
           </xsl:if>
         </a>
@@ -126,12 +126,12 @@
 
             <xsl:if test="position()=last()">
               <img src="" border="0" width="15" height="17">
-                <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/plusLast.gif</xsl:attribute>
+                <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/plusLast.gif</xsl:attribute>
               </img>
             </xsl:if>
             <xsl:if test="position()!=last()">
               <img src="" border="0" width="15" height="17">
-                <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/plusMore.gif</xsl:attribute>
+                <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="/folderTree/css" />/plusMore.gif</xsl:attribute>
               </img>
             </xsl:if>
           </a>
@@ -139,17 +139,17 @@
         </xsl:if>
         <xsl:if test="@leaf">
           <xsl:if test="position()=last()">
-            <img src="/webfilesys/images/branchLast.gif" border="0" width="15" height="17" />
+            <img src="/custom/webfilesys/images/branchLast.gif" border="0" width="15" height="17" />
           </xsl:if>
           <xsl:if test="position()!=last()">
-            <img src="/webfilesys/images/branch.gif" border="0" width="15" height="17" />
+            <img src="/custom/webfilesys/images/branch.gif" border="0" width="15" height="17" />
           </xsl:if>
         </xsl:if>
       </xsl:if>
 
       
       <xsl:if test="@type='drive'">
-        <img src="/webfilesys/images/miniDisk.gif" border="0" width="17" height="14">
+        <img src="/custom/webfilesys/images/miniDisk.gif" border="0" width="17" height="14">
           <xsl:if test="@label">
             <xsl:attribute name="title"><xsl:value-of select="@label" /></xsl:attribute>
           </xsl:if>
@@ -157,7 +157,7 @@
       </xsl:if>
 
       <xsl:if test="@type='floppy'">
-        <img src="/webfilesys/images/miniFloppy.gif" border="0" width="18" height="16">
+        <img src="/custom/webfilesys/images/miniFloppy.gif" border="0" width="18" height="16">
           <xsl:if test="@label">
             <xsl:attribute name="title"><xsl:value-of select="@label" /></xsl:attribute>
           </xsl:if>
@@ -166,18 +166,18 @@
 
       <xsl:if test="not(@type)">
         <xsl:if test="@current">
-          <img src="/webfilesys/images/folder1.gif" border="0" width="17" height="14" />
+          <img src="/custom/webfilesys/images/folder1.gif" border="0" width="17" height="14" />
           <script language="javascript">
             currentDirId = '<xsl:value-of select="@id" />';
           </script>
         </xsl:if>
         <xsl:if test="not(@current)">
-          <img src="/webfilesys/images/folder.gif" border="0" width="17" height="14" />
+          <img src="/custom/webfilesys/images/folder.gif" border="0" width="17" height="14" />
         </xsl:if>
       </xsl:if>
 
 
-    <img src="/webfilesys/images/space.gif" border="0" width="4" height="1" />
+    <img src="/custom/webfilesys/images/space.gif" border="0" width="4" height="1" />
     <a>
       <xsl:attribute name="href">javascript:void()</xsl:attribute>
       <xsl:attribute name="onclick">selectDocRoot(decodeURIComponent('<xsl:value-of select="@path" />'))</xsl:attribute>

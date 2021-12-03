@@ -14,23 +14,23 @@
 
     <title resource="label.resizetitle"></title>
   
-    <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
     <link rel="stylesheet" type="text/css">
-      <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/resizeParams/css" />.css</xsl:attribute>
+      <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/resizeParams/css" />.css</xsl:attribute>
     </link>
 
-    <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/resizeImage.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/jquery/jquery.min.js"></script>
-    <script src="/webfilesys/javascript/jcrop/jquery.Jcrop.js"></script>
+    <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/resizeImage.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/jquery/jquery.min.js"></script>
+    <script src="/custom/webfilesys/javascript/jcrop/jquery.Jcrop.js"></script>
 
-    <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
     <script type="text/javascript">
-      <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/resizeParams/language" /></xsl:attribute>
+      <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/resizeParams/language" /></xsl:attribute>
     </script>
 
     <xsl:if test="/resizeParams/cropEnabled">
-      <script src="/webfilesys/javascript/crop.js" type="text/javascript"></script>
+      <script src="/custom/webfilesys/javascript/crop.js" type="text/javascript"></script>
     </xsl:if>
   
     <script type="text/javascript">
@@ -44,7 +44,7 @@
     
     <br/>
 
-    <form accept-charset="utf-8" name="form1" method="get" action="/webfilesys/servlet">
+    <form accept-charset="utf-8" name="form1" method="get" action="/custom/webfilesys/servlet">
       <input type="hidden" name="command" value="resizeImages" />
       
       <xsl:if test="/resizeParams/popup">
@@ -275,7 +275,7 @@
                       <xsl:attribute name="onclick">self.close()</xsl:attribute>
                     </xsl:if>
                     <xsl:if test="not(/resizeParams/popup)">
-                      <xsl:attribute name="onclick">window.location.href='/webfilesys/servlet?command=listFiles'</xsl:attribute>
+                      <xsl:attribute name="onclick">window.location.href='/custom/webfilesys/servlet?command=listFiles'</xsl:attribute>
                     </xsl:if>
                   </input>
                 </td>

@@ -340,7 +340,7 @@
             
                       if (prevFolderImg) {
                     	  prevFolderImg.setAttribute("savedIcon", prevFolderImg.src);
-                          prevFolderImg.src = "/webfilesys/images/folder1.gif";
+                          prevFolderImg.src = "/custom/webfilesys/images/folder1.gif";
                       
                           var currentFolderImg = locateFolderImage(currentDirDiv);
                       
@@ -349,7 +349,7 @@
                         	  if (savedIcon != undefined) {
                                   currentFolderImg.src = savedIcon;
                         	  } else {
-                                  currentFolderImg.src = "/webfilesys/images/folder.gif";
+                                  currentFolderImg.src = "/custom/webfilesys/images/folder.gif";
                         	  }
                         	  
                               currentDirId = dirDiv.id;
@@ -371,23 +371,23 @@
               
       if (newSelectedImg) {
           if (newSelectedImg.src.indexOf("miniDisk") > 0) {
-              newSelectedImg.src = "/webfilesys/images/miniDisk2.gif";
+              newSelectedImg.src = "/custom/webfilesys/images/miniDisk2.gif";
           } else {
         	  newSelectedImg.setAttribute("savedIcon", newSelectedImg.src);
-              newSelectedImg.src = "/webfilesys/images/folder1.gif";
+              newSelectedImg.src = "/custom/webfilesys/images/folder1.gif";
           }
                       
           var currentFolderImg = locateFolderImage(currentDirDiv);
                       
           if (currentFolderImg) {
               if (currentFolderImg.src.indexOf("miniDisk") > 0) {
-                  currentFolderImg.src = "/webfilesys/images/miniDisk.gif";
+                  currentFolderImg.src = "/custom/webfilesys/images/miniDisk.gif";
               } else {
             	  var savedIcon = currentFolderImg.getAttribute("savedIcon");
             	  if (savedIcon != undefined) {
                       currentFolderImg.src = savedIcon;
             	  } else {
-                      currentFolderImg.src = "/webfilesys/images/folder.gif";
+                      currentFolderImg.src = "/custom/webfilesys/images/folder.gif";
             	  }
               }
               currentDirId = newSelectedDiv.id;
@@ -445,7 +445,7 @@
                   if (nextFolderImg) {
                 	  nextFolderImg.setAttribute("savedIcon", nextFolderImg.src);
 
-                      nextFolderImg.src = "/webfilesys/images/folder1.gif";
+                      nextFolderImg.src = "/custom/webfilesys/images/folder1.gif";
                       
                       var currentFolderImg = locateFolderImage(currentDirDiv);
                       
@@ -454,7 +454,7 @@
                     	  if (savedIcon != undefined) {
                               currentFolderImg.src = savedIcon;
                     	  } else {
-                              currentFolderImg.src = "/webfilesys/images/folder.gif";
+                              currentFolderImg.src = "/custom/webfilesys/images/folder.gif";
                     	  }
                           currentDirId = dirDiv.id;
                           return true;

@@ -714,7 +714,7 @@ public class MainActivity extends ActionBarActivity implements OnMapReadyCallbac
             String encodedAuthToken = createBasicAuthToken();
 
             try {
-                URL url = new URL(serverUrl + "/webfilesys/blogpost/authenticate");
+                URL url = new URL(serverUrl + "/custom/webfilesys/blogpost/authenticate");
 
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setReadTimeout(15000);
@@ -817,7 +817,7 @@ public class MainActivity extends ActionBarActivity implements OnMapReadyCallbac
             EditText descrText = (EditText) findViewById(R.id.description);
 
             try {
-                HttpURLConnection conn = prepareUrlConnection(serverUrl + "/webfilesys/blogpost/description/" + destFileName);
+                HttpURLConnection conn = prepareUrlConnection(serverUrl + "/custom/webfilesys/blogpost/description/" + destFileName);
 
                 OutputStream os = null;
                 BufferedWriter out = null;
@@ -875,7 +875,7 @@ public class MainActivity extends ActionBarActivity implements OnMapReadyCallbac
         private boolean sendPicture(String destFileName) {
             String response = "";
             try {
-                HttpURLConnection conn = prepareUrlConnection(serverUrl + "/webfilesys/blogpost/picture/" + destFileName);
+                HttpURLConnection conn = prepareUrlConnection(serverUrl + "/custom/webfilesys/blogpost/picture/" + destFileName);
 
                 OutputStream os = null;
                 BufferedOutputStream buffOut = null;
@@ -940,7 +940,7 @@ public class MainActivity extends ActionBarActivity implements OnMapReadyCallbac
         private boolean sendPublishRequest(String destFileName) {
             String response = "";
             try {
-                HttpURLConnection conn = prepareUrlConnection(serverUrl + "/webfilesys/blogpost/publish/" + destFileName);
+                HttpURLConnection conn = prepareUrlConnection(serverUrl + "/custom/webfilesys/blogpost/publish/" + destFileName);
 
                 OutputStream os = null;
                 BufferedWriter out = null;

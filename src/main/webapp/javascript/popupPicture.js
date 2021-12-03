@@ -168,7 +168,7 @@
 
           var zoomImgObj = document.getElementById('zoomPic');
 
-          zoomImgObj.src = '/webfilesys/images/space.gif';
+          zoomImgObj.src = '/custom/webfilesys/images/space.gif';
 
           currentPicture = '';
           

@@ -13,20 +13,20 @@
 
   <meta http-equiv="expires" content="0" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
-  <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxGraphics.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxGraphics.js" type="text/javascript"></script>
   
-  <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/cameraData/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/cameraData/language" /></xsl:attribute>
   </script>
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/cameraData/css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/cameraData/css" />.css</xsl:attribute>
   </link>
 
   <title>

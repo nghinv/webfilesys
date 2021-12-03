@@ -144,7 +144,7 @@ public class XslThumbnailExtractDescriptionHandler extends XslFileListHandlerBas
 			}
 		}
 
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/extractDescriptions.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/extractDescriptions.xsl\"");
 
 		Element fileListElement = doc.createElement("fileList");
 
@@ -331,7 +331,7 @@ public class XslThumbnailExtractDescriptionHandler extends XslFileListHandlerBas
 					}
 				}
 
-				String imgSrcPath = "/webfilesys/servlet?command=picThumb&imgFile=" + UTF8URLEncoder.encode(fileCont.getName());
+				String imgSrcPath = "/custom/webfilesys/servlet?command=picThumb&imgFile=" + UTF8URLEncoder.encode(fileCont.getName());
 
 				if (fileCont.isLink()) {
 					imgSrcPath += "&link=true";

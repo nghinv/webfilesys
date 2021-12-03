@@ -14,14 +14,14 @@
 
 <meta http-equiv="expires" content="0" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/registration.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/registration.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/registration/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/registration/css" />.css</xsl:attribute>
 </link>
 
-<link rel="shortcut icon" href="/webfilesys/images/favicon.ico" />
+<link rel="shortcut icon" href="/custom/webfilesys/images/favicon.ico" />
 
 <title>
   WebFileSys: 
@@ -42,7 +42,7 @@
     <table border="0" cellpadding="5" cellspacing="0" width="100%">
       <tr>
         <td class="loginTitle" style="padding-left:10px;vertical-align:top;">
-          <img src="/webfilesys/images/logo.gif" border="0" />
+          <img src="/custom/webfilesys/images/logo.gif" border="0" />
           <div style="width:100%;padding-top:10px;padding-left:0px;">
             WebFileSys
             <br/><br/>
@@ -71,7 +71,7 @@
         </td>
         
         <td width="65%">
-          <form accept-charset="utf-8" name="form1" method="POST" action="/webfilesys/servlet" style="margin:0px">
+          <form accept-charset="utf-8" name="form1" method="POST" action="/custom/webfilesys/servlet" style="margin:0px">
 
             <input type="hidden" name="command" value="registerSelf" />
             <input type="hidden" name="userRole" value="webspace" />
@@ -287,7 +287,7 @@
                 </td>
                 <td align="right" class="formButton">
                   <input type="button">
-                    <xsl:attribute name="onclick">window.location.href='/webfilesys/servlet'</xsl:attribute>
+                    <xsl:attribute name="onclick">window.location.href='/custom/webfilesys/servlet'</xsl:attribute>
                     <xsl:attribute name="value"><xsl:value-of select="resources/msg[@key='button.cancel']/@value" /></xsl:attribute>
                   </input>
                 </td>

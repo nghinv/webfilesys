@@ -160,7 +160,7 @@ public class TextSearch
     							if (allWordsFound) {
                                 	String folderViewLink = "javascript:gotoSearchResultFolder('" + CommonUtils.escapeForJavascript(fullPath) + "')";
 
-    								output.println("<a class=\"fn\" href=\"" + folderViewLink + "\"><img border=\"0\" src=\"/webfilesys/images/folder.gif\" style=\"margin-top:8px;\"> " + relativeFile + "</a>");
+    								output.println("<a class=\"fn\" href=\"" + folderViewLink + "\"><img border=\"0\" src=\"/custom/webfilesys/images/folder.gif\" style=\"margin-top:8px;\"> " + relativeFile + "</a>");
     								output.println("<br/>");
     								output.flush();
     								hitNum++;
@@ -231,7 +231,7 @@ public class TextSearch
 								if (allWordsFound) {
                                     String viewLink = null;
                                     try {
-                                        viewLink = "/webfilesys/servlet?command=getFile&filePath=" + URLEncoder.encode(fullPath, "UTF-8");
+                                        viewLink = "/custom/webfilesys/servlet?command=getFile&filePath=" + URLEncoder.encode(fullPath, "UTF-8");
                                     } catch (UnsupportedEncodingException uex) {
                                         // should never happen
                                     }

@@ -256,7 +256,7 @@ span.menuitem:hover {
   
   a.button 
   {
-      background: transparent url('/webfilesys/images/buttonRight.gif') no-repeat scroll top right;
+      background: transparent url('/custom/webfilesys/images/buttonRight.gif') no-repeat scroll top right;
       color: #444;
       display: block;
       float: left;
@@ -269,7 +269,7 @@ span.menuitem:hover {
 
   a.button span 
   {
-      background: transparent url('/webfilesys/images/buttonLeft.gif') no-repeat;
+      background: transparent url('/custom/webfilesys/images/buttonLeft.gif') no-repeat;
       display: block;
       line-height: 14px;
       padding: 5px 0 5px 18px;

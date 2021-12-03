@@ -14,11 +14,11 @@
 
   <meta http-equiv="expires" content="0" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/searchResult/css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/searchResult/css" />.css</xsl:attribute>
   </link>
 
   <style type="text/css">
@@ -100,7 +100,7 @@
       <xsl:if test="@file">
         <xsl:attribute name="class">dirtree</xsl:attribute>
         <xsl:attribute name="target">_blank</xsl:attribute>
-        <xsl:attribute name="href">/webfilesys/servlet?command=getFile&amp;filePath=<xsl:value-of select="@path"/></xsl:attribute>
+        <xsl:attribute name="href">/custom/webfilesys/servlet?command=getFile&amp;filePath=<xsl:value-of select="@path"/></xsl:attribute>
       </xsl:if>
       <xsl:if test="not(@file)">
         <xsl:attribute name="class">searchResultFolder</xsl:attribute>

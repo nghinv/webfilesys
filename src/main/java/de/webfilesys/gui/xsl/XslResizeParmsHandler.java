@@ -74,7 +74,7 @@ public class XslResizeParmsHandler extends XslRequestHandlerBase {
 			
 		doc.appendChild(resizeParamsElement);
 
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/resizeParams.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/resizeParams.xsl\"");
 
 		doc.insertBefore(xslRef, resizeParamsElement);
 
@@ -111,7 +111,7 @@ public class XslResizeParmsHandler extends XslRequestHandlerBase {
 		}
 		
 		if (imgFilePath != null) {
-	        String imgSrc = "/webfilesys/servlet?command=getFile&filePath=" + UTF8URLEncoder.encode(imgFilePath);
+	        String imgSrc = "/custom/webfilesys/servlet?command=getFile&filePath=" + UTF8URLEncoder.encode(imgFilePath);
 			XmlUtil.setChildText(resizeParamsElement, "imgSrc", imgSrc, false);
 
 			ImageDimensions scaledDim = ImageUtils.getScaledImageDimensions(imgFilePath, 400, 400);

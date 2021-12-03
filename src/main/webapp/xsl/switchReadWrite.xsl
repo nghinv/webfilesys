@@ -12,7 +12,7 @@
   
   <br/>
 
-  <form accept-charset="utf-8" name="swtichReadWriteForm" method="get" action="/webfilesys/servlet">
+  <form accept-charset="utf-8" name="swtichReadWriteForm" method="get" action="/custom/webfilesys/servlet">
   
     <input type="hidden" name="command" value="switchReadWrite" />
     

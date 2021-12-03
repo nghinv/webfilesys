@@ -13,21 +13,21 @@
 
     <meta http-equiv="expires" content="0" />
 
-    <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
     <title>WebFileSys GPX track viewer</title>
 
-    <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/ajax.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/ajax.js" type="text/javascript"></script>
 
-    <script src="/webfilesys/javascript/gpxTrack.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/gpxTrack.js" type="text/javascript"></script>
 
-    <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
     <script type="text/javascript">
-      <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/gpxTracks/language" /></xsl:attribute>
+      <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/gpxTracks/language" /></xsl:attribute>
     </script>
 
     <script type="text/javascript">

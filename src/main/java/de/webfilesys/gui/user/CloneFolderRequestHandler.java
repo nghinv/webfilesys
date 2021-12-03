@@ -85,8 +85,8 @@ public class CloneFolderRequestHandler extends UserRequestHandler
 		output.println("<html>");
 		output.println("<head>");
 
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/common.css\">");
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/common.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
 
 		output.println("</head>");
 
@@ -127,7 +127,7 @@ public class CloneFolderRequestHandler extends UserRequestHandler
 		output.println("<tr>");
 		output.println("<td class=\"formParm2\">");
 		output.println("<div class=\"progressBar\">");
-		output.println("<img id=\"copyProgressBar\" src=\"/webfilesys/images/bluedot.gif\" style=\"width:1px\" />");
+		output.println("<img id=\"copyProgressBar\" src=\"/custom/webfilesys/images/bluedot.gif\" style=\"width:1px\" />");
 		output.println("</div>");
 		output.println("</td>");
 		output.println("</tr>");
@@ -190,7 +190,7 @@ public class CloneFolderRequestHandler extends UserRequestHandler
 			
         }
 
-	    output.println("window.location.href='/webfilesys/servlet?command=exp&expandPath=" + UTF8URLEncoder.encode(path) + "';");
+	    output.println("window.location.href='/custom/webfilesys/servlet?command=exp&expandPath=" + UTF8URLEncoder.encode(path) + "';");
 		output.println("</script>");
 		output.println("</body>");
 		output.println("</html>");

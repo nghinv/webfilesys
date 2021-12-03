@@ -8,7 +8,7 @@
 
 <div class="promptHead" resource="label.rotateFreeAngle"></div>
     
-<form accept-charset="utf-8" name="rotateForm" id="rotateForm" method="post" action="/webfilesys/servlet" style="display:inline;">
+<form accept-charset="utf-8" name="rotateForm" id="rotateForm" method="post" action="/custom/webfilesys/servlet" style="display:inline;">
   <input type="hidden" name="command" value="transformImage" />
   <input type="hidden" name="action" value="rotate" />
   <input type="hidden" name="imgName">

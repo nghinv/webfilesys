@@ -121,17 +121,17 @@ function editRemoteLink(path) {
         editWinHeight = 700;
     }
     
-    editWin = window.open("/webfilesys/servlet?command=editFile&filePath=" + encodeURIComponent(path) + "&screenHeight=" + editWinHeight,"editWin","status=no,toolbar=no,location=no,menu=no,width=" + editWinWidth + ",height=" + editWinHeight + ",resizable=yes,left=20,top=5,screenX=20,screenY=5");
+    editWin = window.open("/custom/webfilesys/servlet?command=editFile&filePath=" + encodeURIComponent(path) + "&screenHeight=" + editWinHeight,"editWin","status=no,toolbar=no,location=no,menu=no,width=" + editWinWidth + ",height=" + editWinHeight + ",resizable=yes,left=20,top=5,screenX=20,screenY=5");
     editWin.focus();
     editWin.opener = self;
 }
 
 function origDir(path) {
-    parent.parent.frames[1].location.href="/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(path) + "&fastPath=true";
+    parent.parent.frames[1].location.href="/custom/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(path) + "&fastPath=true";
 }
 
 function emailLink(filePath) {
-    centeredDialog('/webfilesys/servlet?command=emailFilePrompt&filePath=' + encodeURIComponent(filePath), '/webfilesys/xsl/emailFile.xsl', 400, 250, function() {
+    centeredDialog('/custom/webfilesys/servlet?command=emailFilePrompt&filePath=' + encodeURIComponent(filePath), '/custom/webfilesys/xsl/emailFile.xsl', 400, 250, function() {
         document.emailForm.receiver.focus();
         document.emailForm.receiver.select();
     });

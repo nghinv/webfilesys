@@ -43,12 +43,12 @@
 
           <xsl:if test="@lastInLevel='true'">
             <img class="expCol">
-              <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="css" />/minusLast.gif</xsl:attribute>
+              <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="css" />/minusLast.gif</xsl:attribute>
             </img>
           </xsl:if>
           <xsl:if test="not(@lastInLevel='true')">
             <img class="expCol">
-              <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="css" />/minusMore.gif</xsl:attribute>
+              <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="css" />/minusMore.gif</xsl:attribute>
             </img>
           </xsl:if>
         </a>
@@ -62,12 +62,12 @@
 
             <xsl:if test="@lastInLevel='true'">
               <img class="expCol">
-                <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="css" />/plusLast.gif</xsl:attribute>
+                <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="css" />/plusLast.gif</xsl:attribute>
               </img>
             </xsl:if>
             <xsl:if test="not(@lastInLevel='true')">
               <img class="expCol">
-                <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="css" />/plusMore.gif</xsl:attribute>
+                <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="css" />/plusMore.gif</xsl:attribute>
               </img>
             </xsl:if>
           </a>
@@ -76,10 +76,10 @@
         
         <xsl:if test="@leaf">
           <xsl:if test="@lastInLevel='true'">
-            <img src="/webfilesys/images/branchLast.gif" class="expCol" />
+            <img src="/custom/webfilesys/images/branchLast.gif" class="expCol" />
           </xsl:if>
           <xsl:if test="not(@lastInLevel='true')">
-            <img src="/webfilesys/images/branch.gif" class="expCol" />
+            <img src="/custom/webfilesys/images/branch.gif" class="expCol" />
           </xsl:if>
         </xsl:if>
       </xsl:if>
@@ -106,7 +106,7 @@
       <xsl:if test="not(@type)">
         <xsl:if test="@icon">
           <img class="icon">
-            <xsl:attribute name="src">/webfilesys/icons/<xsl:value-of select="@icon"/></xsl:attribute>
+            <xsl:attribute name="src">/custom/webfilesys/icons/<xsl:value-of select="@icon"/></xsl:attribute>
           </img>
         </xsl:if>
         <xsl:if test="not(@icon)">
@@ -204,12 +204,12 @@
 
          <xsl:if test="position()=last()">
           <img class="expCol">
-            <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="/parentFolder/css" />/plusLast.gif</xsl:attribute>
+            <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="/parentFolder/css" />/plusLast.gif</xsl:attribute>
           </img>
         </xsl:if>
         <xsl:if test="position()!=last()">
           <img class="expCol">
-            <xsl:attribute name="src">/webfilesys/img-skin/<xsl:value-of select="/parentFolder/css" />/plusMore.gif</xsl:attribute>
+            <xsl:attribute name="src">/custom/webfilesys/img-skin/<xsl:value-of select="/parentFolder/css" />/plusMore.gif</xsl:attribute>
           </img>
         </xsl:if>
       </a>
@@ -218,10 +218,10 @@
       
     <xsl:if test="@leaf='true'">
       <xsl:if test="position()=last()">
-        <img src="/webfilesys/images/branchLast.gif" class="expCol" />
+        <img src="/custom/webfilesys/images/branchLast.gif" class="expCol" />
       </xsl:if>
       <xsl:if test="position()!=last()">
-        <img src="/webfilesys/images/branch.gif" class="expCol" />
+        <img src="/custom/webfilesys/images/branch.gif" class="expCol" />
       </xsl:if>
     </xsl:if>
 
@@ -230,7 +230,7 @@
 
       <xsl:if test="@icon">
         <img class="icon">
-          <xsl:attribute name="src">/webfilesys/icons/<xsl:value-of select="@icon"/></xsl:attribute>
+          <xsl:attribute name="src">/custom/webfilesys/icons/<xsl:value-of select="@icon"/></xsl:attribute>
         </img>
       </xsl:if>
       <xsl:if test="not(@icon)">

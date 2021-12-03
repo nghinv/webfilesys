@@ -8,7 +8,7 @@
 
 <div class="promptHead" resource="label.mkdir"></div>
     
-<form accept-charset="utf-8" name="mkdirForm" id="mkdirForm" method="get" action="/webfilesys/servlet" style="display:inline;">
+<form accept-charset="utf-8" name="mkdirForm" id="mkdirForm" method="get" action="/custom/webfilesys/servlet" style="display:inline;">
   <input type="hidden" name="command" value="mkdir" />
   <input type="hidden" name="actpath">
     <xsl:attribute name="value"><xsl:value-of select="/createFolder/baseFolder" /></xsl:attribute>

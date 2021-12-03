@@ -49,13 +49,13 @@ public class AdminEditUserRequestHandler extends AdminRequestHandler
 
 		output.print("<title> WebFileSys Administration: Edit User </title>");
 
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/common.css\">");
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/admin.css\">");
-		// output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/skins/fmweb.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/common.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/admin.css\">");
+		// output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/skins/fmweb.css\">");
 
-		output.println("<script src=\"/webfilesys/javascript/admin.js\" type=\"text/javascript\"></script>");
-		output.println("<script src=\"/webfilesys/javascript/util.js\" type=\"text/javascript\"></script>");
+		output.println("<script src=\"/custom/webfilesys/javascript/admin.js\" type=\"text/javascript\"></script>");
+		output.println("<script src=\"/custom/webfilesys/javascript/util.js\" type=\"text/javascript\"></script>");
 		
 		output.print("</head>");
 		output.print("<body class=\"admin\"");
@@ -67,7 +67,7 @@ public class AdminEditUserRequestHandler extends AdminRequestHandler
 
 		headLine("WebFileSys Administration: Edit User " + login);
 
-		output.println("<form id=\"userForm\" accept-charset=\"utf-8\" method=\"post\" action=\"/webfilesys/servlet\">");
+		output.println("<form id=\"userForm\" accept-charset=\"utf-8\" method=\"post\" action=\"/custom/webfilesys/servlet\">");
 		output.println("<input type=\"hidden\" name=\"command\" value=\"admin\">");
 		output.println("<input type=\"hidden\" name=\"cmd\" value=\"changeUser\">");
 		output.println("<input type=\"hidden\" name=\"username\" value=\"" + login + "\">");
@@ -463,7 +463,7 @@ public class AdminEditUserRequestHandler extends AdminRequestHandler
 		output.println("<tr><td class=\"formButton\">");
 		output.println("<input type=\"button\" name=\"changebutton\" value=\"&nbsp;Save&nbsp;\" onclick=\"validateUser(true);\">");
 		output.println("</td><td class=\"formButton\" align=\"right\">");
-		output.println("<input type=\"button\" value=\"Cancel\" onclick=\"javascript:window.location.href='/webfilesys/servlet?command=admin&cmd=userList'\">");
+		output.println("<input type=\"button\" value=\"Cancel\" onclick=\"javascript:window.location.href='/custom/webfilesys/servlet?command=admin&cmd=userList'\">");
 		output.println("</td></tr>");    
 
 		output.println("</table>");

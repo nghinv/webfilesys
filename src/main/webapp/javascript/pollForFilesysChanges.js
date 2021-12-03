@@ -11,7 +11,7 @@ function pollForDirChanges(immediateRefreshView) {
 	
 	var fileFilter = document.getElementById("fileMask").value;
 	
-	var pollUrl = "/webfilesys/servlet?command=pollForDirChange&lastDirStatusTime=" + dirModified + "&lastSizeSum=" + fileSizeSum + "&mask=" + fileFilter;
+	var pollUrl = "/custom/webfilesys/servlet?command=pollForDirChange&lastDirStatusTime=" + dirModified + "&lastSizeSum=" + fileSizeSum + "&mask=" + fileFilter;
 	
 	if (typeof pollThumbs !== 'undefined') {
 		pollUrl += "&thumbnails=true";
@@ -27,11 +27,11 @@ function pollForDirChanges(immediateRefreshView) {
                 var result = item.firstChild.nodeValue;
                 if (result == "true") {
                 	if (immediateRefreshView) {
-                	    window.location.href = "/webfilesys/servlet?command=listFiles";
+                	    window.location.href = "/custom/webfilesys/servlet?command=listFiles";
                 	} else {
                     	customConfirm(resourceBundle["folderContentModified"], resourceBundle["label.no"], resourceBundle["label.yes"], 
                         	function() {
-                                window.top.frames[2].location.href = "/webfilesys/servlet?command=listFiles";
+                                window.top.frames[2].location.href = "/custom/webfilesys/servlet?command=listFiles";
                         	},
                         	function() {
                         		closeAlert();

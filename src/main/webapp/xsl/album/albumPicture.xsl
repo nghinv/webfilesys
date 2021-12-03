@@ -25,7 +25,7 @@
   </title>
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/pictureAlbum.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/pictureAlbum.css</xsl:attribute>
   </link>
 
   <style type="text/css"> 
@@ -33,19 +33,19 @@
   </style>
 
   <!--  
-  <script src="/webfilesys/javascript/fileMenu.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/fileMenu.js" type="text/javascript"></script>
   -->
-  <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
 
   <xsl:if test="/imageData/geoTag">
-    <script src="/webfilesys/javascript/geoMap.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/geoMap.js" type="text/javascript"></script>
   </xsl:if>
 
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/imageData/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/imageData/language" /></xsl:attribute>
   </script>
 
   <script type="text/javascript">
@@ -80,7 +80,7 @@
     
       function showGoogleMap()
       {
-         mapWin=window.open('/webfilesys/servlet?command=googleMap&amp;path=<xsl:value-of select="/imageData/encodedPath" />','mapWin','status=no,toolbar=no,location=no,menu=no,width=600,height=400,resizable=yes,left=20,top=20,screenX=20,screenY=20');
+         mapWin=window.open('/custom/webfilesys/servlet?command=googleMap&amp;path=<xsl:value-of select="/imageData/encodedPath" />','mapWin','status=no,toolbar=no,location=no,menu=no,width=600,height=400,resizable=yes,left=20,top=20,screenX=20,screenY=20');
          mapWin.focus();
       }
     </xsl:if>
@@ -94,7 +94,7 @@
     <xsl:if test="/imageData/nextLink">
       function nextImage() 
       {
-          window.location.href = '/webfilesys/servlet?command=bookPicture&amp;after=' + encodeURIComponent('<xsl:value-of select="/imageData/imageName" />') + '&amp;windowWidth=' + getWinWidth() + '&amp;windowHeight=' + getWinHeight();
+          window.location.href = '/custom/webfilesys/servlet?command=bookPicture&amp;after=' + encodeURIComponent('<xsl:value-of select="/imageData/imageName" />') + '&amp;windowWidth=' + getWinWidth() + '&amp;windowHeight=' + getWinHeight();
       }
     </xsl:if>
     
@@ -134,23 +134,23 @@
       <a class="pictureAlbumPath">
         <xsl:if test="count(/imageData/currentPath/pathElem) = 1">
           <xsl:if test="not(/imageData/fromStory)">
-            <xsl:attribute name="href">/webfilesys/servlet?command=album&amp;relPath=<xsl:value-of select="@path"/></xsl:attribute>
+            <xsl:attribute name="href">/custom/webfilesys/servlet?command=album&amp;relPath=<xsl:value-of select="@path"/></xsl:attribute>
           </xsl:if>
           <xsl:if test="/imageData/fromStory">
-            <xsl:attribute name="href">/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook</xsl:attribute>
+            <xsl:attribute name="href">/custom/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook</xsl:attribute>
           </xsl:if>
           <xsl:attribute name="resource">button.returnToAlbum</xsl:attribute>
         </xsl:if>
         <xsl:if test="count(/imageData/currentPath/pathElem) &gt; 1">
           <xsl:if test="not(/imageData/fromStory)">
-            <xsl:attribute name="href">/webfilesys/servlet?command=album&amp;relPath=<xsl:value-of select="@path"/>&amp;initial=true</xsl:attribute>
+            <xsl:attribute name="href">/custom/webfilesys/servlet?command=album&amp;relPath=<xsl:value-of select="@path"/>&amp;initial=true</xsl:attribute>
           </xsl:if>
           <xsl:if test="/imageData/fromStory">
             <xsl:if test="position() = count(/imageData/currentPath/pathElem)">
-              <xsl:attribute name="href">/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;relPath=<xsl:value-of select="@path"/>&amp;initial=true</xsl:attribute>
+              <xsl:attribute name="href">/custom/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook&amp;relPath=<xsl:value-of select="@path"/>&amp;initial=true</xsl:attribute>
             </xsl:if>
             <xsl:if test="position() &lt; count(/imageData/currentPath/pathElem)">
-              <xsl:attribute name="href">/webfilesys/servlet?command=album&amp;relPath=<xsl:value-of select="@path"/>&amp;initial=true</xsl:attribute>
+              <xsl:attribute name="href">/custom/webfilesys/servlet?command=album&amp;relPath=<xsl:value-of select="@path"/>&amp;initial=true</xsl:attribute>
             </xsl:if>
           </xsl:if>
           <xsl:value-of select="@name"/>
@@ -211,7 +211,7 @@
 
       <!-- ################# rating ############### -->
 
-      <form accept-charset="utf-8" name="form1" method="get" action="/webfilesys/servlet" style="margin:0px;padding:0px;padding-top:4px;">
+      <form accept-charset="utf-8" name="form1" method="get" action="/custom/webfilesys/servlet" style="margin:0px;padding:0px;padding-top:4px;">
         <input type="hidden" name="command" value="rate" />
         <input type="hidden" name="imagePath">
           <xsl:attribute name="value"><xsl:value-of select="imagePath" /></xsl:attribute>
@@ -326,15 +326,15 @@
         <div class="albumDetailReturn">                  
           <input type="button" resource="button.returnToAlbum">
             <xsl:if test="/imageData/fromStory">
-              <xsl:attribute name="onclick">javascript:window.location.href='/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook';</xsl:attribute>
+              <xsl:attribute name="onclick">javascript:window.location.href='/custom/webfilesys/servlet?command=storyInFrame&amp;mode=pictureBook';</xsl:attribute>
             </xsl:if>          
             <xsl:if test="not(/imageData/fromStory)">
-              <xsl:attribute name="onclick">javascript:window.location.href='/webfilesys/servlet?command=album';</xsl:attribute>
+              <xsl:attribute name="onclick">javascript:window.location.href='/custom/webfilesys/servlet?command=album';</xsl:attribute>
             </xsl:if>
           </input> 
           
           <input type="button" resource="label.download" style="margin-left:20px;">
-            <xsl:attribute name="onclick">window.location.href='/webfilesys/servlet?command=getFile&amp;fileName=<xsl:value-of select="encodedName" />&amp;disposition=download';</xsl:attribute>
+            <xsl:attribute name="onclick">window.location.href='/custom/webfilesys/servlet?command=getFile&amp;fileName=<xsl:value-of select="encodedName" />&amp;disposition=download';</xsl:attribute>
           </input>
         </div>
                   
@@ -344,7 +344,7 @@
       
         <!-- ################# comments ############### -->
       
-        <form accept-charset="utf-8" name="commentForm" method="post" action="/webfilesys/servlet" style="margin:0;padding:0;">
+        <form accept-charset="utf-8" name="commentForm" method="post" action="/custom/webfilesys/servlet" style="margin:0;padding:0;">
  
           <input type="hidden" name="command" value="addAlbumComment" />
       

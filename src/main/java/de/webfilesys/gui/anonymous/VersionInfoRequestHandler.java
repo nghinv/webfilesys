@@ -22,8 +22,8 @@ public class VersionInfoRequestHandler
 		output.println("<head>");
 		output.println("<title> WebFileSys Version Info </title>");
 
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/common.css\">");
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/skins/fmweb.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/common.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/skins/fmweb.css\">");
 
 		output.println("</head>");
 		output.println("<body style=\"background-color:#e0e0e0\">");

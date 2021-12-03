@@ -69,15 +69,15 @@ function jsLinkMenu(linkName, realPath) {
 }
 
 function editRemoteLink(path) {
-    window.location.href = '/webfilesys/servlet?command=mobile&cmd=editFile&filePath=' + encodeURIComponent(path) + '&screenHeight=' + screen.height;
+    window.location.href = '/custom/webfilesys/servlet?command=mobile&cmd=editFile&filePath=' + encodeURIComponent(path) + '&screenHeight=' + screen.height;
 }
 
 function origDir(path) {
-    window.location.href = "/webfilesys/servlet?command=mobile&cmd=folderFileList&absPath=" + encodeURIComponent(path);
+    window.location.href = "/custom/webfilesys/servlet?command=mobile&cmd=folderFileList&absPath=" + encodeURIComponent(path);
 }
 
 function emailLink(filePath) {
-    centeredDialog('/webfilesys/servlet?command=emailFilePrompt&filePath=' + encodeURIComponent(filePath), '/webfilesys/xsl/emailFile.xsl', 400, 250, function() {
+    centeredDialog('/custom/webfilesys/servlet?command=emailFilePrompt&filePath=' + encodeURIComponent(filePath), '/custom/webfilesys/xsl/emailFile.xsl', 400, 250, function() {
         document.emailForm.receiver.focus();
         document.emailForm.receiver.select();
     });

@@ -252,7 +252,7 @@ public class XmlTransformImageHandler extends XmlRequestHandlerBase
 				File thumbnailFile = new File(thumbFileName);
 				if (thumbnailFile.exists())
 				{
-					srcFileName = "/webfilesys/servlet?command=getThumb&imgFile=" + UTF8URLEncoder.encode(fullFileName);
+					srcFileName = "/custom/webfilesys/servlet?command=getThumb&imgFile=" + UTF8URLEncoder.encode(fullFileName);
 					useThumb=true;
 				}
 				else
@@ -295,7 +295,7 @@ public class XmlTransformImageHandler extends XmlRequestHandlerBase
 									thumbHeight = exifThumbHeight * thumbnailSize / exifThumbWidth;
 								}
 								
-								srcFileName = "/webfilesys/servlet?command=exifThumb&imgFile=" + UTF8URLEncoder.encode(fullFileName);
+								srcFileName = "/custom/webfilesys/servlet?command=exifThumb&imgFile=" + UTF8URLEncoder.encode(fullFileName);
 								useThumb=true;
 							}
 						}
@@ -308,7 +308,7 @@ public class XmlTransformImageHandler extends XmlRequestHandlerBase
 
 			if (!useThumb)
 			{
-				srcFileName = "/webfilesys/servlet?command=getFile&filePath=" + UTF8URLEncoder.encode(srcFileName);
+				srcFileName = "/custom/webfilesys/servlet?command=getFile&filePath=" + UTF8URLEncoder.encode(srcFileName);
 			}
 			
 			XmlUtil.setChildText(fileElement, "imgPath", srcFileName);

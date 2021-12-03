@@ -129,13 +129,13 @@ function videoLinkMenu(linkName, realPath, domId) {
 }
 
 function delVideo(fileName) {
-    centeredDialog('/webfilesys/servlet?command=ajaxRPC&method=deleteFilePrompt&param1=' + encodeURIComponent(fileName), 
-                   '/webfilesys/xsl/confirmDeleteFile.xsl', 
+    centeredDialog('/custom/webfilesys/servlet?command=ajaxRPC&method=deleteFilePrompt&param1=' + encodeURIComponent(fileName), 
+                   '/custom/webfilesys/xsl/confirmDeleteFile.xsl', 
                    320, 130);
 }
 
 function renameVideo(fileName, domId) {
-    centeredDialog('/webfilesys/servlet?command=renameImagePrompt&imageFile=' + encodeURIComponent(fileName), '/webfilesys/xsl/renameVideo.xsl', 360, 160, function() {
+    centeredDialog('/custom/webfilesys/servlet?command=renameImagePrompt&imageFile=' + encodeURIComponent(fileName), '/custom/webfilesys/xsl/renameVideo.xsl', 360, 160, function() {
     	document.renameForm.newFileName.focus();
         const newFileName = document.renameForm.newFileName.value;
         if (newFileName) {
@@ -150,23 +150,23 @@ function renameVideo(fileName, domId) {
 }
 
 function editConvertVideo(fileName) {
-	window.location.href = "/webfilesys/servlet?command=video&cmd=editVideoParams&videoFile=" + encodeURIComponent(fileName);
+	window.location.href = "/custom/webfilesys/servlet?command=video&cmd=editVideoParams&videoFile=" + encodeURIComponent(fileName);
 }
 
 function textOnVideo(fileName) {
-	window.location.href = "/webfilesys/servlet?command=video&cmd=textOnVideoParams&videoFile=" + encodeURIComponent(fileName);
+	window.location.href = "/custom/webfilesys/servlet?command=video&cmd=textOnVideoParams&videoFile=" + encodeURIComponent(fileName);
 }
 
 function textOnVideo(fileName) {
-	window.location.href = "/webfilesys/servlet?command=video&cmd=textOnVideoParams&videoFile=" + encodeURIComponent(fileName);
+	window.location.href = "/custom/webfilesys/servlet?command=video&cmd=textOnVideoParams&videoFile=" + encodeURIComponent(fileName);
 }
 
 function fadeAudio(fileName) {
-	window.location.href = "/webfilesys/servlet?command=video&cmd=fadeAudioParams&videoFile=" + encodeURIComponent(fileName);
+	window.location.href = "/custom/webfilesys/servlet?command=video&cmd=fadeAudioParams&videoFile=" + encodeURIComponent(fileName);
 }
 
 function extractVideoFrame(fileName) {
-	window.location.href = "/webfilesys/servlet?command=video&cmd=extractVideoFrameParams&videoFile=" + encodeURIComponent(fileName);
+	window.location.href = "/custom/webfilesys/servlet?command=video&cmd=extractVideoFrameParams&videoFile=" + encodeURIComponent(fileName);
 }
 
 function editVideoDesc(path) {
@@ -176,7 +176,7 @@ function editVideoDesc(path) {
     const xpos = (screen.width - windowWidth) / 2;
     const ypos = (screen.height - windowHeight) / 2;
 
-    descWin = window.open("/webfilesys/servlet?command=editMetaInf&path=" + encodeURIComponent(path) + "&geoTag=true&random=" + new Date().getTime(),"descWin","status=no,toolbar=no,location=no,menu=no,width=" + windowWidth + ",height=" + windowHeight + ",resizable=yes,left=" + xpos + ",top=" + ypos + ",screenX=" + xpos + ",screenY=" + ypos);
+    descWin = window.open("/custom/webfilesys/servlet?command=editMetaInf&path=" + encodeURIComponent(path) + "&geoTag=true&random=" + new Date().getTime(),"descWin","status=no,toolbar=no,location=no,menu=no,width=" + windowWidth + ",height=" + windowHeight + ",resizable=yes,left=" + xpos + ",top=" + ypos + ",screenX=" + xpos + ",screenY=" + ypos);
     descWin.focus();
     descWin.opener = self;
 }
@@ -190,18 +190,18 @@ function cutToClipboard(fileName) {
 }
 
 function gotoOrigDir(path) {
-    parent.parent.frames[1].location.href = "/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(path) + "&fastPath=true";
+    parent.parent.frames[1].location.href = "/custom/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(path) + "&fastPath=true";
 }
 
 function videoComments(path) {
-    commentWin=window.open("/webfilesys/servlet?command=listComments&actPath=" + encodeURIComponent(path),"commentWin","status=no,toolbar=no,location=no,menu=no,scrollbars=yes,width=550,height=400,resizable=yes,left=80,top=100,screenX=80,screenY=100");
+    commentWin=window.open("/custom/webfilesys/servlet?command=listComments&actPath=" + encodeURIComponent(path),"commentWin","status=no,toolbar=no,location=no,menu=no,scrollbars=yes,width=550,height=400,resizable=yes,left=80,top=100,screenX=80,screenY=100");
     commentWin.focus();
 }
 
 function playVideoLocal(path) {
 	toast(resourceBundle["playerStartedInBackground"], 4000);
 	
-    var url = "/webfilesys/servlet?command=playVideoLocal&videoPath=" + encodeURIComponent(path);
+    var url = "/custom/webfilesys/servlet?command=playVideoLocal&videoPath=" + encodeURIComponent(path);
 	
 	xmlRequest(url, function(req) {
         if (req.readyState == 4) {
@@ -246,7 +246,7 @@ function deshakeVideo(fileName) {
                 customAlert(resourceBundle["videoDeshakeStarted"] + " " + targetFolder + ".");
                         
                 setTimeout(function() {
-                  	parent.parent.frames[1].location.href = "/webfilesys/servlet?command=exp&actPath=" + encodeURIComponent(targetPath) + "&expand=" + encodeURIComponent(targetPath) + "&fastPath=true";
+                  	parent.parent.frames[1].location.href = "/custom/webfilesys/servlet?command=exp&actPath=" + encodeURIComponent(targetPath) + "&expand=" + encodeURIComponent(targetPath) + "&fastPath=true";
                 }, 6000);
             }
         }
@@ -254,7 +254,7 @@ function deshakeVideo(fileName) {
 }
 
 function addSilentAudio(fileName) {
-    var url = "/webfilesys/servlet?command=video&cmd=addSilentAudio&videoFileName=" + encodeURIComponent(fileName);
+    var url = "/custom/webfilesys/servlet?command=video&cmd=addSilentAudio&videoFileName=" + encodeURIComponent(fileName);
 	
 	xmlRequest(url, function(req) {
         if (req.readyState == 4) {
@@ -276,7 +276,7 @@ function addSilentAudio(fileName) {
                         customAlert(resourceBundle["addSilentAudioStarted"] + " " + targetFolder + ".");
                         
                         setTimeout(function() {
-                        	parent.parent.frames[1].location.href = "/webfilesys/servlet?command=exp&actPath=" + encodeURIComponent(targetPath) + "&expand=" + encodeURIComponent(targetPath) + "&fastPath=true";
+                        	parent.parent.frames[1].location.href = "/custom/webfilesys/servlet?command=exp&actPath=" + encodeURIComponent(targetPath) + "&expand=" + encodeURIComponent(targetPath) + "&fastPath=true";
                         }, 6000);
                     }
                 } else {

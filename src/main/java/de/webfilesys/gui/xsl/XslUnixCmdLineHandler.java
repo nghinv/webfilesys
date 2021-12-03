@@ -44,7 +44,7 @@ public class XslUnixCmdLineHandler extends XslRequestHandlerBase
 			
 		doc.appendChild(cmdLineElement);
 			
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/unixCmdLine.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/unixCmdLine.xsl\"");
 
 		doc.insertBefore(xslRef, cmdLineElement);
 

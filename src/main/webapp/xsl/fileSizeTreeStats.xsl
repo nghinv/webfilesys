@@ -16,10 +16,10 @@
 
 <meta http-equiv="expires" content="0" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/treeStats/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/treeStats/css" />.css</xsl:attribute>
 </link>
 
 <title><xsl:value-of select="/treeStats/resources/msg[@key='stats.sizeWinTitle']/@value" /></title>
@@ -77,7 +77,7 @@
           <xsl:value-of select="fileNum" />
         </td>
         <td class="data sepTop">
-          <img src="/webfilesys/images/bar.gif" height="18" width="100">
+          <img src="/custom/webfilesys/images/bar.gif" height="18" width="100">
             <xsl:attribute name="width"><xsl:value-of select="fileNumPercentOfMax" /></xsl:attribute>
           </img>
         </td>
@@ -88,7 +88,7 @@
           <xsl:value-of select="sizeSum" />
         </td>
         <td class="data sepTop">
-          <img src="/webfilesys/images/bar.gif" height="18" width="100">
+          <img src="/custom/webfilesys/images/bar.gif" height="18" width="100">
             <xsl:attribute name="width"><xsl:value-of select="sizeSumPercentOfMax" /></xsl:attribute>
           </img>
         </td>

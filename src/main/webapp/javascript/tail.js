@@ -20,7 +20,7 @@ function changeAutoRefresh() {
 }
 
 function pollForChange() {
-    var url = "/webfilesys/servlet?command=checkFileChange&filePath=" + encodeURIComponent(pathForScript) + "&lastModified=" + lastModified + "&size=" + fileSize;
+    var url = "/custom/webfilesys/servlet?command=checkFileChange&filePath=" + encodeURIComponent(pathForScript) + "&lastModified=" + lastModified + "&size=" + fileSize;
 
     xmlRequest(url, function(req) {
         if (req.readyState == 4) {

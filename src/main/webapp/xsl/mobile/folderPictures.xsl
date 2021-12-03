@@ -13,48 +13,48 @@
 
 <meta http-equiv="expires" content="0" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/mobile.css" />
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/imgZoom.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/mobile.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/imgZoom.css" />
 
 <xsl:if test="not(/fileList/browserXslEnabled)">
-  <script src="/webfilesys/javascript/ajaxslt/util.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/xmltoken.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/dom.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/xpath.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/xslt.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/util.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/xmltoken.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/dom.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/xpath.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/xslt.js" type="text/javascript"></script>
 </xsl:if>
 
-<script src="/webfilesys/javascript/jquery/jquery.min.js"></script>
+<script src="/custom/webfilesys/javascript/jquery/jquery.min.js"></script>
 
-<script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/thumbnail.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/mobile/mobileCommon.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/mobile/mobileThumbnail.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/viewMode.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/contextMenuCommon.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/graphicsContextMenu.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/graphicsLinkMenu.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/contextMenuMouse.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/ajax.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/ajaxGraphics.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/popupPicture.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/thumbnail.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/mobile/mobileCommon.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/mobile/mobileThumbnail.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/viewMode.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/contextMenuCommon.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/graphicsContextMenu.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/graphicsLinkMenu.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/contextMenuMouse.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/ajax.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/ajaxGraphics.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/popupPicture.js" type="text/javascript"></script>
 <xsl:if test="/fileList/pollInterval">
-  <script src="/webfilesys/javascript/pollForFilesysChanges.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/pollForFilesysChanges.js" type="text/javascript"></script>
 </xsl:if>
 
-<script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
 <script type="text/javascript">
-  <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/fileList/language" /></xsl:attribute>
+  <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/fileList/language" /></xsl:attribute>
 </script>
 
 <xsl:if test="/fileList/geoTag">
-  <script src="/webfilesys/javascript/geoMap.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/geoMap.js" type="text/javascript"></script>
 </xsl:if>
 
 <script type="text/javascript">
@@ -65,7 +65,7 @@
   
   function showImage(imgPath) {
       var randNum = (new Date()).getTime();
-      picWin = window.open('/webfilesys/servlet?command=showImg&amp;imgname=' + encodeURIComponent(imgPath), 'picWin' + randNum, 'status=no,toolbar=no,location=no,menu=no,width=400,height=300,resizable=yes,left=1,top=1,screenX=1,screenY=1');
+      picWin = window.open('/custom/webfilesys/servlet?command=showImg&amp;imgname=' + encodeURIComponent(imgPath), 'picWin' + randNum, 'status=no,toolbar=no,location=no,menu=no,width=400,height=300,resizable=yes,left=1,top=1,screenX=1,screenY=1');
       picWin.focus();
   }
   
@@ -139,7 +139,7 @@
     </table>
   </xsl:if>
 
-  <form accept-charset="utf-8" name="sortform" method="post" action="/webfilesys/servlet" style="padding:0px;margin:0px;">
+  <form accept-charset="utf-8" name="sortform" method="post" action="/custom/webfilesys/servlet" style="padding:0px;margin:0px;">
   
     <input type="hidden" name="command" value="mobile" />
     <input type="hidden" name="cmd" value="folderPictures" />
@@ -228,7 +228,7 @@
 	              
                   <td class="mobileFolderMenu fileListFunct">
                     <a class="icon-font icon-list mobileMenuIcon" titleResource="mobileFileList">
-                      <xsl:attribute name="href">/webfilesys/servlet?command=mobile&amp;cmd=folderFileList</xsl:attribute>
+                      <xsl:attribute name="href">/custom/webfilesys/servlet?command=mobile&amp;cmd=folderFileList</xsl:attribute>
                     </a>
                   </td> 
 	            </tr>
@@ -257,7 +257,7 @@
                   </xsl:if>
                   <img class="thumb" border="0" style="visibility:hidden">
                     <xsl:attribute name="id">pic-<xsl:value-of select="@id" /></xsl:attribute>
-                    <xsl:attribute name="src">/webfilesys/images/space.gif</xsl:attribute>
+                    <xsl:attribute name="src">/custom/webfilesys/images/space.gif</xsl:attribute>
                     <xsl:attribute name="width">1</xsl:attribute>
                     <xsl:attribute name="height">100</xsl:attribute>
                     <xsl:attribute name="imgPath"><xsl:value-of select="imgPath" /></xsl:attribute>
@@ -366,7 +366,7 @@
           <div id="currentPath">
             <xsl:for-each select="pathElem">
               <a class="currentPath">
-                <xsl:attribute name="href">/webfilesys/servlet?command=mobile&amp;cmd=folderFileList&amp;relPath=<xsl:value-of select="@path"/></xsl:attribute>
+                <xsl:attribute name="href">/custom/webfilesys/servlet?command=mobile&amp;cmd=folderFileList&amp;relPath=<xsl:value-of select="@path"/></xsl:attribute>
                 <xsl:value-of select="@name"/> 
               </a>
               <xsl:if test="not(position()=last())"><span class="currentPathSep">/</span></xsl:if>

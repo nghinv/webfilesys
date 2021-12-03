@@ -17,11 +17,11 @@
 
   <meta http-equiv="expires" content="0" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/slideShow/css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/slideShow/css" />.css</xsl:attribute>
   </link>
 
   <script src="javascript/browserCheck.js" type="text/javascript" />
@@ -33,9 +33,9 @@
   <script src="javascript/slideshow.js" type="text/javascript"></script>
   <script src="javascript/slideShowActions.js" type="text/javascript"></script>
   
-  <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/slideShow/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/slideShow/language" /></xsl:attribute>
   </script>
   
   <script type="text/javascript">
@@ -87,7 +87,7 @@
     </xsl:if>
 
     <img id="slideShowImg0" style="opacity:1">
-      <xsl:attribute name="src">/webfilesys/images/space.gif</xsl:attribute>
+      <xsl:attribute name="src">/custom/webfilesys/images/space.gif</xsl:attribute>
       <xsl:attribute name="onMouseOver">javascript:showActionButtons()</xsl:attribute>
       <xsl:if test="/slideShow/autoForward='true'">
         <xsl:attribute name="class">slideshowImg thumb</xsl:attribute>
@@ -98,7 +98,7 @@
     </img>
 
     <img id="slideShowImg1" style="opacity:0">
-      <xsl:attribute name="src">/webfilesys/images/space.gif</xsl:attribute>
+      <xsl:attribute name="src">/custom/webfilesys/images/space.gif</xsl:attribute>
       <xsl:attribute name="onMouseOver">javascript:showActionButtons()</xsl:attribute>
       <xsl:if test="/slideShow/autoForward='true'">
         <xsl:attribute name="class">slideshowImg thumb</xsl:attribute>
@@ -117,7 +117,7 @@
     
     <xsl:if test="/slideShow/autoForward='true'">
       <a href="javascript:hideActionButtons()">
-        <img src="/webfilesys/images/winClose.gif" border="0" style="float:right;" />
+        <img src="/custom/webfilesys/images/winClose.gif" border="0" style="float:right;" />
       </a>
 
       <br/>
@@ -125,7 +125,7 @@
     
     <xsl:if test="/slideShow/autoForward='false'">
       <a href="javascript:goBack()">
-        <img id="previous" src="/webfilesys/images/prev.png" class="slideshowControl" titleResource="alt.back"></img>
+        <img id="previous" src="/custom/webfilesys/images/prev.png" class="slideshowControl" titleResource="alt.back"></img>
       </a>
     </xsl:if>
 
@@ -134,18 +134,18 @@
     <xsl:if test="/slideShow/autoForward">
       <a id="stopAndGoLink" href="javascript:stopAndGo()">
         <xsl:if test="/slideShow/autoForward='true'">
-          <img id="pauseGo" src="/webfilesys/images/pause.png" border="0" style="vertical-align:text-bottom" titleResource="alt.pause"></img>
+          <img id="pauseGo" src="/custom/webfilesys/images/pause.png" border="0" style="vertical-align:text-bottom" titleResource="alt.pause"></img>
         </xsl:if>
           
         <xsl:if test="/slideShow/autoForward='false'">
-          <img id="pauseGo" src="/webfilesys/images/next.png" class="slideshowControl" titleResource="alt.continue"></img>
+          <img id="pauseGo" src="/custom/webfilesys/images/next.png" class="slideshowControl" titleResource="alt.continue"></img>
         </xsl:if>
       </a>
     </xsl:if>
   </div>
   
   <a id="fullScreenButton" href="javascript:void(0)" onclick="javascript:makeSlideshowFullscreen()" style="position:absolute;top:10px;right:10px;">
-    <img src="/webfilesys/images/fullscreen.png" titleResource="fullScreenMode"></img>    
+    <img src="/custom/webfilesys/images/fullscreen.png" titleResource="fullScreenMode"></img>    
   </a>
   
 </xsl:template>

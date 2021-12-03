@@ -13,37 +13,37 @@
 
 <meta http-equiv="expires" content="0" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/fileList/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/fileList/css" />.css</xsl:attribute>
 </link>
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
 
 <xsl:if test="not(/fileList/browserXslEnabled)">
-  <script src="/webfilesys/javascript/ajaxslt/util.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/xmltoken.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/dom.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/xpath.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/xslt.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/util.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/xmltoken.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/dom.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/xpath.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/xslt.js" type="text/javascript"></script>
 </xsl:if>
 
-<script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/thumbnail.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/viewMode.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/contextMenuCommon.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/contextMenuMouse.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/videoContextMenu.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/ajax.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/ajaxGraphics.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/videoAudio.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/thumbnail.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/viewMode.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/contextMenuCommon.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/contextMenuMouse.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/videoContextMenu.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/ajax.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/ajaxGraphics.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/videoAudio.js" type="text/javascript"></script>
 
-<script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
 <script type="text/javascript">
-  <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/fileList/language" /></xsl:attribute>
+  <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/fileList/language" /></xsl:attribute>
 </script>
 
 <script type="text/javascript">
@@ -162,7 +162,7 @@
   </table>
   <!-- tabs end -->
 
-  <form accept-charset="utf-8" name="sortform" method="get" action="/webfilesys/servlet" style="padding:0px;margin:0px;">
+  <form accept-charset="utf-8" name="sortform" method="get" action="/custom/webfilesys/servlet" style="padding:0px;margin:0px;">
   
     <input type="hidden" name="command" value="listVideos" />
     
@@ -226,7 +226,7 @@
 	    </table>    
   </form>
 
-  <form accept-charset="utf-8" name="form2" action="/webfilesys/servlet" method="post" style="padding:0px;margin:0px;">
+  <form accept-charset="utf-8" name="form2" action="/custom/webfilesys/servlet" method="post" style="padding:0px;margin:0px;">
     <input type="hidden" name="actpath">
       <xsl:attribute name="value">
         <xsl:value-of select="currentPath" />
@@ -253,7 +253,7 @@
                   </xsl:if>
                   <img class="thumb" border="0">
                     <xsl:attribute name="id">pic-<xsl:value-of select="@id" /></xsl:attribute>
-                    <xsl:attribute name="src">/webfilesys/images/videoPlaceholder.png</xsl:attribute>
+                    <xsl:attribute name="src">/custom/webfilesys/images/videoPlaceholder.png</xsl:attribute>
                     <xsl:attribute name="width">160</xsl:attribute>
                     <xsl:attribute name="height">120</xsl:attribute>
                     <xsl:attribute name="imgPath"><xsl:value-of select="imgPath" /></xsl:attribute>
@@ -348,7 +348,7 @@
             <xsl:if test="not(/fileList/readonly)">
 
               <input type="button" resource="button.upload">
-                <xsl:attribute name="onclick">javascript:window.location.href='/webfilesys/servlet?command=uploadParms&amp;actpath='+encodeURIComponent('<xsl:value-of select="/fileList/menuPath" />');</xsl:attribute>
+                <xsl:attribute name="onclick">javascript:window.location.href='/custom/webfilesys/servlet?command=uploadParms&amp;actpath='+encodeURIComponent('<xsl:value-of select="/fileList/menuPath" />');</xsl:attribute>
               </input> 
                                  
               <input type="button" resource="button.paste" id="pasteButton">

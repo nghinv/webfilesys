@@ -1,6 +1,6 @@
 function checkAlarm() 
 {
-	var url = "/webfilesys/servlet?command=calendar&cmd=checkAlarm";
+	var url = "/custom/webfilesys/servlet?command=calendar&cmd=checkAlarm";
 	xmlRequest(url, handleAlarmResult);
 }
 
@@ -147,7 +147,7 @@ function delayOrCloseReminder(eventId)
         return;
 	}
 
-	var url = "/webfilesys/servlet?command=calendar&cmd=delay&eventId=" + eventId + "&delayMinutes=" + remindAgainSel.value;
+	var url = "/custom/webfilesys/servlet?command=calendar&cmd=delay&eventId=" + eventId + "&delayMinutes=" + remindAgainSel.value;
 	xmlRequest(url, handleDelayResult);
 }
 

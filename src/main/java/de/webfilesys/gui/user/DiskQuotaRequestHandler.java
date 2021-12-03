@@ -54,8 +54,8 @@ public class DiskQuotaRequestHandler extends UserRequestHandler
 			return;
 		}
 
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/common.css\">");
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/common.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
 
 		output.println("</head>");
 
@@ -100,10 +100,10 @@ public class DiskQuotaRequestHandler extends UserRequestHandler
 		{
 			long imgWidth=fileSysStat.getTotalSizeSum() * 300L / userDiskQuota;
 			output.println("<td class=\"accountDiskUsage accountDiskUsed\">");
-			output.print("<img src=\"/webfilesys/images/space.gif\" border=\"0\" height=\"10\" width=\"" + imgWidth + "\">");
+			output.print("<img src=\"/custom/webfilesys/images/space.gif\" border=\"0\" height=\"10\" width=\"" + imgWidth + "\">");
 			output.println("</td>");
 			output.println("<td class=\"accountDiskUsage accountDiskFree\">");
-			output.print("<img src=\"/webfilesys/images/space.gif\" border=\"0\" height=\"10\" width=\"" + (300L - imgWidth) + "\">");
+			output.print("<img src=\"/custom/webfilesys/images/space.gif\" border=\"0\" height=\"10\" width=\"" + (300L - imgWidth) + "\">");
 			output.println("</td>");
 			output.println("<td class=\"plaintext\">&nbsp;" + (fileSysStat.getTotalSizeSum() * 100L / userDiskQuota) + " %</td>");
 		}
@@ -111,10 +111,10 @@ public class DiskQuotaRequestHandler extends UserRequestHandler
 		{
 			long imgWidth = userDiskQuota * 300L / fileSysStat.getTotalSizeSum();
 			output.println("<td class=\"accountDiskUsage accountDiskUsed\">");
-			output.print("<img src=\"/webfilesys/images/space.gif\" border=\"0\" height=\"10\" width=\"" + imgWidth + "\">");
+			output.print("<img src=\"/custom/webfilesys/images/space.gif\" border=\"0\" height=\"10\" width=\"" + imgWidth + "\">");
 			output.println("</td>");
 			output.println("<td class=\"accountDiskUsage accountDiskOverdue\">");
-			output.print("<img src=\"/webfilesys/images/space.gif\" border=\"0\" height=\"10\" width=\"" + (300L - imgWidth) + "\">");
+			output.print("<img src=\"/custom/webfilesys/images/space.gif\" border=\"0\" height=\"10\" width=\"" + (300L - imgWidth) + "\">");
 			output.println("</td>");
 			output.println("<td class=\"plaintext\">&nbsp;" + (fileSysStat.getTotalSizeSum() * 100L / userDiskQuota) + " %</td>");
 		}

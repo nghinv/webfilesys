@@ -99,14 +99,14 @@ function multiFileCopyMove()
 {
     document.form1.command.value='multiFileCopyMove';
 
-    xmlRequestPost("/webfilesys/servlet", getFormData(document.form1), showCopyResult);
+    xmlRequestPost("/custom/webfilesys/servlet", getFormData(document.form1), showCopyResult);
     
     document.form1.command.value='multiFileOp';
 }
 
 function diffCompare() {
     if (checkTwoFilesSelected()) {
-	    var compareWin = window.open('/webfilesys/servlet?command=blank','compareWin','width=' + (screen.width - 20) + ',height=' + (screen.height - 80) + ',scrollbars=yes,resizable=yes,status=no,menubar=no,toolbar=no,location=no,directories=no,screenX=0,screenY=0,left=0,top=0');
+	    var compareWin = window.open('/custom/webfilesys/servlet?command=blank','compareWin','width=' + (screen.width - 20) + ',height=' + (screen.height - 80) + ',scrollbars=yes,resizable=yes,status=no,menubar=no,toolbar=no,location=no,directories=no,screenX=0,screenY=0,left=0,top=0');
         compareWin.focus();
         document.form1.command.value = 'diff';
         document.form1.target = 'compareWin';
@@ -130,7 +130,7 @@ function showMultipleGPX() {
     }
 
 
-    var mapWin = window.open('/webfilesys/servlet?command=blank','mapWin','width=' + (screen.width - 20) + ',height=' + (screen.height - 110) + ',scrollbars=yes,resizable=yes,status=no,menubar=no,toolbar=no,location=no,directories=no,screenX=0,screenY=0,left=0,top=0');
+    var mapWin = window.open('/custom/webfilesys/servlet?command=blank','mapWin','width=' + (screen.width - 20) + ',height=' + (screen.height - 110) + ',scrollbars=yes,resizable=yes,status=no,menubar=no,toolbar=no,location=no,directories=no,screenX=0,screenY=0,left=0,top=0');
     mapWin.focus();
     document.form1.command.value = 'multiGPX';
     document.form1.target = 'mapWin';
@@ -378,7 +378,7 @@ function submitSwitchReadWrite()
 }
 
 function switchFolderWatch(path) {
-    var url = "/webfilesys/servlet?command=switchFolderWatch&path=" + encodeURIComponent(path);
+    var url = "/custom/webfilesys/servlet?command=switchFolderWatch&path=" + encodeURIComponent(path);
     
     xmlRequest(url, function(req) {
         if (req.readyState == 4) {
@@ -410,12 +410,12 @@ function enableDisablePatternInput()
 
 function bookmark(path) {
     if (path && (path.length > 0)) {
-        centeredDialog('/webfilesys/servlet?command=addBookmark&path=' + encodeURIComponent(path), '/webfilesys/xsl/addBookmark.xsl', 320, 190, function() {
+        centeredDialog('/custom/webfilesys/servlet?command=addBookmark&path=' + encodeURIComponent(path), '/custom/webfilesys/xsl/addBookmark.xsl', 320, 190, function() {
             document.bookmarkForm.bookmarkName.focus();
             document.bookmarkForm.bookmarkName.select();
         });    
     } else {
-        centeredDialog('/webfilesys/servlet?command=addBookmark', '/webfilesys/xsl/addBookmark.xsl', 320, 190, function() {
+        centeredDialog('/custom/webfilesys/servlet?command=addBookmark', '/custom/webfilesys/xsl/addBookmark.xsl', 320, 190, function() {
             document.bookmarkForm.bookmarkName.focus();
             document.bookmarkForm.bookmarkName.select();
         });
@@ -425,7 +425,7 @@ function bookmark(path) {
 function fastpath(path) {
 	showHourGlass();
 
-	window.location.href = "/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(path) + "&mask=*&fastPath=true";
+	window.location.href = "/custom/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(path) + "&mask=*&fastPath=true";
 }
 
 function hidePrompt() {
@@ -496,7 +496,7 @@ function showPromptDialog(htmlFragmentURL, boxWidth, callback) {
 }
 
 function renameLink(linkName) {
-	showPromptDialog("/webfilesys/html/renameLink.html", 360, function() {	
+	showPromptDialog("/custom/webfilesys/html/renameLink.html", 360, function() {	
 	
 	    document.getElementById("oldLinkName").value = linkName;
 	    document.getElementById("oldLinkNameShort").innerHTML = shortText(linkName, 35);

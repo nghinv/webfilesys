@@ -15,19 +15,19 @@
 <meta http-equiv="expires" content="0" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/metaInf/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/metaInf/css" />.css</xsl:attribute>
 </link>
 
-<script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/editMetaInf.js" type="text/javascript"></script>
-<script type="text/javascript" src="/webfilesys/javascript/jscolor/jscolor.js"></script>
+<script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/editMetaInf.js" type="text/javascript"></script>
+<script type="text/javascript" src="/custom/webfilesys/javascript/jscolor/jscolor.js"></script>
 
-<script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
 <script type="text/javascript">
-  <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/metaInf/language" /></xsl:attribute>
+  <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/metaInf/language" /></xsl:attribute>
 </script>
 
 <title resource="label.editMetaInfo"></title>
@@ -43,7 +43,7 @@
     <xsl:value-of select="/metaInf/shortPath" />
   </div>  
 
-  <form accept-charset="utf-8" name="form1" method="post" action="/webfilesys/servlet" style="margin-bottom:0">
+  <form accept-charset="utf-8" name="form1" method="post" action="/custom/webfilesys/servlet" style="margin-bottom:0">
   
     <input type="hidden" name="command" value="editMetaInf" />
     
@@ -239,7 +239,7 @@
                     </td>
                     <td>
                       <img border="0" width="16" height="16">
-                        <xsl:attribute name="src">/webfilesys/icons/<xsl:value-of select="." /></xsl:attribute>
+                        <xsl:attribute name="src">/custom/webfilesys/icons/<xsl:value-of select="." /></xsl:attribute>
                       </img>
                     </td>
                     <td class="formParm1">

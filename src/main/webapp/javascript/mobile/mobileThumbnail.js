@@ -34,7 +34,7 @@ function mobilePicturePopup(filePath, picIdx) {
     }
   	var xsize = pic.getAttribute("origWidth");
    	var ysize = pic.getAttribute("origHeight");
-    var imgSrc = "/webfilesys/servlet?command=getFile&filePath=" + encodeURIComponent(filePath);
+    var imgSrc = "/custom/webfilesys/servlet?command=getFile&filePath=" + encodeURIComponent(filePath);
 
     var popupShield = document.createElement("div");
 	popupShield.id = "popupShield";

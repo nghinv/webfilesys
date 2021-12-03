@@ -14,10 +14,10 @@
 
 <meta http-equiv="expires" content="0" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/categoryList/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/categoryList/css" />.css</xsl:attribute>
 </link>
 
 <title>WebFileSys: <xsl:value-of select="/categoryList/resources/msg[@key='label.newCategory']/@value" /></title>
@@ -42,7 +42,7 @@
 
 <xsl:template match="categoryList">
 
-  <form accept-charset="utf-8" name="form1" method="post" action="/webfilesys/servlet">
+  <form accept-charset="utf-8" name="form1" method="post" action="/custom/webfilesys/servlet">
     <input type="hidden" name="command" value="category" />
     <input type="hidden" name="cmd" value="new" />
 
@@ -93,7 +93,7 @@
 
         <td class="formButton" nowrap="nowrap" style="text-align:right">
           <a class="button" onclick="this.blur();" style="float:right"> 
-            <xsl:attribute name="href">javascript:window.location.href='/webfilesys/servlet?command=category'</xsl:attribute>
+            <xsl:attribute name="href">javascript:window.location.href='/custom/webfilesys/servlet?command=category'</xsl:attribute>
             <span><xsl:value-of select="resources/msg[@key='button.cancel']/@value" /></span>
           </a>              
         </td>

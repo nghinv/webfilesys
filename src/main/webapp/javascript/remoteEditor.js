@@ -1,5 +1,5 @@
 function saveEditorContent(closeAfterSave) {
-	var url = "/webfilesys/servlet?command=saveRemoteEditor";
+	var url = "/custom/webfilesys/servlet?command=saveRemoteEditor";
 	
 	var formData = getFormData(document.getElementById("editForm"));
 	
@@ -34,7 +34,7 @@ function handleCloseAfterSave(req) {
             if (success == 'true') {
                 var mobile = resultElem.getElementsByTagName("mobile")[0].firstChild.nodeValue;
                 if (mobile == "true") {
-                    window.location.href = "/webfilesys/servlet?command=mobile&cmd=folderFileList";
+                    window.location.href = "/custom/webfilesys/servlet?command=mobile&cmd=folderFileList";
                 } else {
             	    setTimeout("window.close()", 100);
                 }

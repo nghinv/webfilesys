@@ -146,12 +146,12 @@ public class SearchRequestHandler extends UserRequestHandler
 			output.print("<title>" + getResource("label.searchresults","Search Results") + ": " + searchText + " </title>");
 		}
 
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/common.css\">");
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/common.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
 
-		output.println("<script src=\"/webfilesys/javascript/ajaxCommon.js\" type=\"text/javascript\"></script>");
-		output.println("<script src=\"/webfilesys/javascript/ajaxFolder.js\" type=\"text/javascript\"></script>");
-		output.println("<script src=\"/webfilesys/javascript/util.js\" type=\"text/javascript\"></script>");
+		output.println("<script src=\"/custom/webfilesys/javascript/ajaxCommon.js\" type=\"text/javascript\"></script>");
+		output.println("<script src=\"/custom/webfilesys/javascript/ajaxFolder.js\" type=\"text/javascript\"></script>");
+		output.println("<script src=\"/custom/webfilesys/javascript/util.js\" type=\"text/javascript\"></script>");
 
         output.println("<script language=\"javascript\">"); 
 
@@ -164,7 +164,7 @@ public class SearchRequestHandler extends UserRequestHandler
         
         if (!readonly)
         {
-    		output.println("<script src=\"/webfilesys/javascript/search.js\" type=\"text/javascript\"></script>");
+    		output.println("<script src=\"/custom/webfilesys/javascript/search.js\" type=\"text/javascript\"></script>");
         }
 		
 		output.println("</head>");
@@ -420,7 +420,7 @@ public class SearchRequestHandler extends UserRequestHandler
 								{
 									if ((category == null) || metaInfMgr.isCategoryAssigned(act_path, file_list[i], category))
 									{
-										String viewLink = "/webfilesys/servlet?command=getFile&filePath=" + UTF8URLEncoder.encode(temp_file.getAbsolutePath());
+										String viewLink = "/custom/webfilesys/servlet?command=getFile&filePath=" + UTF8URLEncoder.encode(temp_file.getAbsolutePath());
 										
 						                String iconImg = "doc.gif";
 

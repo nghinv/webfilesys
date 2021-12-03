@@ -78,10 +78,10 @@
     <tr>
       <td colspan="2">
         <div class="driveUsageBar">
-          <img src="/webfilesys/images/bluedot.gif" height="20" border="0">
+          <img src="/custom/webfilesys/images/bluedot.gif" height="20" border="0">
             <xsl:attribute name="width"><xsl:value-of select="$percentUsed * 2" /></xsl:attribute> 
           </img>
-          <img src="/webfilesys/images/space.gif" height="20" border="0">
+          <img src="/custom/webfilesys/images/space.gif" height="20" border="0">
             <xsl:attribute name="width"><xsl:value-of select="(100 - $percentUsed) * 2" /></xsl:attribute> 
           </img>
         </div>

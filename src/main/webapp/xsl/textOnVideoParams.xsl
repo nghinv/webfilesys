@@ -11,19 +11,19 @@
 
     <meta http-equiv="expires" content="0" />
 
-    <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
     <link rel="stylesheet" type="text/css">
-      <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/editParams/css" />.css</xsl:attribute>
+      <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/editParams/css" />.css</xsl:attribute>
     </link>
 
-    <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/videoAudio.js" type="text/javascript"></script>
-    <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/videoAudio.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
 
-    <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
     <script type="text/javascript">
-      <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/editParams/language" /></xsl:attribute>
+      <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/editParams/language" /></xsl:attribute>
     </script>
   </head>
 
@@ -33,7 +33,7 @@
     
     <br/>
 
-    <form accept-charset="utf-8" name="textOnVideoForm" method="post" action="/webfilesys/servlet">
+    <form accept-charset="utf-8" name="textOnVideoForm" method="post" action="/custom/webfilesys/servlet">
       <input type="hidden" name="command" value="video" />
       <input type="hidden" name="cmd" value="textOnVideo" />
       
@@ -155,7 +155,7 @@
                 </td>
                 <td class="formParm2" style="text-align:right">
                   <input type="button" class="formButton" name="cancel" resource="button.cancel">
-                    <xsl:attribute name="onclick">window.location.href='/webfilesys/servlet?command=listVideos'</xsl:attribute>
+                    <xsl:attribute name="onclick">window.location.href='/custom/webfilesys/servlet?command=listVideos'</xsl:attribute>
                   </input>
                 </td>
               </tr>

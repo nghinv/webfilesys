@@ -10,19 +10,19 @@
 	  <head>
 	    <title>WebFileSys: Folder Statistics</title>
 	    
-        <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+        <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 	    
         <link rel="stylesheet" type="text/css">
-          <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/folderStats/css" />.css</xsl:attribute>
+          <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/folderStats/css" />.css</xsl:attribute>
         </link>
 	  
-        <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-        <script src="/webfilesys/javascript/sunburstChart.js" type="text/javascript"></script>
-        <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-        <script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+        <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+        <script src="/custom/webfilesys/javascript/sunburstChart.js" type="text/javascript"></script>
+        <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+        <script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
 	  
 	    <script type="text/javascript">
-	      var CLICK_TARGET = "/webfilesys/servlet?command=folderTreeStats&amp;path=";
+	      var CLICK_TARGET = "/custom/webfilesys/servlet?command=folderTreeStats&amp;path=";
 	    
 	      var windowWidth = getWinWidth();
           var windowHeight = getWinHeight();	
@@ -190,17 +190,17 @@
 		  
 		  function oneLevelUp() {
 		      showHourGlass();
-              window.location.href = "/webfilesys/servlet?command=folderTreeStats&amp;path=" + encodeURIComponent('<xsl:value-of select="/folderStats/parentFolder" />') + "&amp;random=" + (new Date()).getTime();
+              window.location.href = "/custom/webfilesys/servlet?command=folderTreeStats&amp;path=" + encodeURIComponent('<xsl:value-of select="/folderStats/parentFolder" />') + "&amp;random=" + (new Date()).getTime();
   		  }
 		  
 		  function showSubTrees() {
 		      showHourGlass();
-              window.location.href = '/webfilesys/servlet?command=folderTreeStats&amp;path=<xsl:value-of select="/folderStats/encodedPath" />';
+              window.location.href = '/custom/webfilesys/servlet?command=folderTreeStats&amp;path=<xsl:value-of select="/folderStats/encodedPath" />';
   		  }
   		  
 		  function hideSubTrees() {
 		      showHourGlass();
-              window.location.href = '/webfilesys/servlet?command=folderTreeStats&amp;path=<xsl:value-of select="/folderStats/encodedPath" />&amp;hideSubTrees=true';
+              window.location.href = '/custom/webfilesys/servlet?command=folderTreeStats&amp;path=<xsl:value-of select="/folderStats/encodedPath" />&amp;hideSubTrees=true';
   		  }
   		  
 		</script>

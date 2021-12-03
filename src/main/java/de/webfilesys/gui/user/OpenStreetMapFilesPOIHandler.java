@@ -134,7 +134,7 @@ public class OpenStreetMapFilesPOIHandler extends UserRequestHandler
         		
                 if (geoDataExist)
                 {
-                    String descrText = "<img src=\"/webfilesys/servlet?command=picThumb&amp;imgFile=" + URLEncoder.encode(imgFile.getName()) + "\" style=\"max-width:160px;display:inline;\">";  
+                    String descrText = "<img src=\"/custom/webfilesys/servlet?command=picThumb&amp;imgFile=" + URLEncoder.encode(imgFile.getName()) + "\" style=\"max-width:160px;display:inline;\">";  
                     
             		String description = metaInfMgr.getDescription(imgFile.getAbsolutePath());
             		if (!CommonUtils.isEmpty(description)) {
@@ -149,7 +149,7 @@ public class OpenStreetMapFilesPOIHandler extends UserRequestHandler
                     output.print('\t');
                     output.print(descrText);
                     output.print('\t');
-                    output.print("/webfilesys/images/OSMaps.png");
+                    output.print("/custom/webfilesys/images/OSMaps.png");
                     output.print('\t');
                     output.print("32,32");
                     output.print('\t');

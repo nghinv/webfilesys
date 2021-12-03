@@ -51,7 +51,7 @@ public class XslSyncCompareHandler extends XslRequestHandlerBase
 			
 		doc.appendChild(syncElement);
 			
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/syncCompare.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/syncCompare.xsl\"");
 
 		doc.insertBefore(xslRef, syncElement);
 

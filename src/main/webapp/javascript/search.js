@@ -5,9 +5,9 @@ function showResults() {
 	keepSearchResults = true;
             
     if (mobile) {
-        window.opener.location.href = "/webfilesys/servlet?command=mobile&cmd=folderFileList&absPath=" + searchResultDir; 
+        window.opener.location.href = "/custom/webfilesys/servlet?command=mobile&cmd=folderFileList&absPath=" + searchResultDir; 
     } else {
-        window.opener.parent.DirectoryPath.location.href = "/webfilesys/servlet?command=exp&expandPath=" + searchResultDir + "&fastPath=true"; 
+        window.opener.parent.DirectoryPath.location.href = "/custom/webfilesys/servlet?command=exp&expandPath=" + searchResultDir + "&fastPath=true"; 
     }
 
 	setTimeout("self.close()", 1000);
@@ -32,7 +32,7 @@ function discardAndClose() {
 	
 function gotoSearchResultFolder(folderPath) {
 	if (window.opener) {
-		window.opener.location.href = "/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(folderPath) + "&fastPath=true;"
+		window.opener.location.href = "/custom/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(folderPath) + "&fastPath=true;"
 	}
 }
 

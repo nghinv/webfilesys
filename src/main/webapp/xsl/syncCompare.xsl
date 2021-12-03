@@ -15,17 +15,17 @@
 <meta http-equiv="expires" content="0" />
 
 <xsl:if test="not(folderTree/browserXslEnabled)">
-  <script language="JavaScript" src="/webfilesys/javascript/ajaxslt/util.js" type="text/javascript"></script>
-  <script language="JavaScript" src="/webfilesys/javascript/ajaxslt/xmltoken.js" type="text/javascript"></script>
-  <script language="JavaScript" src="/webfilesys/javascript/ajaxslt/dom.js" type="text/javascript"></script>
-  <script language="JavaScript" src="/webfilesys/javascript/ajaxslt/xpath.js" type="text/javascript"></script>
-  <script language="JavaScript" src="/webfilesys/javascript/ajaxslt/xslt.js" type="text/javascript"></script>
+  <script language="JavaScript" src="/custom/webfilesys/javascript/ajaxslt/util.js" type="text/javascript"></script>
+  <script language="JavaScript" src="/custom/webfilesys/javascript/ajaxslt/xmltoken.js" type="text/javascript"></script>
+  <script language="JavaScript" src="/custom/webfilesys/javascript/ajaxslt/dom.js" type="text/javascript"></script>
+  <script language="JavaScript" src="/custom/webfilesys/javascript/ajaxslt/xpath.js" type="text/javascript"></script>
+  <script language="JavaScript" src="/custom/webfilesys/javascript/ajaxslt/xslt.js" type="text/javascript"></script>
 </xsl:if>
 
-<script language="JavaScript" src="/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
-<script language="JavaScript" src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-<script language="JavaScript" src="/webfilesys/javascript/ajaxFolder.js" type="text/javascript"></script>
-<script language="JavaScript" src="/webfilesys/javascript/synchronize.js" type="text/javascript"></script>
+<script language="JavaScript" src="/custom/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
+<script language="JavaScript" src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+<script language="JavaScript" src="/custom/webfilesys/javascript/ajaxFolder.js" type="text/javascript"></script>
+<script language="JavaScript" src="/custom/webfilesys/javascript/synchronize.js" type="text/javascript"></script>
 
 <script type="text/javascript">
   var nothingSelected = '<xsl:value-of select="/synchronize/resources/msg[@key='sync.nothingSelected']/@value" />';
@@ -51,11 +51,11 @@
   
 </script>
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/synchronize/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/synchronize/css" />.css</xsl:attribute>
 </link>
 
 <title>
@@ -70,7 +70,7 @@
     <xsl:value-of select="/synchronize/resources/msg[@key='headline.syncCompare']/@value" />
   </div>
 
-  <form accept-charset="utf-8" name="form1" method="post" action="/webfilesys/servlet" style="margin-top:20px">
+  <form accept-charset="utf-8" name="form1" method="post" action="/custom/webfilesys/servlet" style="margin-top:20px">
   
     <input type="hidden" name="command" value="synchronize" />
   

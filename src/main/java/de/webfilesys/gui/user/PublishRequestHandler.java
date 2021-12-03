@@ -157,7 +157,7 @@ public class PublishRequestHandler extends UserRequestHandler
 
 		if (invitationType.equals(InvitationManager.INVITATION_TYPE_TREE))
 		{
-			secretURL.append("/webfilesys/servlet?command=silentLogin&");
+			secretURL.append("/custom/webfilesys/servlet?command=silentLogin&");
 			secretURL.append(virtualUser);
 			secretURL.append('=');
 			secretURL.append(accessCode);
@@ -173,11 +173,11 @@ public class PublishRequestHandler extends UserRequestHandler
 		{
 			if (typeOfContent.equals("pictures"))
 			{
-				secretURL.append("/webfilesys/servlet?command=visitor&accessCode=");
+				secretURL.append("/custom/webfilesys/servlet?command=visitor&accessCode=");
 			}
 			else
 			{
-				secretURL.append("/webfilesys/servlet?command=public?accessCode=");
+				secretURL.append("/custom/webfilesys/servlet?command=public?accessCode=");
 			}
 
 			secretURL.append(accessCode);
@@ -188,8 +188,8 @@ public class PublishRequestHandler extends UserRequestHandler
 
 		output.println("<title>" + getResource("label.publishhead","Publish folder content") + "</title>");
 
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/common.css\">");
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/common.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
 
 		output.println("</head>"); 
 		output.println("<body class=\"publish\">");
@@ -278,8 +278,8 @@ public class PublishRequestHandler extends UserRequestHandler
 		output.println("<head>");
 		output.println("<title>" + getResource("label.publishhead","Publish folder content") + "</title>");
 
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/common.css\">");
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/common.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
 
 		output.println("<script language=\"JavaScript\" src=\"javascript/fmweb.js\" type=\"text/javascript\"></script>"); 
 
@@ -290,7 +290,7 @@ public class PublishRequestHandler extends UserRequestHandler
         
         output.println("<br/>");
 
-		output.println("<form accept-charset=\"utf-8\" name=\"form1\" method=\"post\" action=\"/webfilesys/servlet\">");
+		output.println("<form accept-charset=\"utf-8\" name=\"form1\" method=\"post\" action=\"/custom/webfilesys/servlet\">");
 
 		output.println("<input type=\"hidden\" name=\"command\" value=\"publishFolder\">");
 

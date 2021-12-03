@@ -14,20 +14,20 @@
 
 <meta http-equiv="expires" content="0" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/menubar/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/menubar/css" />.css</xsl:attribute>
 </link>
 
-<script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/menuBar.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/menuBar.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
 <script type="text/javascript">
-  <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/menubar/language" /></xsl:attribute>
+  <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/menubar/language" /></xsl:attribute>
 </script>
 
 </head>
@@ -69,7 +69,7 @@
 
             <xsl:if test="/menubar/unixAdmin">
               <th>
-	            <div class="icon-button" onclick="window.open('/webfilesys/servlet?command=processList', 'processWin')">
+	            <div class="icon-button" onclick="window.open('/custom/webfilesys/servlet?command=processList', 'processWin')">
                   <xsl:attribute name="titleResource">label.processes</xsl:attribute>
                   <a class="icon-font icon-process">
                     <xsl:text> </xsl:text>
@@ -100,7 +100,7 @@
 
             <xsl:if test="/menubar/role='admin'">
               <th>
-	            <div class="icon-button" onclick="parent.location.href='/webfilesys/servlet?command=admin&amp;cmd=menu'">
+	            <div class="icon-button" onclick="parent.location.href='/custom/webfilesys/servlet?command=admin&amp;cmd=menu'">
                   <xsl:attribute name="titleResource">label.admin</xsl:attribute>
                   <a class="icon-font icon-admin">
                     <xsl:text> </xsl:text>
@@ -113,7 +113,7 @@
               <xsl:if test="not(readonly) or (readonly='false')">
                 <xsl:if test="registrationType='open'">
                   <th>
-	                <div class="icon-button" onclick="parent.frames[2].location.href='/webfilesys/servlet?command=selfEditUser'">
+	                <div class="icon-button" onclick="parent.frames[2].location.href='/custom/webfilesys/servlet?command=selfEditUser'">
                       <xsl:attribute name="titleResource">label.editregistration</xsl:attribute>
                       <a class="icon-font icon-user">
                         <xsl:text> </xsl:text>
@@ -124,7 +124,7 @@
 
                 <xsl:if test="not(registrationType='open')">
                   <th>
-	                <div class="icon-button" onclick="parent.frames[2].location.href='/webfilesys/servlet?command=editPw'">
+	                <div class="icon-button" onclick="parent.frames[2].location.href='/custom/webfilesys/servlet?command=editPw'">
                       <xsl:attribute name="titleResource">label.settings</xsl:attribute>
                       <a class="icon-font icon-user">
                         <xsl:text> </xsl:text>
@@ -271,7 +271,7 @@
 
             <th>
 			  <div class="icon-button">
-                <xsl:attribute name="onclick">window.open('/webfilesys/help/<xsl:value-of select="helpLanguage" />/help.html', 'helpWin')</xsl:attribute>
+                <xsl:attribute name="onclick">window.open('/custom/webfilesys/help/<xsl:value-of select="helpLanguage" />/help.html', 'helpWin')</xsl:attribute>
                 <xsl:attribute name="titleResource">label.help</xsl:attribute>
                 <a class="icon-font icon-help">
                   <xsl:text> </xsl:text>
@@ -280,7 +280,7 @@
             </th>
 
             <th>
-			  <div class="icon-button" onclick="window.open('/webfilesys/servlet?command=versionInfo','infowindow','status=no,toolbar=no,location=no,menu=no,width=300,height=220,resizable=no,left=250,top=150,screenX=250,screenY=150')">
+			  <div class="icon-button" onclick="window.open('/custom/webfilesys/servlet?command=versionInfo','infowindow','status=no,toolbar=no,location=no,menu=no,width=300,height=220,resizable=no,left=250,top=150,screenX=250,screenY=150')">
                 <xsl:attribute name="titleResource">label.about</xsl:attribute>
                 <a class="icon-font icon-info">
                   <xsl:text> </xsl:text>
@@ -289,7 +289,7 @@
             </th>
 
             <th style="padding-left:20px">
-			  <div class="icon-button" onclick="parent.location.href='/webfilesys/servlet?command=logout'">
+			  <div class="icon-button" onclick="parent.location.href='/custom/webfilesys/servlet?command=logout'">
                 <xsl:attribute name="titleResource">label.logout</xsl:attribute>
                 <a class="icon-font icon-exit">
                   <xsl:text> </xsl:text>

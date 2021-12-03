@@ -1,6 +1,6 @@
 function getUploadStatus() {
 
-    var url = "/webfilesys/servlet?command=uploadStatus";
+    var url = "/custom/webfilesys/servlet?command=uploadStatus";
 
     xmlRequest(url, function(req) {
         if (req.readyState == 4) {
@@ -30,7 +30,7 @@ function getUploadStatus() {
                 if (browserMSIE) {
                     // workaround for MSIE hanging on the upload status screen
                     if (responseXml.getElementsByTagName("success")[0].firstChild.nodeValue == 'true') {
-                        window.location.href = '/webfilesys/servlet?command=listFiles';        
+                        window.location.href = '/custom/webfilesys/servlet?command=listFiles';        
                     }        
                 }     
              

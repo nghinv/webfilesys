@@ -27,7 +27,7 @@
 
 <title>WebFileSys geotrack viewer</title>
 
-<script language="JavaScript" src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+<script language="JavaScript" src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
 
 <script language="javascript">
   var trackPointList = new Array();

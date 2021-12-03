@@ -14,12 +14,12 @@
 
   <meta http-equiv="expires" content="0" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/fileIcons.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/fileIcons.css" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/folderTree/css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/folderTree/css" />.css</xsl:attribute>
   </link>
 
   <style type="text/css">
@@ -73,7 +73,7 @@
     <xsl:if test="not(@folder)">
       <xsl:if test="@icon">
         <img border="0" width="16" height="16">
-          <xsl:attribute name="src">/webfilesys/icons/<xsl:value-of select="@icon" /></xsl:attribute>
+          <xsl:attribute name="src">/custom/webfilesys/icons/<xsl:value-of select="@icon" /></xsl:attribute>
         </img>
       </xsl:if>
       <xsl:if test="@iconFont">
@@ -87,7 +87,7 @@
     </xsl:if>
 
     <a class="dirtree">
-      <xsl:attribute name="href">/webfilesys/servlet?command=getZipContentFile&amp;zipFilePath=<xsl:value-of select="/folderTree/zipFileEncodedPath" />&amp;zipContentPath=<xsl:value-of select="@path" /></xsl:attribute>
+      <xsl:attribute name="href">/custom/webfilesys/servlet?command=getZipContentFile&amp;zipFilePath=<xsl:value-of select="/folderTree/zipFileEncodedPath" />&amp;zipContentPath=<xsl:value-of select="@path" /></xsl:attribute>
       <xsl:attribute name="target">_blank</xsl:attribute>
       <xsl:attribute name="class">
         <xsl:value-of select="'dirtree'"/>

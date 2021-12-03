@@ -16,10 +16,10 @@
 
   <meta http-equiv="expires" content="0" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/slideShow/css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/slideShow/css" />.css</xsl:attribute>
   </link>
 
   <script src="javascript/ajaxCommon.js" type="text/javascript" />
@@ -64,7 +64,7 @@
   
         first = true;
   
-        prefetchSrc = '/webfilesys/images/space.gif';
+        prefetchSrc = '/custom/webfilesys/images/space.gif';
     
         prefetchWidth = 1;
     
@@ -124,7 +124,7 @@
             return;
         }
 
-        var url = '/webfilesys/servlet?command=coBrowsingClientImage&amp;windowWidth=' + getWinWidth() + '&amp;windowHeight=' + getWinHeight();
+        var url = '/custom/webfilesys/servlet?command=coBrowsingClientImage&amp;windowWidth=' + getWinWidth() + '&amp;windowHeight=' + getWinHeight();
 
         if (initial)
         {
@@ -219,7 +219,7 @@
                     
                 prefetchImg.onLoad = prefetchLoaded();
                     
-                prefetchSrc = '/webfilesys/servlet?command=getFile&amp;filePath=' + encodeURIComponent(imagePath) + '&amp;cached=true';
+                prefetchSrc = '/custom/webfilesys/servlet?command=getFile&amp;filePath=' + encodeURIComponent(imagePath) + '&amp;cached=true';
                     
                 if (first)
                 {
@@ -234,7 +234,7 @@
                     
                 centerDiv.style.height = Math.round(((getWinHeight() - imageHeight) / 2)) + 'px';
                     
-                imageElement.src = '/webfilesys/images/space.gif';
+                imageElement.src = '/custom/webfilesys/images/space.gif';
 
                 imageElement.width = 1;
                     
@@ -301,17 +301,17 @@
           <xsl:value-of select="/slideShow/resources/msg[@key='headCoBrowsingClient']/@value" />
         </h1>
     
-        <a href="#" onclick="window.open('/webfilesys/servlet?command=versionInfo','infowindow','status=no,toolbar=no,location=no,menu=no,width=300,height=220,resizable=no,left=250,top=150,screenX=250,screenY=150')">
+        <a href="#" onclick="window.open('/custom/webfilesys/servlet?command=versionInfo','infowindow','status=no,toolbar=no,location=no,menu=no,width=300,height=220,resizable=no,left=250,top=150,screenX=250,screenY=150')">
           <xsl:attribute name="title">About WebFileSys</xsl:attribute>
           <img id="pauseImg" border="0">
-            <xsl:attribute name="src">/webfilesys/images/logo.gif</xsl:attribute>
+            <xsl:attribute name="src">/custom/webfilesys/images/logo.gif</xsl:attribute>
           </img>
         </a>
       </div>
       
       <div id="slideShowDiv" style="padding:0px;margin:0px;display:none;">
         <img id="slideShowImg" border="0" class="thumb">
-          <xsl:attribute name="src">/webfilesys/images/space.gif</xsl:attribute>
+          <xsl:attribute name="src">/custom/webfilesys/images/space.gif</xsl:attribute>
         </img>
       </div>  
 

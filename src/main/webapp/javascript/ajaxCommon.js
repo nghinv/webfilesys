@@ -16,7 +16,7 @@ function xmlRequestPost(url, params, callBackFunction) {
 function xmlGetRequest(command, parameters, successCallBack, failureCallBack) {
 	showHourGlass();
     
-    let url = "/webfilesys/servlet?command=" + command;
+    let url = "/custom/webfilesys/servlet?command=" + command;
     for (const key in parameters) {
         url = url + "&" + key + "=" + parameters[key];
    	}
@@ -49,7 +49,7 @@ function xmlPostRequest(command, parameters, successCallBack, failureCallBack) {
     	postData = postData + (postData.length > 0 ? "&" : "") + key + "=" + parameters[key];
    	}
 	
-	xmlRequestPost("/webfilesys/servlet", postData, function(req) {
+	xmlRequestPost("/custom/webfilesys/servlet", postData, function(req) {
 		
         if (req.readyState == 4) {
             if (req.status == 200) {
@@ -303,7 +303,7 @@ function showHourGlass() {
     waitDivElem.setAttribute("id", "waitDiv");
     
     var hourGlassElem = document.createElement('img');
-    hourGlassElem.setAttribute("src", "/webfilesys/images/hourglass.gif");
+    hourGlassElem.setAttribute("src", "/custom/webfilesys/images/hourglass.gif");
     waitDivElem.appendChild(hourGlassElem);
 
     document.getElementsByTagName('body')[0].appendChild(waitDivElem);    

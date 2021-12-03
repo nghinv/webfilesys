@@ -16,22 +16,22 @@
 
 <title>WebFileSys Picture Story</title>
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/fileList/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/fileList/css" />.css</xsl:attribute>
 </link>
 
-<script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
 <script src="javascript/fmweb.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
 <script src="javascript/contextMenuCommon.js" type="text/javascript"></script>
 <script src="javascript/graphicsContextMenu.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
 <script type="text/javascript">
-  <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/fileList/language" /></xsl:attribute>
+  <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/fileList/language" /></xsl:attribute>
 </script>
 
   <script language="javascript">
@@ -39,7 +39,7 @@
     function showImage(imgPath, width, height)
     {
         randNum = (new Date()).getTime();
-        picWin = window.open('/webfilesys/servlet?command=showImg&amp;imgname=' + encodeURIComponent(imgPath) + '&amp;random=' + randNum,'picWin' + randNum,'status=no,toolbar=no,location=no,menu=no,width=' + width + ',height=' + (height + 55) + ',resizable=yes,left=1,top=1,screenX=1,screenY=1');
+        picWin = window.open('/custom/webfilesys/servlet?command=showImg&amp;imgname=' + encodeURIComponent(imgPath) + '&amp;random=' + randNum,'picWin' + randNum,'status=no,toolbar=no,location=no,menu=no,width=' + width + ',height=' + (height + 55) + ',resizable=yes,left=1,top=1,screenX=1,screenY=1');
         picWin.focus();
     }
 
@@ -92,7 +92,7 @@
 
   <xsl:if test="/fileList/file">
   
-    <form accept-charset="utf-8" name="sortform" method="get" action="/webfilesys/servlet" style="padding:0px;margin:0px;">
+    <form accept-charset="utf-8" name="sortform" method="get" action="/custom/webfilesys/servlet" style="padding:0px;margin:0px;">
     
       <input type="hidden" name="command" value="pictureStory" />
     
@@ -106,9 +106,9 @@
             
                 <xsl:if test="paging/currentPage &gt; 1">
                   <td class="fileListFunct" valign="center" nowrap="true">
-                    <a href="/webfilesys/servlet?command=pictureStory&amp;startIdx=0" class="icon-font icon-paging icon-page-first" style="margin-right:12px"></a>
+                    <a href="/custom/webfilesys/servlet?command=pictureStory&amp;startIdx=0" class="icon-font icon-paging icon-page-first" style="margin-right:12px"></a>
                     <a class="icon-font icon-paging icon-page-prev">
-                      <xsl:attribute name="href">/webfilesys/servlet?command=pictureStory&amp;startIdx=<xsl:value-of select="paging/prevStartIdx"/></xsl:attribute>
+                      <xsl:attribute name="href">/custom/webfilesys/servlet?command=pictureStory&amp;startIdx=<xsl:value-of select="paging/prevStartIdx"/></xsl:attribute>
                     </a>
                   </td>
                 </xsl:if>
@@ -139,7 +139,7 @@
                         </xsl:if>
                         <xsl:if test="not(@num=../currentPage)">
                           <div class="pagingPage pagingPageOther">
-                            <xsl:attribute name="onclick">window.location.href='/webfilesys/servlet?command=pictureStory&amp;startIdx=<xsl:value-of select="@startIdx" />'</xsl:attribute>
+                            <xsl:attribute name="onclick">window.location.href='/custom/webfilesys/servlet?command=pictureStory&amp;startIdx=<xsl:value-of select="@startIdx" />'</xsl:attribute>
                             <xsl:value-of select="@num" />
                           </div>
                         </xsl:if>
@@ -164,11 +164,11 @@
                   <td class="fileListFunct" align="right" valign="center">
                     <div>
                       <a class="icon-font icon-paging icon-page-last">
-                        <xsl:attribute name="href">/webfilesys/servlet?command=pictureStory&amp;startIdx=<xsl:value-of select="paging/lastStartIdx" /></xsl:attribute>
+                        <xsl:attribute name="href">/custom/webfilesys/servlet?command=pictureStory&amp;startIdx=<xsl:value-of select="paging/lastStartIdx" /></xsl:attribute>
                       </a>
                       <a class="icon-font icon-paging icon-page-next" style="margin-right:12px">
                         <xsl:attribute name="href">
-                          <xsl:value-of select="concat('/webfilesys/servlet?command=pictureStory&amp;startIdx=',paging/nextStartIdx)"/>
+                          <xsl:value-of select="concat('/custom/webfilesys/servlet?command=pictureStory&amp;startIdx=',paging/nextStartIdx)"/>
                         </xsl:attribute>
                       </a>
                     </div>
@@ -264,24 +264,24 @@
       <tr>
         <xsl:if test="paging/currentPage &gt; 1">
           <td class="fileListFunct" valign="center" nowrap="true">
-            <a href="/webfilesys/servlet?command=pictureStory&amp;startIdx=0" class="icon-font icon-paging icon-page-first" style="margin-right:12px;"></a>
+            <a href="/custom/webfilesys/servlet?command=pictureStory&amp;startIdx=0" class="icon-font icon-paging icon-page-first" style="margin-right:12px;"></a>
             <a class="icon-font icon-paging icon-page-prev">
-              <xsl:attribute name="href">/webfilesys/servlet?command=pictureStory&amp;startIdx=<xsl:value-of select="paging/prevStartIdx" /></xsl:attribute>
+              <xsl:attribute name="href">/custom/webfilesys/servlet?command=pictureStory&amp;startIdx=<xsl:value-of select="paging/prevStartIdx" /></xsl:attribute>
             </a>
           </td>
         </xsl:if>
 
         <xsl:if test="paging/nextStartIdx">
           <td class="fileListFunct">
-            <img src="/webfilesys/images/space.gif" border="0" width="16" />
+            <img src="/custom/webfilesys/images/space.gif" border="0" width="16" />
           </td>
               
           <td class="fileListFunct" align="right" valign="center" nowrap="true">
             <a class="icon-font icon-paging icon-page-last">
-              <xsl:attribute name="href">/webfilesys/servlet?command=pictureStory&amp;startIdx=<xsl:value-of select="paging/lastStartIdx" /></xsl:attribute>
+              <xsl:attribute name="href">/custom/webfilesys/servlet?command=pictureStory&amp;startIdx=<xsl:value-of select="paging/lastStartIdx" /></xsl:attribute>
             </a>
             <a class="icon-font icon-paging icon-page-next" style="margin-right:12px;">
-              <xsl:attribute name="href">/webfilesys/servlet?command=pictureStory&amp;startIdx=<xsl:value-of select="paging/nextStartIdx" /></xsl:attribute>
+              <xsl:attribute name="href">/custom/webfilesys/servlet?command=pictureStory&amp;startIdx=<xsl:value-of select="paging/nextStartIdx" /></xsl:attribute>
             </a>
           </td>
         </xsl:if>

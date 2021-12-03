@@ -14,10 +14,10 @@
 
   <meta http-equiv="expires" content="0" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/folderTree/css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/folderTree/css" />.css</xsl:attribute>
   </link>
 
   <style type="text/css">
@@ -41,9 +41,9 @@
 
 <xsl:template match="folderTree">
 
-  <img src="/webfilesys/images/space.gif" border="0" width="12" height="17" />
-  <img src="/webfilesys/images/tar.png" border="0" width="16" height="16" />
-  <img src="/webfilesys/images/space.gif" border="0" width="4" height="1" />
+  <img src="/custom/webfilesys/images/space.gif" border="0" width="12" height="17" />
+  <img src="/custom/webfilesys/images/tar.png" border="0" width="16" height="16" />
+  <img src="/custom/webfilesys/images/space.gif" border="0" width="4" height="1" />
   <a class="dirtree">
     <xsl:value-of select="/folderTree/shortZipFileName" />
   </a>
@@ -59,19 +59,19 @@
   <div class="last">
       
     <xsl:if test="position()=last()">
-      <img src="/webfilesys/images/branchLast.gif" border="0" width="15" height="17" />
+      <img src="/custom/webfilesys/images/branchLast.gif" border="0" width="15" height="17" />
     </xsl:if>
     <xsl:if test="position()!=last()">
-      <img src="/webfilesys/images/branch.gif" border="0" width="15" height="17" />
+      <img src="/custom/webfilesys/images/branch.gif" border="0" width="15" height="17" />
     </xsl:if>
 
     <xsl:if test="folder">
-      <img src="/webfilesys/images/folder.gif" border="0" width="17" height="14" />
+      <img src="/custom/webfilesys/images/folder.gif" border="0" width="17" height="14" />
     </xsl:if>
 
     <xsl:if test="not(folder)">
       <img border="0" width="16" height="16">
-        <xsl:attribute name="src">/webfilesys/icons/<xsl:value-of select="@icon" /></xsl:attribute>
+        <xsl:attribute name="src">/custom/webfilesys/icons/<xsl:value-of select="@icon" /></xsl:attribute>
       </img>
     </xsl:if>
 

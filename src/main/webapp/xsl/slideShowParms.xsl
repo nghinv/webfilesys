@@ -13,24 +13,24 @@
 
   <meta http-equiv="expires" content="0" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/slideShowParms/css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/slideShowParms/css" />.css</xsl:attribute>
   </link>
 
   <title resource="label.slideparmhead"></title>
 
-  <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/slideShowParms/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/slideShowParms/language" /></xsl:attribute>
   </script>
   
   <script type="text/javascript">
     function startShow() {
         if (document.form1.extraWin.checked) {
-            var slideshowURL = '/webfilesys/servlet?command=slideShow&amp;imageIdx=0&amp;delay=' + 
+            var slideshowURL = '/custom/webfilesys/servlet?command=slideShow&amp;imageIdx=0&amp;delay=' + 
                                document.form1.delay.options[document.form1.delay.selectedIndex].value + 
                                '&amp;recurse=' + document.form1.recurse.checked + 
                                '&amp;autoForward=' + document.form1.autoForward.checked +
@@ -45,7 +45,7 @@
             
             showWin.focus();
 
-            window.location.href = '/webfilesys/servlet?command=listFiles';
+            window.location.href = '/custom/webfilesys/servlet?command=listFiles';
         } else {
             var windowWidth;
             var windowHeigth;
@@ -86,7 +86,7 @@
 
   <div class="headline" resource="label.slideparmhead"></div>
 
-  <form accept-charset="utf-8" name="form1" method="post" action="/webfilesys/servlet">
+  <form accept-charset="utf-8" name="form1" method="post" action="/custom/webfilesys/servlet">
   
     <input type="hidden" name="command" value="slideShowInFrame" />
     <input type="hidden" name="imageIdx" value="" />
@@ -200,7 +200,7 @@
         </td>
        
         <td class="formButton" align="right">
-          <input type="button" name="cancel" onclick="window.location.href = '/webfilesys/servlet?command=listFiles';" resource="button.cancel"></input>
+          <input type="button" name="cancel" onclick="window.location.href = '/custom/webfilesys/servlet?command=listFiles';" resource="button.cancel"></input>
         </td>
       </tr>
      

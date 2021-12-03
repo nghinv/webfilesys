@@ -87,7 +87,7 @@ public class CompareImageTabHandler extends XslRequestHandlerBase {
 
 			XmlUtil.setChildText(fileElement, "displayName", displayName);
 			
-			String imgSrcPath = "/webfilesys/servlet?command=picThumb&imgFile=" + UTF8URLEncoder.encode(selectedFile);
+			String imgSrcPath = "/custom/webfilesys/servlet?command=picThumb&imgFile=" + UTF8URLEncoder.encode(selectedFile);
 
 			XmlUtil.setChildText(fileElement, "imgPath", imgSrcPath);
 		}

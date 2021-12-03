@@ -10,7 +10,7 @@
   <xsl:value-of select="/addBookmark/resources/msg[@key='label.addBookmark']/@value" />
 </div>
     
-<form accept-charset="utf-8" name="bookmarkForm" id="bookmarkForm" method="get" action="/webfilesys/servlet" 
+<form accept-charset="utf-8" name="bookmarkForm" id="bookmarkForm" method="get" action="/custom/webfilesys/servlet" 
       style="display:inline;">
   <xsl:attribute name="onsubmit">validateBookmarkName('<xsl:value-of select="/addBookmark/resources/msg[@key='alert.bookmarkMissingName']/@value" />');return false;</xsl:attribute>
   <input type="hidden" name="command" value="createBookmark" />

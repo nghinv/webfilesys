@@ -18,13 +18,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/login/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/login/css" />.css</xsl:attribute>
 </link>
 
-<link rel="shortcut icon" href="/webfilesys/images/favicon.ico" />
+<link rel="shortcut icon" href="/custom/webfilesys/images/favicon.ico" />
 
 <title>
   WebFileSys: 
@@ -34,18 +34,18 @@
   <xsl:value-of select="/login/version"/>
 </title>
 
-<script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-<script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
 
-<script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
 <script type="text/javascript">
-  <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/login/language" /></xsl:attribute>
+  <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/login/language" /></xsl:attribute>
 </script>
 
 <script language="javascript">
 
   function about() {
-      infowindow = window.open('/webfilesys/servlet?command=versionInfo','infowindow','status=no,toolbar=no,location=no,menu=no,width=300,height=230,resizable=no,left=250,top=150,screenX=250,screenY=150');
+      infowindow = window.open('/custom/webfilesys/servlet?command=versionInfo','infowindow','status=no,toolbar=no,location=no,menu=no,width=300,height=230,resizable=no,left=250,top=150,screenX=250,screenY=150');
       infowindow.focus();
   }
 
@@ -79,13 +79,13 @@
     <table border="0" cellpadding="5" cellspacing="0" width="100%">
       <tr>
         <td class="loginTitle" style="padding-left:10px">
-          <img src="/webfilesys/images/logo.gif" border="0" style="margin-top:20px" />
+          <img src="/custom/webfilesys/images/logo.gif" border="0" style="margin-top:20px" />
           <div style="width:100%;padding-top:10px;padding-left:0px;" resource="label.login.title">
           </div>
         </td>
         
         <td>
-          <form accept-charset="utf-8" name="passwordform" method="post" action="/webfilesys/servlet">
+          <form accept-charset="utf-8" name="passwordform" method="post" action="/custom/webfilesys/servlet">
             <input type="hidden" name="command" value="login" />
             <input type="hidden" id="screenWidth" name="screenWidth" value="" />
           
@@ -122,7 +122,7 @@
               <tr>
                 <td colspan="2" style="text-align:right;padding-right:10px;">
                   <xsl:if test="/login/openRegistration">
-                    <a class="dir" href="/webfilesys/servlet?command=registerSelf" resource="label.registerself"></a>
+                    <a class="dir" href="/custom/webfilesys/servlet?command=registerSelf" resource="label.registerself"></a>
                   </xsl:if>
                 </td>
               </tr>

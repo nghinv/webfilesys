@@ -11,7 +11,7 @@
     
       <xsl:for-each select="pathElem">
         <a class="currentTrail">
-          <xsl:attribute name="href">/webfilesys/servlet?command=exp&amp;expandPath=<xsl:value-of select="@path"/>&amp;fastPath=true</xsl:attribute>
+          <xsl:attribute name="href">/custom/webfilesys/servlet?command=exp&amp;expandPath=<xsl:value-of select="@path"/>&amp;fastPath=true</xsl:attribute>
           <xsl:attribute name="target">DirectoryPath</xsl:attribute>
           <xsl:value-of select="@name"/> 
         </a>

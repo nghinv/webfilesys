@@ -14,13 +14,13 @@
 
 <meta http-equiv="expires" content="0" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/publishFile/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/publishFile/css" />.css</xsl:attribute>
 </link>
 
-<script src="/webfilesys/javascript/publish.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/publish.js" type="text/javascript"></script>
 
 <title>
   <xsl:value-of select="/publishFile/resources/msg[@key='label.publishFile']/@value" />

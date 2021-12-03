@@ -14,15 +14,15 @@
 
 <meta http-equiv="expires" content="0" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/osmap.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/osmap.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/metaInf/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/metaInf/css" />.css</xsl:attribute>
 </link>
   
 <script type="text/javascript">
-  <xsl:attribute name="src">/webfilesys/javascript/openStreetMaps/OpenLayers.js</xsl:attribute>
+  <xsl:attribute name="src">/custom/webfilesys/javascript/openStreetMaps/OpenLayers.js</xsl:attribute>
 </script>
 
 <title>
@@ -42,7 +42,7 @@
  
         var pois = new OpenLayers.Layer.Text("My Points",
                                              {
-                                                 location:"/webfilesys/servlet?command=osmPOIList&amp;path=" + encodeURIComponent('<xsl:value-of select="/geoTag/pathForScript" />'),
+                                                 location:"/custom/webfilesys/servlet?command=osmPOIList&amp;path=" + encodeURIComponent('<xsl:value-of select="/geoTag/pathForScript" />'),
                                                  projection: map.displayProjection
                                              });
         map.addLayer(pois);

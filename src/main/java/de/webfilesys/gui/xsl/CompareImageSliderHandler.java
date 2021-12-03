@@ -60,7 +60,7 @@ public class CompareImageSliderHandler extends XslRequestHandlerBase {
 
         compareImageElem.appendChild(img1Elem);
         
-		String img1Src = "/webfilesys/servlet?command=getFile&filePath=" + UTF8URLEncoder.encode(img1Path);
+		String img1Src = "/custom/webfilesys/servlet?command=getFile&filePath=" + UTF8URLEncoder.encode(img1Path);
         
         XmlUtil.setChildText(img1Elem, "path", img1Src);
         XmlUtil.setChildText(img1Elem, "name", selectedFiles.get(0));
@@ -69,7 +69,7 @@ public class CompareImageSliderHandler extends XslRequestHandlerBase {
 
         compareImageElem.appendChild(img2Elem);
         
-		String img2Src = "/webfilesys/servlet?command=getFile&filePath=" + UTF8URLEncoder.encode(img2Path);
+		String img2Src = "/custom/webfilesys/servlet?command=getFile&filePath=" + UTF8URLEncoder.encode(img2Path);
 
 		XmlUtil.setChildText(img2Elem, "path", img2Src);
         XmlUtil.setChildText(img2Elem, "name", selectedFiles.get(1));

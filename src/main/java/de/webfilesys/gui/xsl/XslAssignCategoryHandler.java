@@ -68,7 +68,7 @@ public class XslAssignCategoryHandler extends XslRequestHandlerBase
 
     private void listAssignment(Element catListElement, String filePath)
     {
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/assignCategory.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/assignCategory.xsl\"");
 
 		doc.insertBefore(xslRef, catListElement);
 

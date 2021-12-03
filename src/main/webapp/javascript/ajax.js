@@ -1,20 +1,20 @@
 function cutCopyToClip(fileName, operation)
 {
-    url = '/webfilesys/servlet?command=cutCopy&fileName=' + encodeURIComponent(fileName) + '&cmd=' + operation;
+    url = '/custom/webfilesys/servlet?command=cutCopy&fileName=' + encodeURIComponent(fileName) + '&cmd=' + operation;
 
     xmlRequest(url, showCopyResult);
 }
 
 function editLocal(fileName)
 {
-    url = "/webfilesys/servlet?command=editFile&fileName=" + encodeURIComponent(fileName);
+    url = "/custom/webfilesys/servlet?command=editFile&fileName=" + encodeURIComponent(fileName);
 
     xmlRequest(url, ignoreResult);
 }
 
 function editLocalLink(filePath)
 {
-    url = "/webfilesys/servlet?command=editFile&filePath=" + encodeURIComponent(filePath);
+    url = "/custom/webfilesys/servlet?command=editFile&filePath=" + encodeURIComponent(filePath);
 
     xmlRequest(url, ignoreResult);
 }
@@ -88,7 +88,7 @@ function ignoreResult(req)
 
 function reloadPage()
 {
-    window.location.href = '/webfilesys/servlet?command=listFiles';
+    window.location.href = '/custom/webfilesys/servlet?command=listFiles';
 }
 
 function hideMsg()
@@ -101,7 +101,7 @@ function diffSelect(path)
 {
     parent.diffStarted = true;
 
-    url = "/webfilesys/servlet?command=diffSelect&path=" + encodeURIComponent(path);
+    url = "/custom/webfilesys/servlet?command=diffSelect&path=" + encodeURIComponent(path);
 
     xmlRequest(url, diffSelectResult);
 }
@@ -139,7 +139,7 @@ function diffSelectResult(req)
 }
 
 function cancelDiff() {
-    var url = "/webfilesys/servlet?command=diffSelect&cmd=deselect";
+    var url = "/custom/webfilesys/servlet?command=diffSelect&cmd=deselect";
 
     xmlRequest(url, function(req) {
         if (req.readyState == 4) {
@@ -157,7 +157,7 @@ function cancelDiff() {
 
 function openDiffWindow()
 {
-    diffWin = window.open('/webfilesys/servlet?command=startDiff','diffWin','width=' + (screen.width - 20) + ',height=' + (screen.height - 80) + ',scrollbars=yes,resizable=yes,status=no,menubar=no,toolbar=no,location=no,directories=no,screenX=0,screenY=0,left=0,top=0');
+    diffWin = window.open('/custom/webfilesys/servlet?command=startDiff','diffWin','width=' + (screen.width - 20) + ',height=' + (screen.height - 80) + ',scrollbars=yes,resizable=yes,status=no,menubar=no,toolbar=no,location=no,directories=no,screenX=0,screenY=0,left=0,top=0');
     if (diffWin) 
     {
         diffWin.focus();
@@ -210,7 +210,7 @@ function checkPasteOverwrite(path) {
 	
 	showHourGlass();
 	
-    var url = "/webfilesys/servlet?command=checkPasteOverwrite";
+    var url = "/custom/webfilesys/servlet?command=checkPasteOverwrite";
     
     if (path) {
         url = url + "&path=" + encodeURIComponent(path);
@@ -223,7 +223,7 @@ function checkPasteOverwriteResult(req) {
     if (req.readyState == 4) {
         if (req.status == 200) {
 
-        	var pasteUrl = "/webfilesys/servlet?command=pasteFiles";
+        	var pasteUrl = "/custom/webfilesys/servlet?command=pasteFiles";
         	
             var pathElems = req.responseXML.getElementsByTagName("path");
             if (pathElems && (pathElems.length == 1)) {
@@ -317,6 +317,6 @@ function delFileAjax(path, deleteWriteProtected) {
         } else {
             alert(resourceBundle["alert.delFileError"]);
         }
-        window.location.href = "/webfilesys/servlet?command=listFiles";                
+        window.location.href = "/custom/webfilesys/servlet?command=listFiles";                
     });          
 }

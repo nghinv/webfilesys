@@ -27,7 +27,7 @@ import de.webfilesys.util.CommonUtils;
  * @author Frank Hoehnel
  */
 public class GPXViewHandler extends UserRequestHandler {
-	private static final String STYLESHEET_REF = "<?xml-stylesheet type=\"text/xsl\" href=\"/webfilesys/xsl/gpxViewer.xsl\"?>";
+	private static final String STYLESHEET_REF = "<?xml-stylesheet type=\"text/xsl\" href=\"/custom/webfilesys/xsl/gpxViewer.xsl\"?>";
 
 	private static final String XML_HEADER = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"yes\"?>";
 

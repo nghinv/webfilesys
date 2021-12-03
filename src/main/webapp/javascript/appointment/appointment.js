@@ -650,7 +650,7 @@ function deleteAppointment(eventId)
 	{
 		return;
 	}
-	var url = "/webfilesys/servlet?command=calendar&cmd=delAppointment&eventId=" + eventId;
+	var url = "/custom/webfilesys/servlet?command=calendar&cmd=delAppointment&eventId=" + eventId;
 	xmlRequest(url, showDeleteResult);
 }
 
@@ -689,7 +689,7 @@ function showDeleteResult(req)
 
 function moveAppointment(eventId)
 {
-	var url = "/webfilesys/servlet?command=calendar&cmd=moveAppointment&eventId=" + eventId;
+	var url = "/custom/webfilesys/servlet?command=calendar&cmd=moveAppointment&eventId=" + eventId;
 	xmlRequest(url, showMoveResult);
 }
 
@@ -713,7 +713,7 @@ function showMoveResult(req)
 
 function pasteAppointment(year, month, dayOfMonth)
 {
-	var url = "/webfilesys/servlet?command=calendar&cmd=pasteAppointment&year=" + year + "&month=" + month + "&dayOfMonth=" + dayOfMonth;
+	var url = "/custom/webfilesys/servlet?command=calendar&cmd=pasteAppointment&year=" + year + "&month=" + month + "&dayOfMonth=" + dayOfMonth;
 	xmlRequest(url, showPasteResult);
 }
 
@@ -746,7 +746,7 @@ function changeAppointment()
 	
 	formData = formData + "command=calendar&cmd=changeAppointment";
 	
-	xmlRequestPost("/webfilesys/servlet", formData, showChangeResult)	
+	xmlRequestPost("/custom/webfilesys/servlet", formData, showChangeResult)	
 }
 
 function showChangeResult(req)
@@ -812,7 +812,7 @@ function createAppointment()
 	
 	formData = formData + "&year=" + selectedDay.year + "&month=" + selectedDay.month + "&day=" + selectedDay.dayOfMonth;
 	
-	xmlRequestPost("/webfilesys/servlet", formData, showCreateResult)	
+	xmlRequestPost("/custom/webfilesys/servlet", formData, showCreateResult)	
 }
 
 function showCreateResult(req)
@@ -871,7 +871,7 @@ function showCreateResult(req)
 
 function reloadMonth()
 {
-    window.location.href = "/webfilesys/servlet?command=calendar&cmd=month&year=" + selectedDay.year + "&month=" + selectedDay.month;
+    window.location.href = "/custom/webfilesys/servlet?command=calendar&cmd=month&year=" + selectedDay.year + "&month=" + selectedDay.month;
 }
 
 function getAppointmentById(dayOfMonth, appointmentId)

@@ -13,24 +13,24 @@
 
   <meta http-equiv="expires" content="0" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/folderTree/css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/folderTree/css" />.css</xsl:attribute>
   </link>
 
   <style type="text/css">
     img {vertical-align:bottom;}
   </style>
 
-  <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/folderTree/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/folderTree/language" /></xsl:attribute>
   </script>
 
 </head>
@@ -83,7 +83,7 @@
     <xsl:if test="not(@bookmark)">
       <xsl:if test="@icon">
         <img class="icon">
-          <xsl:attribute name="src">/webfilesys/icons/<xsl:value-of select="@icon"/></xsl:attribute>
+          <xsl:attribute name="src">/custom/webfilesys/icons/<xsl:value-of select="@icon"/></xsl:attribute>
         </img>
       </xsl:if>
     

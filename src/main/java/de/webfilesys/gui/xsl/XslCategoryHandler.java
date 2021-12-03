@@ -83,7 +83,7 @@ public class XslCategoryHandler extends XslRequestHandlerBase
 
     private void listCategories(Element catListElement)
     {
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/categoryList.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/categoryList.xsl\"");
 
 		doc.insertBefore(xslRef, catListElement);
 

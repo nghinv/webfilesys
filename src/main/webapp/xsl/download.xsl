@@ -14,10 +14,10 @@
 
 <meta http-equiv="expires" content="0" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/download/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/download/css" />.css</xsl:attribute>
 </link>
 
 <title>
@@ -30,7 +30,7 @@
 
   <div class="info" style="width:100%;padding:10px;text-align:center">
     <a class="dirtree" style="text-decoration:underline">
-      <xsl:attribute name="href">/webfilesys/servlet?command=getFile&amp;filePath=<xsl:value-of select="/download/path" />&amp;disposition=download</xsl:attribute>
+      <xsl:attribute name="href">/custom/webfilesys/servlet?command=getFile&amp;filePath=<xsl:value-of select="/download/path" />&amp;disposition=download</xsl:attribute>
       <xsl:value-of select="/download/resources/msg[@key='label.download.link']/@value" />
     </a>
     <br/><br/>

@@ -1,6 +1,6 @@
 function submitCmd()
 {
-    var ajaxUrl = '/webfilesys/servlet';
+    var ajaxUrl = '/custom/webfilesys/servlet';
 
     xmlRequestPost(ajaxUrl, getFormData(document.form1), showCmdOutput);
 }

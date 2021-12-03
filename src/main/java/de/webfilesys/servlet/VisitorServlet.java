@@ -30,18 +30,18 @@ import de.webfilesys.user.UserManager;
  * 
  * request path syntax:
  * 
- * /webfilesys/visitor/<userid>/<password>/<viewType>
+ * /custom/webfilesys/visitor/<userid>/<password>/<viewType>
  * 
  * parameter viewType is optional, default is picture album
  */
 public class VisitorServlet extends WebFileSysServlet {
 	private static final long serialVersionUID = 1L;
 
-	private static int REQUEST_PATH_LENGTH = "/webfilesys/visitor".length();
+	private static int REQUEST_PATH_LENGTH = "/custom/webfilesys/visitor".length();
 	
 	public static final String VISITOR_COOKIE_NAME = "webfilesys-visitor";
 	
-	public static final String VISITOR_COOKIE_PATH = "/webfilesys/visitor";
+	public static final String VISITOR_COOKIE_PATH = "/custom/webfilesys/visitor";
 	
 	public static final String SESSION_ATTRIB_VISITOR_ID = "visitorId";
 	

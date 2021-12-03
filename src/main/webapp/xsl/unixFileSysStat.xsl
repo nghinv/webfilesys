@@ -13,10 +13,10 @@
 
   <meta http-equiv="expires" content="0" />
 
-   <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+   <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="css" />.css</xsl:attribute>
   </link>
 
   <style type="text/css">
@@ -68,10 +68,10 @@
         </td>
 
         <td class="fileSysData">
-          <img src="/webfilesys/images/bar.gif" border="0" height="20" style="border-color:navy;border-style:solid;border-width:1px;border-right-width:0;">
+          <img src="/custom/webfilesys/images/bar.gif" border="0" height="20" style="border-color:navy;border-style:solid;border-width:1px;border-right-width:0;">
             <xsl:attribute name="width"><xsl:value-of select="usage * 3" /></xsl:attribute>
           </img>
-          <img src="/webfilesys/images/space.gif" border="0" height="20" style="border-color:navy;border-style:solid;border-width:1px;border-left-width:0;">
+          <img src="/custom/webfilesys/images/space.gif" border="0" height="20" style="border-color:navy;border-style:solid;border-width:1px;border-left-width:0;">
             <xsl:attribute name="width"><xsl:value-of select="(100 - usage) * 3" /></xsl:attribute>
           </img>
         </td>

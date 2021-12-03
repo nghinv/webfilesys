@@ -20,26 +20,26 @@
 
   <meta http-equiv="expires" content="0" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/imageData/css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/imageData/css" />.css</xsl:attribute>
   </link>
 
   <style type="text/css"> 
     div.albumPath {padding-top:8px;padding-bottom:10px;text-align:left;}
   </style>
 
-  <script src="/webfilesys/javascript/fileMenu.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/fileMenu.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
 
   <xsl:if test="/imageData/geoTag">
-    <script src="/webfilesys/javascript/geoMap.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/geoMap.js" type="text/javascript"></script>
   </xsl:if>
 
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/pictureAlbum/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/pictureAlbum/language" /></xsl:attribute>
   </script>
 
   <script type="text/javascript">
@@ -54,7 +54,7 @@
     
     function exifData()
     {
-        exifWin=window.open('/webfilesys/servlet?command=exifData&amp;imgFile=<xsl:value-of select="/imageData/encodedPath" />','exifWin','scrollbars=yes,status=no,toolbar=no,location=no,menu=no,width=400,height=480,left=200,top=100,screenX=200,screenY=100,resizable=no');
+        exifWin=window.open('/custom/webfilesys/servlet?command=exifData&amp;imgFile=<xsl:value-of select="/imageData/encodedPath" />','exifWin','scrollbars=yes,status=no,toolbar=no,location=no,menu=no,width=400,height=480,left=200,top=100,screenX=200,screenY=100,resizable=no');
         exifWin.focus();
     }
     
@@ -108,7 +108,7 @@
     
       function showGoogleMap()
       {
-         mapWin=window.open('/webfilesys/servlet?command=googleMap&amp;path=<xsl:value-of select="/imageData/encodedPath" />','mapWin','status=no,toolbar=no,location=no,menu=no,width=600,height=400,resizable=yes,left=20,top=20,screenX=20,screenY=20');
+         mapWin=window.open('/custom/webfilesys/servlet?command=googleMap&amp;path=<xsl:value-of select="/imageData/encodedPath" />','mapWin','status=no,toolbar=no,location=no,menu=no,width=600,height=400,resizable=yes,left=20,top=20,screenX=20,screenY=20');
          mapWin.focus();
       }
     </xsl:if>
@@ -151,7 +151,7 @@
         <div class="albumPath">
           <xsl:for-each select="pathElem">
             <a class="dirtree">
-              <xsl:attribute name="href"><xsl:value-of select="concat('/webfilesys/servlet?command=album&amp;relPath=',@path)"/></xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="concat('/custom/webfilesys/servlet?command=album&amp;relPath=',@path)"/></xsl:attribute>
               <xsl:value-of select="@name"/> 
             </a>
             <font class="fixed"><b> &gt; </b></font>
@@ -166,7 +166,7 @@
       </td>
       
       <td align="right">
-        <a href="#" onclick="window.open('/webfilesys/servlet?command=versionInfo','infowindow','status=no,toolbar=no,location=no,menu=no,width=300,height=220,resizable=no,left=250,top=150,screenX=250,screenY=150')">
+        <a href="#" onclick="window.open('/custom/webfilesys/servlet?command=versionInfo','infowindow','status=no,toolbar=no,location=no,menu=no,width=300,height=220,resizable=no,left=250,top=150,screenX=250,screenY=150')">
           <img src="images/infoSmall.gif" border="0" width="18" height="18">
             <xsl:attribute name="title"><xsl:value-of select="/imageData/resources/msg[@key='label.about']/@value" /></xsl:attribute>
           </img></a>
@@ -210,7 +210,7 @@
 
       <!-- ################# rating ############### -->
 
-      <form accept-charset="utf-8" name="form1" method="get" action="/webfilesys/servlet" style="margin:0px;padding:0px;padding-top:4px;">
+      <form accept-charset="utf-8" name="form1" method="get" action="/custom/webfilesys/servlet" style="margin:0px;padding:0px;padding-top:4px;">
         <input type="hidden" name="command" value="rate" />
         <input type="hidden" name="imagePath">
           <xsl:attribute name="value"><xsl:value-of select="imagePath" /></xsl:attribute>
@@ -317,7 +317,7 @@
 
                     <td id="mapIcon" style="vertical-align:top;padding-right:10px;">
                       <a href="javascript:showMapSelection()">
-                        <img src="/webfilesys/images/geoTag.gif" width="30" height="30" border="0">
+                        <img src="/custom/webfilesys/images/geoTag.gif" width="30" height="30" border="0">
                           <xsl:attribute name="title"><xsl:value-of select="/imageData/resources/msg[@key='label.geoMapLink']/@value" /></xsl:attribute>
                         </img>
                       </a>
@@ -327,7 +327,7 @@
 
                   <td nowrap="nowrap">
                     <input type="button">
-                      <xsl:attribute name="onclick">javascript:window.location.href='/webfilesys/servlet?command=album';</xsl:attribute>
+                      <xsl:attribute name="onclick">javascript:window.location.href='/custom/webfilesys/servlet?command=album';</xsl:attribute>
                       <xsl:attribute name="value"><xsl:value-of select="/imageData/resources/msg[@key='button.returnToAlbum']/@value" /></xsl:attribute>
                     </input> 
                   </td>
@@ -345,7 +345,7 @@
       
       <!-- ################# comments ############### -->
       
-      <form accept-charset="utf-8" name="form2" method="post" action="/webfilesys/servlet" style="margin:0;padding:0;">
+      <form accept-charset="utf-8" name="form2" method="post" action="/custom/webfilesys/servlet" style="margin:0;padding:0;">
 
         <input type="hidden" name="command" value="addComment" />
       

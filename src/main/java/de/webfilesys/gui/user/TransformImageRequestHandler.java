@@ -68,8 +68,8 @@ public class TransformImageRequestHandler extends UserRequestHandler
 		output.println("<head>");
 		output.println("<title>WebFileSys Image Transformation</title>");
 
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/common.css\">");
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/common.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
 
 		output.println("</head>");
 		output.println("<body class=\"imgTransform\">");
@@ -125,7 +125,7 @@ public class TransformImageRequestHandler extends UserRequestHandler
 		}
 
         output.println("<script language=\"javascript\">");
-        output.println("window.location.href = '/webfilesys/servlet?command=listFiles&keepListStatus=true';");
+        output.println("window.location.href = '/custom/webfilesys/servlet?command=listFiles&keepListStatus=true';");
         output.println("</script>");
 
 		output.println("</body></html>");

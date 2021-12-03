@@ -14,10 +14,10 @@
 
 <meta http-equiv="expires" content="0" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/publishFile/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/publishFile/css" />.css</xsl:attribute>
 </link>
 
 <title>
@@ -58,7 +58,7 @@
     <xsl:value-of select="/publishFile/resources/msg[@key='label.publishFile']/@value" />
   </div>
 
-  <form accept-charset="utf-8" name="form1" method="get" action="/webfilesys/servlet">
+  <form accept-charset="utf-8" name="form1" method="get" action="/custom/webfilesys/servlet">
 
     <input type="hidden" name="command" value="publishFile" />
   

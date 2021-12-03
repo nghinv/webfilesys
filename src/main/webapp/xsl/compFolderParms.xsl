@@ -10,7 +10,7 @@
   <xsl:value-of select="/compareFolder/resources/msg[@key='label.compSource']/@value" />
 </div>
     
-<form accept-charset="utf-8" name="compParmsForm" id="compParms" method="get" action="/webfilesys/servlet" style="display:inline;">
+<form accept-charset="utf-8" name="compParmsForm" id="compParms" method="get" action="/custom/webfilesys/servlet" style="display:inline;">
   <input type="hidden" name="command" value="compareFolders" />
   
   <table border="0" width="100%" cellpadding="10">

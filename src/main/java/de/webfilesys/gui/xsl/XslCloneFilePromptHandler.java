@@ -49,7 +49,7 @@ public class XslCloneFilePromptHandler extends XslRequestHandlerBase
 			
 		doc.appendChild(cloneFileElement);
 			
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/cloneFile.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/cloneFile.xsl\"");
 
 		doc.insertBefore(xslRef, cloneFileElement);
 

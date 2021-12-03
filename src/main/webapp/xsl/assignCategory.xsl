@@ -16,10 +16,10 @@
 
 <title>WebFileSys: <xsl:value-of select="/categoryList/resources/msg[@key='label.assignCategories']/@value" /></title>
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/categoryList/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/categoryList/css" />.css</xsl:attribute>
 </link>
 
 <script language="javascript">
@@ -59,7 +59,7 @@
 
 <xsl:template match="categoryList">
 
-  <form accept-charset="utf-8" name="form1" method="post" action="/webfilesys/servlet">
+  <form accept-charset="utf-8" name="form1" method="post" action="/custom/webfilesys/servlet">
     <input type="hidden" name="command" value="assignCategory" />
     <input type="hidden" name="cmd" value="list" />
     <input type="hidden" name="filePath">

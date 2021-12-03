@@ -16,10 +16,10 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/mobile.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/mobile.css" />
 
-  <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
 
   <script src="javascript/titleToolTip.js" type="text/javascript" />
   
@@ -33,17 +33,17 @@
     
     function prevImage() 
     {
-        window.location.href = '/webfilesys/servlet?command=mobile&amp;cmd=showImg&amp;before=<xsl:value-of select="/imageData/imagePath" />';
+        window.location.href = '/custom/webfilesys/servlet?command=mobile&amp;cmd=showImg&amp;before=<xsl:value-of select="/imageData/imagePath" />';
     }
 
     function nextImage() 
     {
-        window.location.href = '/webfilesys/servlet?command=mobile&amp;cmd=showImg&amp;after=<xsl:value-of select="/imageData/imagePath" />';
+        window.location.href = '/custom/webfilesys/servlet?command=mobile&amp;cmd=showImg&amp;after=<xsl:value-of select="/imageData/imagePath" />';
     }
 
     function back() 
     {
-        window.location.href = '/webfilesys/servlet?command=mobile&amp;cmd=folderFileList';
+        window.location.href = '/custom/webfilesys/servlet?command=mobile&amp;cmd=folderFileList';
     }
   </script>
 
@@ -72,7 +72,7 @@
     style="position:absolute;top:5px;left:5px;width=20px;height=22px;padding:10px;background-color:ivory;border-style:solid;border-width:1px;border-color:#000000;visibility:hidden">
   <a>
     <xsl:attribute name="href">javascript:prevImage()</xsl:attribute>
-    <img src="/webfilesys/images/previous.gif" width="7" height="12" border="0" />
+    <img src="/custom/webfilesys/images/previous.gif" width="7" height="12" border="0" />
   </a>
 </div>
 
@@ -80,7 +80,7 @@
     style="position:absolute;top:5px;right:5px;width=20px;height=22px;padding:10px;background-color:ivory;border-style:solid;border-width:1px;border-color:#000000;visibility:hidden">
   <a>
     <xsl:attribute name="href">javascript:nextImage()</xsl:attribute>
-    <img src="/webfilesys/images/next.gif" width="7" height="12" border="0" />
+    <img src="/custom/webfilesys/images/next.gif" width="7" height="12" border="0" />
   </a>
 </div>
 
@@ -88,7 +88,7 @@
     style="position:absolute;bottom:5px;left:5px;width=20px;height=21px;padding:10px;background-color:ivory;border-style:solid;border-width:1px;border-color:#000000;visibility:hidden">
   <a>
     <xsl:attribute name="href">javascript:back()</xsl:attribute>
-    <img src="/webfilesys/images/ascii.gif" width="9" height="11" border="0" />
+    <img src="/custom/webfilesys/images/ascii.gif" width="9" height="11" border="0" />
   </a>
 </div>
 

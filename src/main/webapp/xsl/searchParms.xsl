@@ -13,10 +13,10 @@
 
 <meta http-equiv="expires" content="0" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/searchParms/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/searchParms/css" />.css</xsl:attribute>
 </link>
 
 <link rel="stylesheet" href="javascript/jquery-ui-1.12.1.custom/jquery-ui.min.css" />
@@ -37,9 +37,9 @@
 <script src="javascript/calendar/date.js" type="text/javascript"></script>
 <script src="javascript/calendar/PopupWindow.js" type="text/javascript"></script>
 
-<script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+<script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
 <script type="text/javascript">
-  <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/searchParms/language" /></xsl:attribute>
+  <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/searchParms/language" /></xsl:attribute>
 </script>
 
 <style id="calendarStyle">
@@ -51,7 +51,7 @@
 
   <div class="headline" resource="label.searchHead" />
   
-  <form accept-charset="utf-8" name="findform" method="post" action="/webfilesys/servlet">
+  <form accept-charset="utf-8" name="findform" method="post" action="/custom/webfilesys/servlet">
   
     <input type="hidden" name="command" value="fmfindfile" />
   

@@ -17,39 +17,39 @@
 
   <meta http-equiv="expires" content="0" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/imageData/css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/imageData/css" />.css</xsl:attribute>
   </link>
 
-  <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/showImage.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/showImage.js" type="text/javascript"></script>
   <script src="javascript/jsFileMenu.js" type="text/javascript" />
-  <script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajax.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajax.js" type="text/javascript"></script>
 
-  <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/imageData/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/imageData/language" /></xsl:attribute>
   </script>
 
   <xsl:if test="/imageData/geoTag">
-    <script src="/webfilesys/javascript/geoMap.js" type="text/javascript"></script>
+    <script src="/custom/webfilesys/javascript/geoMap.js" type="text/javascript"></script>
   </xsl:if>
 
   <script language="JavaScript">
     function exifData()
     {
-        exifWin=window.open('/webfilesys/servlet?command=exifData&amp;imgFile=<xsl:value-of select="/imageData/encodedPath" />','exifWin','scrollbars=yes,status=no,toolbar=no,location=no,menu=no,width=400,height=480,left=200,top=100,screenX=200,screenY=100,resizable=no');
+        exifWin=window.open('/custom/webfilesys/servlet?command=exifData&amp;imgFile=<xsl:value-of select="/imageData/encodedPath" />','exifWin','scrollbars=yes,status=no,toolbar=no,location=no,menu=no,width=400,height=480,left=200,top=100,screenX=200,screenY=100,resizable=no');
         exifWin.focus();
     }
     
     function scale()
     {
-        scaleWin = window.open('/webfilesys/servlet?command=resizeParms&amp;imgFile=<xsl:value-of select="/imageData/encodedPath" />&amp;popup=true','resizeWin' + (new Date()).getTime(),'status=no,toolbar=no,menu=no,width=400,height=560,resizable=no,scrollbars=yes,screenX=180,screenY=20,left=180,top=20');
+        scaleWin = window.open('/custom/webfilesys/servlet?command=resizeParms&amp;imgFile=<xsl:value-of select="/imageData/encodedPath" />&amp;popup=true','resizeWin' + (new Date()).getTime(),'status=no,toolbar=no,menu=no,width=400,height=560,resizable=no,scrollbars=yes,screenX=180,screenY=20,left=180,top=20');
         scaleWin.focus();
     }
     
@@ -181,7 +181,7 @@
       <tr>
         <td><span resource="rating.rateNow"></span>:</td>
         <td>
-          <form accept-charset="utf-8" name="form1" method="get" action="/webfilesys/servlet" style="margin:0px;padding:0px;padding-top:4px;">
+          <form accept-charset="utf-8" name="form1" method="get" action="/custom/webfilesys/servlet" style="margin:0px;padding:0px;padding-top:4px;">
             <input type="hidden" name="command" value="rate" />
             <input type="hidden" name="imagePath">
               <xsl:attribute name="value"><xsl:value-of select="/imageData/imagePath" /></xsl:attribute>

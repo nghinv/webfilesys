@@ -229,7 +229,7 @@ public class XslRequestHandlerBase extends UserRequestHandler
 		addCommonSessionData();
 		
 		if ((session != null) && (!xsltAlwaysOnServer) && isBrowserXslEnabled()) {
-			ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/" + xslFile + "\"");
+			ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/" + xslFile + "\"");
 			doc.insertBefore(xslRef, doc.getDocumentElement());
 			
 			resp.setContentType("text/xml");

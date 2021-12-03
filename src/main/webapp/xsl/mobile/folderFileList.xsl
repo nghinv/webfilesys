@@ -17,38 +17,38 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/mobile.css" />
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/fileIcons.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/mobile.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/fileIcons.css" />
 
   <title resource="label.mobileWindowTitle"></title>
 
-  <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajax.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxFolder.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/mobile/mobileCommon.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/contextMenuCommon.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/mobile/contextMenuCommon.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/mobile/fileContextMenu.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/mobile/linkContextMenu.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/contextMenuMouse.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/mobile/jsFileMenu.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/mobile/dirContextMenu.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/mobile/jsDirMenu.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/mobile/mobileMainMenu.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajax.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxFolder.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/mobile/mobileCommon.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/contextMenuCommon.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/mobile/contextMenuCommon.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/mobile/fileContextMenu.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/mobile/linkContextMenu.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/contextMenuMouse.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/mobile/jsFileMenu.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/mobile/dirContextMenu.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/mobile/jsDirMenu.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/mobile/mobileMainMenu.js" type="text/javascript"></script>
   
-  <script src="/webfilesys/javascript/ajaxslt/util.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/xmltoken.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/dom.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/xpath.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxslt/xslt.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/util.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/xmltoken.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/dom.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/xpath.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxslt/xslt.js" type="text/javascript"></script>
 
-  <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/folderFileList/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/folderFileList/language" /></xsl:attribute>
   </script>
 
   <script type="text/javascript">
@@ -97,7 +97,7 @@
     <xsl:call-template name="filterAndMenu" />
   </xsl:for-each>
   
-  <form accept-charset="utf-8" name="form1" action="/webfilesys/servlet" method="post" style="padding:0px;margin:0px;">
+  <form accept-charset="utf-8" name="form1" action="/custom/webfilesys/servlet" method="post" style="padding:0px;margin:0px;">
   
     <input type="hidden" name="command" value="mobileMultiFile" />
 
@@ -144,7 +144,7 @@
           <div id="currentPath">
             <xsl:for-each select="pathElem">
               <a class="currentPath">
-                <xsl:attribute name="href">/webfilesys/servlet?command=mobile&amp;cmd=folderFileList&amp;relPath=<xsl:value-of select="@path"/></xsl:attribute>
+                <xsl:attribute name="href">/custom/webfilesys/servlet?command=mobile&amp;cmd=folderFileList&amp;relPath=<xsl:value-of select="@path"/></xsl:attribute>
                 <xsl:value-of select="@name"/> 
               </a>
               <xsl:if test="not(position()=last())"><span class="currentPathSep">/</span></xsl:if>
@@ -162,7 +162,7 @@
 <!-- ############################## sorting, folder menu and main menu ################################ -->
 
 <xsl:template name="filterAndMenu">
-  <form accept-charset="utf-8" name="sortform" method="get" action="/webfilesys/servlet" style="padding:0px;margin:0px;">
+  <form accept-charset="utf-8" name="sortform" method="get" action="/custom/webfilesys/servlet" style="padding:0px;margin:0px;">
     <input type="hidden" name="command" value="mobile" />
     <input type="hidden" name="cmd" value="folderFileList" />
     
@@ -204,7 +204,7 @@
                 
                 <td class="mobileFolderMenu">
                   <a class="icon-font icon-picture mobileMenuIcon" titleResource="menuThumbnails">
-                    <xsl:attribute name="href">/webfilesys/servlet?command=mobile&amp;cmd=folderPictures</xsl:attribute>
+                    <xsl:attribute name="href">/custom/webfilesys/servlet?command=mobile&amp;cmd=folderPictures</xsl:attribute>
                   </a>
                 </td> 
                 
@@ -288,7 +288,7 @@
         </td>
         <td colspan="2" class="fileListData sepBottom" style="width:95%">
           <a class="subFolder">
-            <xsl:attribute name="href">/webfilesys/servlet?command=mobile&amp;cmd=folderFileList&amp;relPath=<xsl:value-of select="@path"/>&amp;initial=true</xsl:attribute>
+            <xsl:attribute name="href">/custom/webfilesys/servlet?command=mobile&amp;cmd=folderFileList&amp;relPath=<xsl:value-of select="@path"/>&amp;initial=true</xsl:attribute>
             <xsl:attribute name="title"><xsl:value-of select="@name" /></xsl:attribute>
             <xsl:value-of select="@displayName"/> 
           </a>
@@ -337,7 +337,7 @@
             <td class="fileListData fileListIcon">
               <xsl:if test="@icon">
                 <img border="0" width="16" height="16">
-                  <xsl:attribute name="src">/webfilesys/icons/<xsl:value-of select="@icon" /></xsl:attribute>
+                  <xsl:attribute name="src">/custom/webfilesys/icons/<xsl:value-of select="@icon" /></xsl:attribute>
                 </img>
               </xsl:if>
               <xsl:if test="@iconFont">

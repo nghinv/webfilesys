@@ -48,7 +48,7 @@ public class XslRenameImagePromptHandler extends XslRequestHandlerBase
 			
 		doc.appendChild(renameFileElement);
 			
-		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/webfilesys/xsl/renameImage.xsl\"");
+		ProcessingInstruction xslRef = doc.createProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"/custom/webfilesys/xsl/renameImage.xsl\"");
 
 		doc.insertBefore(xslRef, renameFileElement);
 

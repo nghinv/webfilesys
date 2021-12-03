@@ -38,7 +38,7 @@ public class FontFileViewHandler implements ViewHandler {
 			
 			output.println("@font-face {");
 			output.println("font-family: 'TheFont';");
-			output.println("src: url('/webfilesys/servlet?command=getFile&filePath=" + UTF8URLEncoder.encode(filePath) + "&disposition=inline');");
+			output.println("src: url('/custom/webfilesys/servlet?command=getFile&filePath=" + UTF8URLEncoder.encode(filePath) + "&disposition=inline');");
 			output.println("font-weight: normal;");
 			output.println("font-style: normal;");
 			output.println("}");

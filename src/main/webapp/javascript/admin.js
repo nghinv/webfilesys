@@ -4,7 +4,7 @@ var PASSWORD_MIN_LENGTH = 5;
 var PASSWORD_MAX_LENGTH = 32;
 
 function selectDocRoot() {
-    var docRootWin = open('/webfilesys/servlet?command=admin&cmd=selectDocRoot','docRootWin','status=no,toolbar=no,menu=no,width=550,height=500,resizable=yes,scrollbars=yes,left=100,top=50,screenX=100,screenY=50');
+    var docRootWin = open('/custom/webfilesys/servlet?command=admin&cmd=selectDocRoot','docRootWin','status=no,toolbar=no,menu=no,width=550,height=500,resizable=yes,scrollbars=yes,left=100,top=50,screenX=100,screenY=50');
     docRootWin.focus();
 }
 

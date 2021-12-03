@@ -65,21 +65,21 @@ function linkGraphicsMenu(linkName, realPath, imgType)
 }
 
 function jsDelImageLink(linkName) {
-    window.location.href="/webfilesys/servlet?command=delImageLink&linkName=" + encodeURIComponent(linkName);
+    window.location.href="/custom/webfilesys/servlet?command=delImageLink&linkName=" + encodeURIComponent(linkName);
 }
 
 function jsDescription(path) {
-    descWin=window.open("/webfilesys/servlet?command=editMetaInf&path=" + encodeURIComponent(path) + "&random=" + new Date().getTime(),"descWin","status=no,toolbar=no,location=no,menu=no,width=600,height=300,resizable=yes,left=20,top=100,screenX=20,screenY=100");
+    descWin=window.open("/custom/webfilesys/servlet?command=editMetaInf&path=" + encodeURIComponent(path) + "&random=" + new Date().getTime(),"descWin","status=no,toolbar=no,location=no,menu=no,width=600,height=300,resizable=yes,left=20,top=100,screenX=20,screenY=100");
     descWin.focus();
     descWin.opener=self;
 }
 
 function origDir(path) {
-    parent.parent.frames[1].location.href="/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(path) + "&fastPath=true";
+    parent.parent.frames[1].location.href="/custom/webfilesys/servlet?command=exp&expandPath=" + encodeURIComponent(path) + "&fastPath=true";
 }
 
 function emailLink(filePath) {
-    centeredDialog('/webfilesys/servlet?command=emailFilePrompt&filePath=' + encodeURIComponent(filePath), '/webfilesys/xsl/emailFile.xsl', 400, 250, function() {
+    centeredDialog('/custom/webfilesys/servlet?command=emailFilePrompt&filePath=' + encodeURIComponent(filePath), '/custom/webfilesys/xsl/emailFile.xsl', 400, 250, function() {
         document.emailForm.receiver.focus();
         document.emailForm.receiver.select();
     });

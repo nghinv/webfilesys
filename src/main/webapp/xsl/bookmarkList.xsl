@@ -16,26 +16,26 @@
 
   <meta http-equiv="expires" content="0" />
 
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
-  <link rel="stylesheet" type="text/css" href="/webfilesys/styles/icons.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/icons.css" />
 
   <link rel="stylesheet" type="text/css">
-    <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/bookmarkList/css" />.css</xsl:attribute>
+    <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/bookmarkList/css" />.css</xsl:attribute>
   </link>
 
   <xsl:if test="/bookmarkList/mobile">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <link rel="stylesheet" type="text/css" href="/webfilesys/styles/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/mobile.css" />
   </xsl:if>
 
-  <script src="/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/ajaxFolder.js" type="text/javascript"></script>
-  <script src="/webfilesys/javascript/util.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/browserCheck.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxCommon.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/ajaxFolder.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/util.js" type="text/javascript"></script>
 
-  <script src="/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
+  <script src="/custom/webfilesys/javascript/resourceBundle.js" type="text/javascript"></script>
   <script type="text/javascript">
-    <xsl:attribute name="src">/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/bookmarkList/language" /></xsl:attribute>
+    <xsl:attribute name="src">/custom/webfilesys/servlet?command=getResourceBundle&amp;lang=<xsl:value-of select="/bookmarkList/language" /></xsl:attribute>
   </script>
   
   <script type="text/javascript">
@@ -69,7 +69,7 @@
 
   <div class="headline" resource="label.bookmarks" />
 
-  <form accept-charset="utf-8" name="bookmarkForm" method="get" action="/webfilesys/servlet">
+  <form accept-charset="utf-8" name="bookmarkForm" method="get" action="/custom/webfilesys/servlet">
     <input type="hidden" name="command" value="exp" />
     <input type="hidden" name="expandPath">
       <xsl:attribute name="value"><xsl:value-of select="currentPath" /></xsl:attribute>
@@ -85,7 +85,7 @@
             <td>
               <xsl:if test="icon">
                 <img border="0">
-                  <xsl:attribute name="src">/webfilesys/icons/<xsl:value-of select="icon" /></xsl:attribute>
+                  <xsl:attribute name="src">/custom/webfilesys/icons/<xsl:value-of select="icon" /></xsl:attribute>
                 </img>
               </xsl:if>
               <xsl:if test="not(icon)">
@@ -110,7 +110,7 @@
               
               <td>
                 <a class="icon-font icon-delete" titleResource="label.deleteBookmark">
-                  <xsl:attribute name="href">/webfilesys/servlet?command=bookmarks&amp;cmd=delete&amp;id=<xsl:value-of select="@id" /></xsl:attribute>
+                  <xsl:attribute name="href">/custom/webfilesys/servlet?command=bookmarks&amp;cmd=delete&amp;id=<xsl:value-of select="@id" /></xsl:attribute>
                 </a>
               </td>
             </xsl:if>
@@ -132,7 +132,7 @@
     
     <input type="button" resource="button.return">
       <xsl:if test="/bookmarkList/mobile">
-        <xsl:attribute name="onclick">window.location.href='/webfilesys/servlet?command=mobile&amp;cmd=folderFileList&amp;relPath=/'</xsl:attribute>
+        <xsl:attribute name="onclick">window.location.href='/custom/webfilesys/servlet?command=mobile&amp;cmd=folderFileList&amp;relPath=/'</xsl:attribute>
       </xsl:if>
       <xsl:if test="not(/bookmarkList/mobile)">
         <xsl:attribute name="onclick">javascript:document.bookmarkForm.submit()</xsl:attribute>

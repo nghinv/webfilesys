@@ -97,8 +97,8 @@ public class FtpBackupHandler extends UserRequestHandler
 		output.println("<HTML>");
 		output.println("<HEAD>");
 
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/common.css\">");
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/common.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
 		output.println("</HEAD>");
 
 		output.println("<BODY class=\"ftp\">");
@@ -264,8 +264,8 @@ public class FtpBackupHandler extends UserRequestHandler
 
 		output.println("<html><head>");
 
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/common.css\">");
-		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/common.css\">");
+		output.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"/custom/webfilesys/styles/skins/" + userMgr.getCSS(uid) + ".css\">");
 
         /*
 		output.println("<script language=\"javascript\">"); 
@@ -287,7 +287,7 @@ public class FtpBackupHandler extends UserRequestHandler
 
 		headLine(getResource("label.ftpBackupHead","Backup to FTP Server"));
 
-		output.print("<form accept-charset=\"utf-8\" name=\"form1\" method=\"post\" action=\"/webfilesys/servlet\">");
+		output.print("<form accept-charset=\"utf-8\" name=\"form1\" method=\"post\" action=\"/custom/webfilesys/servlet\">");
 		output.print("<input type=\"hidden\" name=\"command\" value=\"ftpBackup\">");
 		output.print("<input type=\"hidden\" name=\"actPath\" value=\"" + actPath + "\">");
 

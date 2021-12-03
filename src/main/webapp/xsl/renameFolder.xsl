@@ -12,13 +12,13 @@
 
 <meta http-equiv="expires" content="0" />
 
-<link rel="stylesheet" type="text/css" href="/webfilesys/styles/common.css" />
+<link rel="stylesheet" type="text/css" href="/custom/webfilesys/styles/common.css" />
 
 <link rel="stylesheet" type="text/css">
-  <xsl:attribute name="href">/webfilesys/styles/skins/<xsl:value-of select="/folder/css" />.css</xsl:attribute>
+  <xsl:attribute name="href">/custom/webfilesys/styles/skins/<xsl:value-of select="/folder/css" />.css</xsl:attribute>
 </link>
 
-<script language="JavaScript" src="/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
+<script language="JavaScript" src="/custom/webfilesys/javascript/fmweb.js" type="text/javascript"></script>
 
 <script language="javascript">
 
@@ -56,7 +56,7 @@
     </tr>
   </table>
 
-  <form accept-charset="utf-8" name="form1" method="get" action="/webfilesys/servlet">
+  <form accept-charset="utf-8" name="form1" method="get" action="/custom/webfilesys/servlet">
   
     <input type="hidden" name="command" value="renameDir" />
 
@@ -116,7 +116,7 @@
 
         <td class="formButton">
           <a class="button" href="#" style="float:right"> 
-            <xsl:attribute name="onclick">this.blur();window.location.href='/webfilesys/servlet?command=exp&amp;expandPath=<xsl:value-of select="/folder/encodedPath" />'</xsl:attribute>
+            <xsl:attribute name="onclick">this.blur();window.location.href='/custom/webfilesys/servlet?command=exp&amp;expandPath=<xsl:value-of select="/folder/encodedPath" />'</xsl:attribute>
             <span><xsl:value-of select="/folder/resources/msg[@key='button.cancel']/@value" /></span>
           </a>              
         </td>

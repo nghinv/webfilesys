@@ -700,7 +700,7 @@ input[type="submit"], input[type="button"], input.roundedButton {
     color: black;
     font-size: 13px;
     border: 1px solid #a0a0a0;
-    background-image:url('/webfilesys/images/buttonBack.png');
+    background-image:url('/custom/webfilesys/images/buttonBack.png');
     background-repeat:repeat-x;
     padding-left: 12px;
     padding-right: 12px;
@@ -1156,7 +1156,7 @@ td.syncCompare {
 }
 
 a.button {
-    background: transparent url('/webfilesys/images/buttonRight.gif') no-repeat scroll top right;
+    background: transparent url('/custom/webfilesys/images/buttonRight.gif') no-repeat scroll top right;
     color: #444;
     display: block;
     float: left;
@@ -1168,7 +1168,7 @@ a.button {
 }
 
 a.button span {
-    background: transparent url('/webfilesys/images/buttonLeft.gif') no-repeat;
+    background: transparent url('/custom/webfilesys/images/buttonLeft.gif') no-repeat;
     display: block;
     line-height: 14px;
     padding: 5px 0 5px 18px;

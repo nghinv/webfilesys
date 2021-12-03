@@ -82,7 +82,7 @@ function initZoomedPic(zoomedPic) {
 	var urlBase = zoomedPic.src.substring(0, zoomedPic.src.lastIndexOf("/"));
 	var cursorImgUrl = urlBase + "/images/search.cur"; 
 	
-	zoomedPicCont.style.cursor = "url(/webfilesys/images/search.gif),url(" + cursorImgUrl + "),auto";
+	zoomedPicCont.style.cursor = "url(/custom/webfilesys/images/search.gif),url(" + cursorImgUrl + "),auto";
 	
 	zoomedPicCont.style.backgroundSize = zoomedPic.clientWidth + "px " + zoomedPic.clientHeight + "px";
 	
